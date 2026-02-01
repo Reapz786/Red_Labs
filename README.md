@@ -5,7 +5,6 @@ All work is performed in legal, controlled training environments.
 ## Repository Structure
 
 - THM Challenge Rooms - Red Easy  
-  Entry-level red-team labs focused on enumeration, SMB, SSH, and credential attacks.
 
 - THM Challenge Rooms - Red Medium 
 
