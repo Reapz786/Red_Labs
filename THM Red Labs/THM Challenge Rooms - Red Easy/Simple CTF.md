@@ -252,7 +252,39 @@ msf6 >
 ```
 
 > [!NOTE] 
-> I went back to the site that had http://10.64./simple and use gobuster again to enumerate further to see what I can find and found more redirects to lead me further in.
+> I went back to the site that had http//10.64.182.223/simple and use gobuster again to enumerate further to see what I can find and found more redirects to lead me further in.
+```
+root@ip-10-64-94-77:~# gobuster dir -u http://10.64.182.223/simple -w /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-medium.txt 
+===============================================================
+Gobuster v3.6
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://10.64.182.223/simple
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-medium.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.6
+[+] Timeout:                 10s
+===============================================================
+Starting gobuster in directory enumeration mode
+===============================================================
+/modules              (Status: 301) [Size: 323] [--> http://10.64.182.223/simple/modules/]
+/uploads              (Status: 301) [Size: 323] [--> http://10.64.182.223/simple/uploads/]
+/doc                  (Status: 301) [Size: 319] [--> http://10.64.182.223/simple/doc/]
+/admin                (Status: 301) [Size: 321] [--> http://10.64.182.223/simple/admin/]
+/assets               (Status: 301) [Size: 322] [--> http://10.64.182.223/simple/assets/]
+/lib                  (Status: 301) [Size: 319] [--> http://10.64.182.223/simple/lib/]
+/tmp                  (Status: 301) [Size: 319] [--> http://10.64.182.223/simple/tmp/]
+Progress: 207643 / 207644 (100.00%)
+===============================================================
+Finished
+===============================================================
+```
+
+> [!NOTE] Title
+> Contents
+
 
 
 
