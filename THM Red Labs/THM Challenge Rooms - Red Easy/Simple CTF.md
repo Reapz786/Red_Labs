@@ -166,6 +166,9 @@ Finished
 > Ok straight to the point here - need to find out how to utilise this CVE/vulnerability found specifically to reveal a password so let's enumerate/explore for now.
 
 
+> [!NOTE] 
+> I went straight for exploitation which I realised was a mistake as I thought THM asking me for a password means I should do this but as I realised from the below, I was too early for it as it Me
+
 
 
 
