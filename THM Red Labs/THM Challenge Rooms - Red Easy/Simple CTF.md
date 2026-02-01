@@ -167,7 +167,92 @@ Finished
 
 
 > [!NOTE] 
-> I went straight for exploitation which I realised was a mistake as I thought THM asking me for a password means I should do this but as I realised from the below, I was too early for it as it Me
+> I went straight for exploitation which I realised was a mistake as I thought THM asking me for a password means I should do this but as I realised from the below, I was too early for it as it Metasploit, I need to have the username/password first:
+```
+msf6 > search 2.2.8
+
+Matching Modules
+================
+
+   #  Name                                                         Disclosure Date  Rank    Check  Description
+   -  ----                                                         ---------------  ----    -----  -----------
+   0  exploit/multi/http/cmsms_object_injection_rce                2019-03-26       normal  Yes    CMS Made Simple Authenticated RCE via object injection
+   1  exploit/freebsd/samba/trans2open                             2003-04-07       great   No     Samba trans2open Overflow (*BSD x86)
+   2  exploit/linux/samba/trans2open                               2003-04-07       great   No     Samba trans2open Overflow (Linux x86)
+   3  exploit/osx/samba/trans2open                                 2003-04-07       great   No     Samba trans2open Overflow (Mac OS X PPC)
+   4  exploit/solaris/samba/trans2open                             2003-04-07       great   No     Samba trans2open Overflow (Solaris SPARC)
+   5    \_ target: Samba 2.2.x - Solaris 9 (sun4u) - Bruteforce    .                .       .      .
+   6    \_ target: Samba 2.2.x - Solaris 7/8 (sun4u) - Bruteforce  .                .       .      .
+   7  exploit/windows/fileformat/vlc_mkv                           2018-05-24       great   No     VLC Media Player MKV Use After Free
+   8    \_ target: VLC 2.2.8 on Windows 10 x86                     .                .       .      .
+   9    \_ target: VLC 2.2.8 on Windows 10 x64                     .                .       .      .
+
+
+Interact with a module by name or index. For example info 9, use 9 or use exploit/windows/fileformat/vlc_mkv
+After interacting with a module you can manually set a TARGET with set TARGET 'VLC 2.2.8 on Windows 10 x64'
+
+msf6 > info 0
+
+       Name: CMS Made Simple Authenticated RCE via object injection
+     Module: exploit/multi/http/cmsms_object_injection_rce
+   Platform: PHP
+       Arch: php
+ Privileged: No
+    License: Metasploit Framework License (BSD)
+       Rank: Normal
+  Disclosed: 2019-03-26
+
+Provided by:
+  Daniele Scanu danielescanu20 <Daniele Scanu danielescanu20@gmail.com>
+
+Available targets:
+      Id  Name
+      --  ----
+  =>  0   Automatic
+
+Check supported:
+  Yes
+
+Basic options:
+  Name       Current Setting  Required  Description
+  ----       ---------------  --------  -----------
+  PASSWORD                    yes       Password to authenticate with
+  Proxies                     no        A proxy chain of format type:host:port
+                                        [,type:host:port][...]
+  RHOSTS                      yes       The target host(s), see https://docs.m
+                                        etasploit.com/docs/using-metasploit/ba
+                                        sics/using-metasploit.html
+  RPORT      80               yes       The target port (TCP)
+  SSL        false            no        Negotiate SSL/TLS for outgoing connect
+                                        ions
+  TARGETURI  /                yes       Base cmsms directory path
+  USERNAME                    yes       Username to authenticate with
+  VHOST                       no        HTTP server virtual host
+
+Payload information:
+
+Description:
+  An issue was discovered in CMS Made Simple 2.2.8.
+  In the module DesignManager (in the files action.admin_bulk_css.php
+  and action.admin_bulk_template.php), with an unprivileged user
+  with Designer permission, it is possible to reach an unserialize
+  call with a crafted value in the m1_allparms parameter,
+  and achieve object injection.
+
+  This module has been successfully tested on CMS Made Simple versions
+  2.2.6, 2.2.7, 2.2.8, 2.2.9 and 2.2.9.1.
+
+References:
+  https://nvd.nist.gov/vuln/detail/CVE-2019-9055
+  https://newsletter.cmsmadesimple.org/w/89247Qog4jCRCuRinvhsofwg
+  https://www.cmsmadesimple.org/2019/03/Announcing-CMS-Made-Simple-v2.2.10-Spuzzum
+
+View the full module info with the info -d command.
+msf6 > 
+```
+
+> [!NOTE] 
+> I went back to the site that had http://10.64./simple and use gobuster again to enumerate further to see what I can find and found more redirects to lead me further in.
 
 
 
