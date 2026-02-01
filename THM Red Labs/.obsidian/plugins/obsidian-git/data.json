@@ -32,8 +32,8 @@
   "submoduleRecurseCheckout": false,
   "gitDir": "",
   "showFileMenu": true,
-  "authorInHistoryView": "full",
-  "dateInHistoryView": true,
+  "authorInHistoryView": "hide",
+  "dateInHistoryView": false,
   "diffStyle": "split",
   "hunks": {
     "showSigns": false,
