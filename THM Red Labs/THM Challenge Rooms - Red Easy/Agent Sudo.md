@@ -70,3 +70,5 @@ Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2026-02-07 08:52:
 > [!info]
 > I can see the path from here and it will be to access ftp and get a zip file - once downloaded onto attack machine, use zip2john to get zip password and read contents of file. Let's see anyway
 
+> [!note]
+> hmm
