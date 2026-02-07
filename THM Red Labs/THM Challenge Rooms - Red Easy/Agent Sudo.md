@@ -262,3 +262,12 @@ Your buddy,
 chris
 >```
 
+> [!question]
+> What is the user flag?
+
+> [!note]
+> SSH'd and immediately ran some basic commands and realised I got the POWA as you'll see and found the user flag:
+> ```
+> 
+> ```
+
