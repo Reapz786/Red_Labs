@@ -383,7 +383,7 @@ W3ll d0n3. You made it!
 root@Machine:/root# > 
 > ```
 
-![[Simple CTF DONE.png]]
+![Simple CTF DONE.png](/assets/Simple%20CTF%20DONE.png)
 
 
 
