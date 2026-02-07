@@ -8,7 +8,7 @@ This Rick and Morty-themed challenge requires you to exploit a web server and fi
 
 > [!Note]
 > Immediately inspecting the page source allowed me to find a username called R1ckRul3s
-![[Pickle Rick - page source 1.png]]
+![Pickle Rick - page source 1.png](/assets/Pickle%20Rick%20-%20page%20source%201.png)
 
 > [!info]
 > Where can I use this username? Need to enumerate further...
@@ -67,14 +67,14 @@ Finished
 
 > [!note]
 > Ok so only 2 service ports available - SSH port 22 and HTTP port 80 - gobuster enumeration led me to useful site via /assets
-> ![[assets.png]]
+> ![assets.png](/assets/assets.png)
 
 > [!info]
 > jQuery v3.3.1 found in jquery.min.js - Bootstrap v3.4.0 in bootstrap.min.css - those file didnt really show much but could be steganography? Anyway apache Apache/2.4.41 so vulnerability with that?
 
 > [!note]
 > Through some online OSINT checks aka cheating lol, I found that I can explore robots.txt which revealed Wubbalubbadubdub and login.php - using this i was able to sign in and have access to a CLI:
-![[login.php.png]]
+![login.php.png](/assets/login.php.png)
 
 > [!note]
 > Tested a few cmds and realised some work, some dont and revealed the following with:
