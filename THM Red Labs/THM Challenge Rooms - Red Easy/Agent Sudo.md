@@ -388,10 +388,8 @@ imagedata           .. text: ["+" repeated 9 times]
 
 ```
 
-> [!info]
-> dsadsadadd
-> ```
-> teghide is already the newest version (0.5.1-15).
+```
+teghide is already the newest version (0.5.1-15).
 Summary:
   Upgrading: 0, Installing: 0, Removing: 0, Not Upgrading: 2018
                                                                            
@@ -421,5 +419,6 @@ extradata:0         .. file: Zip archive data, made by v6.3 UNIX, extract using 
     000000e0: 45 77 77 54 8e d5 01 00  65 da d3 54 8e d5 01 00  |EwwT....e..T....|
     000000f0: 65 da d3 54 8e d5 01 01  99 07 00 02 00 41 45 01  |e..T.........AE.|
 imagedata           .. text: ["+" repeated 9 times]
+
 ```
-```
+
