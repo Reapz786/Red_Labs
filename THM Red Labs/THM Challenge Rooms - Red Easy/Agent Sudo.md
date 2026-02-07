@@ -315,8 +315,10 @@ b03d975e8c92a7c04146cfa7a5a313c7
 > What is the root flag?
 
 > [!info]
-> Could use different way to exploit and privilege escalate so lets try a few in mind and see how I get on:
+> Could use different way to exploit and privilege escalate so lets try a few in mind and see how I get on.
 
+> [!note]
+> C
 
 
 
