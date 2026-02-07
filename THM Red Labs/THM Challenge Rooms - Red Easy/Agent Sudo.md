@@ -348,4 +348,9 @@ DesKel a.k.a Agent R
 root@agent-sudo:/root# 
 >```
 
+> [!question]
+> Who is Agent R?
 
+> [!success]
+> Annoyed about this cause i spent some time trying to crack shadow/passwd, checking google etc. to realise Deskel is Agent R. I thought the R was short for somehting starting with R lol.
+> Anyway the answer is DesKel
