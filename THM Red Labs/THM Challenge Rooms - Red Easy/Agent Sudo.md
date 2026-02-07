@@ -196,5 +196,43 @@ Session completed.
 
 > [!info]
 > With the unzip passphrase as alien, im hoping the extracted file will reveal the steg password but lets see.
+
 > [!note]
-> Contents
+> Managed to extract the file but the file revealed something which doesnt lead to the steg passphrase so unsure where to take it or what to use it on?
+> ```
+┌──(kali㉿kali)-[~/_cutie.png.extracted]
+└─$ 7z x 8702.zip                                            
+7-Zip 25.01 (x64) : Copyright (c) 1999-2025 Igor Pavlov : 2025-08-03
+ 64-bit locale=en_US.UTF-8 Threads:2 OPEN_MAX:1024, ASM
+Scanning the drive for archives:
+1 file, 280 bytes (1 KiB)
+Extracting archive: 8702.zip
+Path = 8702.zip
+Type = zip
+Physical Size = 280   
+Would you like to replace the existing file:
+  Path:     ./To_agentR.txt
+  Size:     0 bytes
+  Modified: 2019-10-29 07:29:11
+with the file from archive:
+  Path:     To_agentR.txt
+  Size:     86 bytes (1 KiB)
+  Modified: 2019-10-29 07:29:11
+? (Y)es / (N)o / (A)lways / (S)kip all / A(u)to rename all / (Q)uit? Y
+Enter password (will not be echoed):
+Everything is Ok
+Size:       86
+Compressed: 280
+┌──(kali㉿kali)-[~/_cutie.png.extracted]
+└─$ cat To_agentR.txt 
+Agent C,
+We need to send the picture to 'QXJlYTUx' as soon as possible!
+By,
+Agent R
+┌──(kali㉿kali)-[~/_cutie.png.extracted]
+└─$ cd ..                  
+┌──(kali㉿kali)-[~]
+└─$ steghide extract -sf cute-alien.jpg                      
+Enter passphrase: 
+steghide: could not extract any data with that passphrase!
+``
