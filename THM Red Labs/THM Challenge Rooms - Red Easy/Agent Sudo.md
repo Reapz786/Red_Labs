@@ -242,7 +242,7 @@ steghide: could not extract any data with that passphrase!
 > ![](assets/base64%20area51.png)
 >  and is the steg password also managed to get the answer to the following questions:
 > > [!question]
-> >  & fdgfdgfdgfdgf
+> > Who is the other agent (in full name)? & SSH password
 > > 
 >```
 >┌──(kali㉿kali)-[~]
@@ -261,3 +261,4 @@ Don't ask me why the password look cheesy, ask agent R who set this password for
 Your buddy,
 chris
 >```
+
