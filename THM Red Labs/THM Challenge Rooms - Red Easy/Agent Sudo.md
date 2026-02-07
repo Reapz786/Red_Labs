@@ -307,6 +307,7 @@ b03d975e8c92a7c04146cfa7a5a313c7
 > [!question]
 > CVE number for the escalation
 
-
+> [!note]
+> Using earlier knowledge 
 
 
