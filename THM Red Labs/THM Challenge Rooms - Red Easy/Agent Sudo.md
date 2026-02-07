@@ -308,6 +308,7 @@ b03d975e8c92a7c04146cfa7a5a313c7
 > CVE number for the escalation
 
 > [!note]
-> Using earlier knowledge 
+> Using earlier knowledge about the /bin/bash, i put the following into google to see if any CVE relates to this and it did:
+> 
 
 
