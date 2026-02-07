@@ -71,4 +71,13 @@ Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2026-02-07 08:52:
 > I can see the path from here and it will be to access ftp and get a zip file - once downloaded onto attack machine, use zip2john to get zip password and read contents of file. Let's see anyway
 
 > [!note]
-> hmm
+> hmm guess i was wrong? lets read what we have here or see...
+> ```
+> ftp> ls
+229 Entering Extended Passive Mode (|||24980|)
+150 Here comes the directory listing.
+-rw-r--r--    1 0        0             217 Oct 29  2019 To_agentJ.txt
+-rw-r--r--    1 0        0           33143 Oct 29  2019 cute-alien.jpg
+-rw-r--r--    1 0        0           34842 Oct 29  2019 cutie.png
+226 Directory send OK.
+> ```
