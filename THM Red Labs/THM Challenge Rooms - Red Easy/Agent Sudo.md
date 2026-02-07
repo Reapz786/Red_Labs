@@ -196,4 +196,5 @@ Session completed.
 
 > [!info]
 > With the unzip passphrase as alien, im hoping the extracted file will reveal the steg password but lets see.
-
+> [!note]
+> Contents
