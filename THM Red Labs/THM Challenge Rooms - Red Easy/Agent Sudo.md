@@ -133,7 +133,18 @@ DECIMAL       HEXADECIMAL     DESCRIPTION
 WARNING: Extractor.execute failed to run external extractor 'jar xvf '%e'': [Errno 2] No such file or directory: 'jar', 'jar xvf '%e'' might not be installed correctly
 34562         0x8702          Zip archive data, encrypted compressed size: 98, uncompressed size: 86, name: To_agentR.txt
 WARNING: One or more files failed to extract: either no utility was found or it's unimplemented
+┌──(kali㉿kali)-[~]
+└─$ cd _cutie.png.extracted 
+┌──(kali㉿kali)-[~/_cutie.png.extracted]
+└─$ ls
+365  365.zlib  8702.zip
 > ```
 
 > [!important]
-> Feel this is important hence the important callout - Essentially the cmds used above revealed a ZIP file hidden wi
+> Feel this is important hence the important callout - Essentially the cmds used above revealed a ZIP file hidden within the image cutie.png and cute-alien.jpg required a password. Now to extract the zip file and use zip2john with john
+
+> [!note]
+> Lets see the results
+> ```
+> 
+> ```
