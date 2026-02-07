@@ -85,7 +85,7 @@ Finished
 
 > [!note]
 > Used cat cmd and it said it was disabled:
-![[super ingredient file.png]]
+![super ingredient file.png](/assets/super%20ingredient%20file.png)
 
 > [!note]
 > I did:
@@ -233,6 +233,3 @@ cat 3rd.txt
 > fleeb juice
 
 ![Pickle Rick complete.png](/assets/Pickle%20Rick%20complete.png)
-
-![](assets/test.png)
-
