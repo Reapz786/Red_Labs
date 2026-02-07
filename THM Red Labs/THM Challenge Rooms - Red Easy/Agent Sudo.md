@@ -298,5 +298,10 @@ james@agent-sudo:~$ cat user_flag.txt
 b03d975e8c92a7c04146cfa7a5a313c7
 > ```
 
+> [!question]
+> What is the incident of the photo called?
+
+> [!note]
+> Saw the image file and thought it was another steg situation but 
 
 
