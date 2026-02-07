@@ -83,4 +83,13 @@ Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2026-02-07 08:52:
 > ```
 
 > [!note]
-> 
+> .txt file revealed the following:
+> ```
+> > ┌──(kali㉿kali)-[~]
+└─$ cat To_agentJ.txt          
+Dear agent J,
+All these alien like photos are fake! Agent R stored the real picture inside your directory. Your login password is somehow stored in the fake picture. It shouldn't be a problem for you.
+From,
+Agent C
+> ```
+> and images were nothing significant
