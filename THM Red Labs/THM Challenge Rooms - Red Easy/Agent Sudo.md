@@ -200,7 +200,7 @@ Session completed.
 > [!note]
 > Managed to extract the file but the file revealed something which doesnt lead to the steg passphrase so unsure where to take it or what to use it on?
 > ```
-┌──(kali㉿kali)-[~/_cutie.png.extracted]
+> ┌──(kali㉿kali)-[~/_cutie.png.extracted]
 └─$ 7z x 8702.zip                                            
 7-Zip 25.01 (x64) : Copyright (c) 1999-2025 Igor Pavlov : 2025-08-03
  64-bit locale=en_US.UTF-8 Threads:2 OPEN_MAX:1024, ASM
@@ -235,4 +235,5 @@ Agent R
 └─$ steghide extract -sf cute-alien.jpg                      
 Enter passphrase: 
 steghide: could not extract any data with that passphrase!
-``
+> ```
+
