@@ -82,4 +82,5 @@ Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2026-02-07 08:52:
 226 Directory send OK.
 > ```
 
-
+> [!note]
+> 
