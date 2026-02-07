@@ -99,5 +99,40 @@ Agent C
 > [!note]
 > OK used claude as I knew what I needed to do and went down a rabbit hole that led me to the ZIP password as follows:
 > ```
-> 
+> ┌──(kali㉿kali)-[~]
+└─$ steghide extract -sf cute-alien.jpg
+Enter passphrase: 
+steghide: could not extract any data with that passphrase!
+                                                                           
+┌──(kali㉿kali)-[~]
+└─$ zsteg cutie.png
+[?] 280 bytes of extra data after image end (IEND), offset = 0x8702
+extradata:0         .. file: Zip archive data, made by v6.3 UNIX, extract using at least v5.1, last modified Oct 29 2019 20:29:12, uncompressed size 86, method=AES Encrypted       
+    00000000: 50 4b 03 04 33 03 01 00  63 00 a6 a3 5d 4f 00 00  |PK..3...c...]O..|
+    00000010: 00 00 62 00 00 00 56 00  00 00 0d 00 0b 00 54 6f  |..b...V.......To|
+    00000020: 5f 61 67 65 6e 74 52 2e  74 78 74 01 99 07 00 02  |_agentR.txt.....|
+    00000030: 00 41 45 01 08 00 46 73  ca e7 14 57 90 45 67 aa  |.AE...Fs...W.Eg.|
+    00000040: 61 c4 cf 3a f9 4e 64 9f  82 7e 59 64 ce 57 5c 5f  |a..:.Nd..~Yd.W\_|
+    00000050: 7a 23 9c 48 fb 99 2c 8e  a8 cb ff e5 1d 03 75 5e  |z#.H..,.......u^|
+    00000060: 0c a8 61 a5 a3 dc ba bf  a6 18 78 4b 85 07 5f 0e  |..a.......xK.._.|
+    00000070: f4 76 c6 da 82 61 80 5b  d0 a4 30 9d b3 88 35 ad  |.v...a.[..0...5.|
+    00000080: 32 61 3e 3d c5 d7 e8 7c  0f 91 c0 b5 e6 4e 49 69  |2a>=...|.....NIi|
+    00000090: f3 82 48 6c b6 76 7a e6  50 4b 01 02 3f 03 33 03  |..Hl.vz.PK..?.3.|
+    000000a0: 01 00 63 00 a6 a3 5d 4f  00 00 00 00 62 00 00 00  |..c...]O....b...|
+    000000b0: 56 00 00 00 0d 00 2f 00  00 00 00 00 00 00 20 80  |V...../....... .|
+    000000c0: a4 81 00 00 00 00 54 6f  5f 61 67 65 6e 74 52 2e  |......To_agentR.|
+    000000d0: 74 78 74 0a 00 20 00 00  00 00 00 01 00 18 00 80  |txt.. ..........|
+    000000e0: 45 77 77 54 8e d5 01 00  65 da d3 54 8e d5 01 00  |EwwT....e..T....|
+    000000f0: 65 da d3 54 8e d5 01 01  99 07 00 02 00 41 45 01  |e..T.........AE.|
+imagedata           .. text: ["+" repeated 9 times]
+chunk:0:IHDR        .. file: Adobe Photoshop Color swatch, version 0, 528 colors; 1st RGB space (0), w 0x210, x 0x803, y 0, z 0; 2nd RGB space (0), w 0, x 0, y 0, z 0                                                           
+chunk:1:PLTE        .. text: "8\">;&@B&A>9RO =:#<A"
+┌──(kali㉿kali)-[~]
+└─$ binwalk -e cutie.png
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+869           0x365           Zlib compressed data, best compression
+WARNING: Extractor.execute failed to run external extractor 'jar xvf '%e'': [Errno 2] No such file or directory: 'jar', 'jar xvf '%e'' might not be installed correctly
+34562         0x8702          Zip archive data, encrypted compressed size: 98, uncompressed size: 86, name: To_agentR.txt
+WARNING: One or more files failed to extract: either no utility was found or it's unimplemented
 > ```
