@@ -12,7 +12,7 @@
 > [!note]
 > Running an nmap scan as follows revealed the relevant open ports:
 > ```
-> ┌──(kali㉿kali)-[~]
+┌──(kali㉿kali)-[~]
 └─$ sudo nmap -p- 10.65.183.121
 [sudo] password for kali: 
 Starting Nmap 7.95 ( https://nmap.org ) at 2026-02-07 08:20 EST
