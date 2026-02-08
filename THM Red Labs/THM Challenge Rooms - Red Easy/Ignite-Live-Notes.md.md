@@ -6,5 +6,5 @@
 > Target ip: 10.66.139.221
 
 > [!info]
-> Ok so Root box is end goal. I need to enumerate. I'll use gobuster/nmap/browse the site
+> Ok Root box is end goal. I need to enumerate. I'll use gobuster/nmap/browse the site for vulns
 
