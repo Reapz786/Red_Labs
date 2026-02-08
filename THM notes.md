@@ -426,4 +426,18 @@ As a note, I find it helpful to talk out the patterns if you’re writing a rule
 
 Jumbo John already has an extensive list of custom rules containing modifiers for use in almost all cases. If you get stuck, try looking at those rules [around line 678] if your syntax isn’t working correctly.
 
-PHP
+PHP code for password complexity example:
+```
+php
+<?php
+$password = $_POST['pass']; // Example1
+$pattern = '/^(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).+$/';
+
+if (preg_match($pattern, $password)) {
+    echo "Password is valid.";
+} else {
+    echo "Password is invalid. It must contain at least one uppercase letter, one number, and one symbol.";
+}
+?>
+```
+
