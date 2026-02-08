@@ -9,9 +9,48 @@
 > Ok Root box is end goal. I need to enumerate. I'll use gobuster/nmap/browse the site for vulns.
 
 > [!note]
-> I ran the following scans and got the following results from nmap/gobuster respectively:
+> I ran the following scans and got the following results from nmap/gobuster/site respectively:
 
+```
+┌──(kali㉿kali)-[~]
+└─$ sudo nmap -A -p- 10.66.139.221 
+[sudo] password for kali: 
+Starting Nmap 7.95 ( https://nmap.org ) at 2026-02-08 04:42 EST
+Nmap scan report for 10.66.139.221
+Host is up (0.084s latency).
+Not shown: 65534 closed tcp ports (reset)
+PORT   STATE SERVICE VERSION
+80/tcp open  http    Apache httpd 2.4.18 ((Ubuntu))
+| http-robots.txt: 1 disallowed entry 
+|_/fuel/
+|_http-server-header: Apache/2.4.18 (Ubuntu)
+|_http-title: Welcome to FUEL CMS
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.95%E=4%D=2/8%OT=80%CT=1%CU=33032%PV=Y%DS=3%DC=T%G=Y%TM=69885B27
+OS:%P=x86_64-pc-linux-gnu)SEQ(SP=101%GCD=1%ISR=109%TI=Z%CI=I%TS=A)SEQ(SP=10
+OS:2%GCD=1%ISR=10C%TI=Z%CI=I%TS=A)SEQ(SP=104%GCD=1%ISR=108%TI=Z%CI=I%TS=A)S
+OS:EQ(SP=104%GCD=1%ISR=10E%TI=Z%CI=I%TS=A)SEQ(SP=106%GCD=1%ISR=10C%TI=Z%CI=
+OS:I%TS=A)OPS(O1=M4E8ST11NW7%O2=M4E8ST11NW7%O3=M4E8NNT11NW7%O4=M4E8ST11NW7%
+OS:O5=M4E8ST11NW7%O6=M4E8ST11)WIN(W1=68DF%W2=68DF%W3=68DF%W4=68DF%W5=68DF%W
+OS:6=68DF)ECN(R=Y%DF=Y%T=40%W=6903%O=M4E8NNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=
+OS:O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD
+OS:=0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0
+OS:%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1
+OS:(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI
+OS:=N%T=40%CD=S)
+
+Network Distance: 3 hops
+
+TRACEROUTE (using port 111/tcp)
+HOP RTT      ADDRESS
+1   83.58 ms 192.168.128.1
+2   ...
+3   83.90 ms 10.66.139.221
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 132.11 seconds
+```
 ```
 
 ```
-
