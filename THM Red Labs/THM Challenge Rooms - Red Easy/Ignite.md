@@ -164,7 +164,10 @@ cat flag.txt
 > [!info]
 > Need to know how to privilege escalate now but I dont know sudo password...
 
-
+> [!note]
+> After trial/error of many types of privilege escalation, I realised the original site contained all the info I need to enumerate further so looking at the following info:
+![](assets/DB%20config%20data.png)
+I was able to determine where I would need to go to find some information and if I didnt, there was still more info on the site to help me enumerate further.
 
 ```
 $ cd ..
