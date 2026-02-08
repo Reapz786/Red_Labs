@@ -87,3 +87,5 @@ Finished
 ===============================================================
 ```
 ![](assets/Fuel%20CMS%20v1.4%20main%20site.png)
+![](assets/robots.txt.png)
+![](assets/login%20with%20base64%20encoded.png)
