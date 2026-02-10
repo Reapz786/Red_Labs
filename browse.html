@@ -1,0 +1,134 @@
+---
+layout: default
+title: All Write-ups
+---
+
+<section class="browse">
+    <div class="container">
+        <header class="browse-header">
+            <h1>All Write-ups</h1>
+            <p class="browse-description">{{ site.writeups.size }} penetration testing challenges documented</p>
+        </header>
+
+        <!-- Filters -->
+        <div class="filters">
+            <div class="filter-group">
+                <label for="difficulty-filter">Difficulty:</label>
+                <select id="difficulty-filter">
+                    <option value="all">All</option>
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label for="platform-filter">Platform:</label>
+                <select id="platform-filter">
+                    <option value="all">All</option>
+                    <option value="THM">TryHackMe</option>
+                    <option value="HTB">HackTheBox</option>
+                </select>
+            </div>
+            
+            <div class="filter-group search-group">
+                <label for="search-input">Search:</label>
+                <input type="text" id="search-input" placeholder="Search write-ups...">
+            </div>
+        </div>
+
+        <!-- Write-ups Grid -->
+        <div class="writeups-grid" id="writeups-grid">
+            {% assign sorted_writeups = site.writeups | sort: 'date' | reverse %}
+            {% for writeup in sorted_writeups %}
+            <a href="{{ writeup.url | relative_url }}" 
+               class="writeup-card" 
+               data-difficulty="{{ writeup.difficulty | default: 'unknown' | downcase }}"
+               data-platform="{{ writeup.platform | default: 'unknown' }}"
+               data-tags="{{ writeup.tags | join: ',' | downcase }}"
+               data-title="{{ writeup.title | downcase }}">
+                <div class="writeup-card-header">
+                    <h3>{{ writeup.title }}</h3>
+                    {% if writeup.difficulty %}
+                    <span class="badge badge-{{ writeup.difficulty | downcase }}">{{ writeup.difficulty }}</span>
+                    {% endif %}
+                </div>
+                
+                {% if writeup.excerpt %}
+                <p class="writeup-excerpt">{{ writeup.excerpt | strip_html | truncatewords: 25 }}</p>
+                {% endif %}
+                
+                {% if writeup.tags %}
+                <div class="writeup-card-tags">
+                    {% for tag in writeup.tags limit:4 %}
+                    <span class="tag-small">{{ tag }}</span>
+                    {% endfor %}
+                </div>
+                {% endif %}
+                
+                <div class="writeup-card-footer">
+                    <span class="read-more">Read more →</span>
+                    {% if writeup.date %}
+                    <span class="date">{{ writeup.date | date: "%b %d, %Y" }}</span>
+                    {% endif %}
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+
+        <div id="no-results" class="no-results" style="display: none;">
+            <p>No write-ups found matching your filters.</p>
+        </div>
+    </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const difficultyFilter = document.getElementById('difficulty-filter');
+    const platformFilter = document.getElementById('platform-filter');
+    const searchInput = document.getElementById('search-input');
+    const writeupCards = document.querySelectorAll('.writeup-card');
+    const noResults = document.getElementById('no-results');
+    const grid = document.getElementById('writeups-grid');
+
+    function filterWriteups() {
+        const difficulty = difficultyFilter.value.toLowerCase();
+        const platform = platformFilter.value;
+        const search = searchInput.value.toLowerCase();
+        
+        let visibleCount = 0;
+
+        writeupCards.forEach(card => {
+            const cardDifficulty = card.dataset.difficulty;
+            const cardPlatform = card.dataset.platform;
+            const cardTitle = card.dataset.title;
+            const cardTags = card.dataset.tags;
+
+            const difficultyMatch = difficulty === 'all' || cardDifficulty === difficulty;
+            const platformMatch = platform === 'all' || cardPlatform === platform;
+            const searchMatch = search === '' || 
+                                cardTitle.includes(search) || 
+                                cardTags.includes(search);
+
+            if (difficultyMatch && platformMatch && searchMatch) {
+                card.style.display = '';
+                visibleCount++;
+            } else {
+                card.style.display = 'none';
+            }
+        });
+
+        if (visibleCount === 0) {
+            grid.style.display = 'none';
+            noResults.style.display = 'block';
+        } else {
+            grid.style.display = 'grid';
+            noResults.style.display = 'none';
+        }
+    }
+
+    difficultyFilter.addEventListener('change', filterWriteups);
+    platformFilter.addEventListener('change', filterWriteups);
+    searchInput.addEventListener('input', filterWriteups);
+});
+</script>
