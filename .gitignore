@@ -7,3 +7,11 @@ $RECYCLE.BIN/
 .obsidian
 **/.obsidian/
 .obsidian/
+# === Jekyll Portfolio Site ===
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+vendor/
+.bundle/
+Gemfile.lock
