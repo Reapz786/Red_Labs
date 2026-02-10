@@ -2,7 +2,7 @@
 > You found a secret server located under the deep sea. Your task is to hack inside the server and reveal the truth.
 > Welcome to another THM exclusive CTF room. Your task is simple, capture the flags just like the other CTF room. Have Fun!
 
-![](assets/Agent%20Sudo.png)
+![](Obsidian%20assets/Agent%20Sudo.png)
 > [!important]
 > Target IP: 10.65.183.121
 
@@ -34,14 +34,14 @@
 
 > [!note]
 > Just put the target IP in firefox and got the answer user-agent:
->![](assets/user-agent%20mainpage.png)
+>![](Obsidian%20assets/user-agent%20mainpage.png)
 
 > [!question]
 > What is the agent name?
 
 > [!note]
 > Had to get a hint and realised user-agent can be amended via firefox so used claude to help on how to change user-agent - noticed agent at bottom was named agent R so they use first letter of name only so logically I would ahve to go to A then B and then got the answer at C
-> ![](assets/Agent%20Chris.png)
+> ![](Obsidian%20assets/Agent%20Chris.png)
 
 > [!info]
 > In the extract above, not only do we learn about the name chris, we know theres a agent J and Chris has a weak password
@@ -92,7 +92,7 @@
 > Agent C
 > ```
 > and images were as follows:
-> ![](assets/Alien%20images.png)
+> ![](Obsidian%20assets/Alien%20images.png)
 > i need to find out if images have anything useful via steganography
 
 > [!note]
@@ -237,7 +237,7 @@
 
 > [!info]
 > Initially thought the message was related to a user (QXJ1YTUx) but it was referring to a place which is Area51:
-> ![](assets/base64%20area51.png)
+> ![](Obsidian%20assets/base64%20area51.png)
 >  and is the steg password also managed to get the answer to the following questions:
 > > [!question]
 > > Who is the other agent (in full name)? & SSH password
@@ -307,7 +307,7 @@
 
 > [!note]
 > Using earlier knowledge about the /bin/bash, i put the following into google to see if any CVE relates to this and it did:
-> ![](assets/binbash%20CVE.png)
+> ![](Obsidian%20assets/binbash%20CVE.png)
 
 > [!question]
 > What is the root flag?
@@ -351,4 +351,4 @@
 
 > [!success]
 > Annoyed about this cause i spent some time trying to crack shadow/passwd, checking google etc. to realise Deskel is Agent R. I thought the R was short for somehting starting with R lol.
-> Anyway the answer is DesKel![](assets/Agent%20Sudo%20completed.png)
+> Anyway the answer is DesKel![](Obsidian%20assets/Agent%20Sudo%20completed.png)
