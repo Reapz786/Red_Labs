@@ -1,6 +1,6 @@
 # Site Configuration
-title: "Reapz786 - Penetration Testing Portfolio"
-description: "Offensive security portfolio documenting penetration testing challenges, exploits, and security research"
+title: "Ehsan Ali - Security Research Portfolio"
+description: "Offensive security portfolio documenting penetration testing work"
 url: "https://reapz786.github.io"
 baseurl: "/THM_Red_Labs"
 
@@ -20,18 +20,16 @@ kramdown:
   syntax_highlighter: rouge
   syntax_highlighter_opts:
     default_lang: bash
+    css_class: 'highlight'
 
-# Collections
-collections:
-  writeups:
-    output: true
-    permalink: /writeups/:path/
+# Include all markdown files from THM Red Labs directories
+include:
+  - "THM Red Labs"
 
-# Defaults
+# Defaults for frontmatter
 defaults:
   - scope:
-      path: ""
-      type: "writeups"
+      path: "THM Red Labs"
     values:
       layout: "writeup"
 
@@ -42,8 +40,13 @@ exclude:
   - Gemfile.lock
   - node_modules
   - vendor
+  - .git
+  - .gitignore
 
 # Plugins
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
+
+# Timezone
+timezone: Europe/London

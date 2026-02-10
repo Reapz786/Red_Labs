@@ -3,11 +3,12 @@ layout: default
 title: All Write-ups
 ---
 
-<section class="browse">
+<section class="writeups-section" style="padding: 3rem 0;">
     <div class="container">
         <header class="browse-header">
             <h1>All Write-ups</h1>
-            <p class="browse-description">{{ site.writeups.size }} penetration testing challenges documented</p>
+            {% assign writeup_files = site.pages | where_exp: "page", "page.path contains 'THM Red Labs'" | where_exp: "page", "page.path contains '.md'" %}
+            <p style="color: var(--text-secondary); font-size: 1.125rem;">{{ writeup_files.size }} penetration testing challenges documented</p>
         </header>
 
         <!-- Filters -->
@@ -31,7 +32,7 @@ title: All Write-ups
                 </select>
             </div>
             
-            <div class="filter-group search-group">
+            <div class="filter-group" style="flex: 2;">
                 <label for="search-input">Search:</label>
                 <input type="text" id="search-input" placeholder="Search write-ups...">
             </div>
@@ -39,44 +40,42 @@ title: All Write-ups
 
         <!-- Write-ups Grid -->
         <div class="writeups-grid" id="writeups-grid">
-            {% assign sorted_writeups = site.writeups | sort: 'date' | reverse %}
-            {% for writeup in sorted_writeups %}
-            <a href="{{ writeup.url | relative_url }}" 
+            {% assign sorted_pages = writeup_files | sort: 'date' | reverse %}
+            {% for page in sorted_pages %}
+            <a href="{{ page.url | relative_url }}" 
                class="writeup-card" 
-               data-difficulty="{{ writeup.difficulty | default: 'unknown' | downcase }}"
-               data-platform="{{ writeup.platform | default: 'unknown' }}"
-               data-tags="{{ writeup.tags | join: ',' | downcase }}"
-               data-title="{{ writeup.title | downcase }}">
-                <div class="writeup-card-header">
-                    <h3>{{ writeup.title }}</h3>
-                    {% if writeup.difficulty %}
-                    <span class="badge badge-{{ writeup.difficulty | downcase }}">{{ writeup.difficulty }}</span>
+               data-difficulty="{{ page.difficulty | default: 'unknown' | downcase }}"
+               data-platform="{{ page.platform | default: 'unknown' }}"
+               data-tags="{{ page.tags | join: ',' | downcase }}"
+               data-title="{{ page.title | default: page.name | remove: '.md' | downcase }}">
+                <div class="writeup-header">
+                    <h3 class="writeup-title">{{ page.title | default: page.name | remove: '.md' }}</h3>
+                    {% if page.difficulty %}
+                    <span class="badge badge-{{ page.difficulty | downcase }}">{{ page.difficulty }}</span>
                     {% endif %}
                 </div>
                 
-                {% if writeup.excerpt %}
-                <p class="writeup-excerpt">{{ writeup.excerpt | strip_html | truncatewords: 25 }}</p>
-                {% endif %}
+                <div class="writeup-meta">
+                    {% if page.platform %}
+                    <span>{{ page.platform }}</span>
+                    {% endif %}
+                    {% if page.date %}
+                    <span>• {{ page.date | date: "%b %d, %Y" }}</span>
+                    {% endif %}
+                </div>
                 
-                {% if writeup.tags %}
-                <div class="writeup-card-tags">
-                    {% for tag in writeup.tags limit:4 %}
-                    <span class="tag-small">{{ tag }}</span>
+                {% if page.tags %}
+                <div class="writeup-tags">
+                    {% for tag in page.tags limit:5 %}
+                    <span class="tag">{{ tag }}</span>
                     {% endfor %}
                 </div>
                 {% endif %}
-                
-                <div class="writeup-card-footer">
-                    <span class="read-more">Read more →</span>
-                    {% if writeup.date %}
-                    <span class="date">{{ writeup.date | date: "%b %d, %Y" }}</span>
-                    {% endif %}
-                </div>
             </a>
             {% endfor %}
         </div>
 
-        <div id="no-results" class="no-results" style="display: none;">
+        <div id="no-results" style="display: none; text-align: center; padding: 3rem; color: var(--text-muted);">
             <p>No write-ups found matching your filters.</p>
         </div>
     </div>
