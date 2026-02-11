@@ -97,7 +97,10 @@ Finished
 > [!info]
 > before getting into the site section as its a lot of enumeration I did, nmap revealed only 1 port available which was port 80 and gobuster revealed a few filepaths to try so I included them below and will review them with more information.
 ![](assets/Fuel%20CMS%20v1.4%20main%20site.png)
+
 ![](assets/robots.txt.png)
+
+
 ![](assets/login%20with%20base64%20encoded.png)
 ![](assets/Pasted%20image%2020260208095840.png)
 ![](assets/admin%20login.png)
