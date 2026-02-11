@@ -125,4 +125,31 @@ Finished
 ![](Obsidian%20assets/Pagesource.png)
 
 > [!note]
-> so using Nikto revealed 4 O
+> so using Nikto revealed 4 OSVDB's which include a Apache default file and a /files directory
+
+```
+root@ip-10-64-88-17:~# nikto -h 10.64.145.68
+- Nikto v2.1.5
+---------------------------------------------------------------------------
++ Target IP:          10.64.145.68
++ Target Hostname:    10.64.145.68
++ Target Port:        80
++ Start Time:         2026-02-11 18:34:52 (GMT0)
+---------------------------------------------------------------------------
++ Server: Apache/2.4.18 (Ubuntu)
++ Server leaks inodes via ETags, header found with file /, fields: 0x328 0x5b3e1b06be884 
++ The anti-clickjacking X-Frame-Options header is not present.
++ No CGI Directories found (use '-C all' to force check all possible dirs)
++ Allowed HTTP Methods: GET, HEAD, POST, OPTIONS 
++ OSVDB-3268: /files/: Directory indexing found.
++ OSVDB-3092: /files/: This might be interesting...
++ OSVDB-3233: /icons/README: Apache default file found.
++ 6544 items checked: 0 error(s) and 6 item(s) reported on remote host
++ End Time:           2026-02-11 18:35:02 (GMT0) (10 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
+```
+
+> [!info]
+> With the initial enumeration done, I can proceed enumeration with /files as a potential attack vector so lets see where that leads us.
+
