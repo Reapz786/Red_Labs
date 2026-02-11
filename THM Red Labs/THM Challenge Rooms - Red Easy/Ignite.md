@@ -102,8 +102,13 @@ Finished
 
 
 ![](assets/login%20with%20base64%20encoded.png)
+
+
 ![](assets/Pasted%20image%2020260208095840.png)
+
+
 ![](assets/admin%20login.png)
+
 >
 > As you can see, I am in with admin:admin already but i need to get a reverse shell to be able to get user & root flag as Fuel CMS version is 1.4 and CVE-2018-16763 targets this with RCE.
 
@@ -172,8 +177,12 @@ cat flag.txt
 
 > [!note]
 > After trial/error of many types of privilege escalation, I realised the original site contained all the info I need to enumerate further so looking at the following info:
+> 
+
 ![](assets/DB%20config%20data.png)
-I was able to determine where I would need to go to find some information and if I didnt, there was still more info on the site to help me enumerate further.
+
+> [!note]
+> I was able to determine where I would need to go to find some information and if I didnt, there was still more info on the site to help me enumerate further.
 
 ```
 $ cd fuel
