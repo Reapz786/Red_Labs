@@ -21,3 +21,100 @@ date: 2026-02-11
 
 > [!note]
 > Lets show the nmap scan first - i did a scan across all ports and then did a aggresive scan after seeing only 3 open ports - ftp, ssh & http.
+
+```
+root@ip-10-64-88-17:~# sudo nmap 10.64.145.68 -p-
+sudo: unable to resolve host ip-10-64-88-17: Name or service not known
+Starting Nmap 7.80 ( https://nmap.org ) at 2026-02-11 18:25 GMT
+mass_dns: warning: Unable to open /etc/resolv.conf. Try using --system-dns or specify valid servers with --dns-servers
+mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
+Nmap scan report for 10.64.145.68
+Host is up (0.00044s latency).
+Not shown: 65532 closed ports
+PORT   STATE SERVICE
+21/tcp open  ftp
+22/tcp open  ssh
+80/tcp open  http
+
+Nmap done: 1 IP address (1 host up) scanned in 3.70 seconds
+root@ip-10-64-88-17:~# sudo nmap 10.64.145.68 -A
+sudo: unable to resolve host ip-10-64-88-17: Name or service not known
+Starting Nmap 7.80 ( https://nmap.org ) at 2026-02-11 18:26 GMT
+mass_dns: warning: Unable to open /etc/resolv.conf. Try using --system-dns or specify valid servers with --dns-servers
+mass_dns: warning: Unable to determine any DNS servers. Reverse DNS is disabled. Try using --system-dns or specify valid servers with --dns-servers
+Nmap scan report for 10.64.145.68
+Host is up (0.00057s latency).
+Not shown: 997 closed ports
+PORT   STATE SERVICE VERSION
+21/tcp open  ftp     vsftpd 3.0.3
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+| drwxrwxrwx    2 65534    65534        4096 Nov 12  2020 ftp [NSE: writeable]
+| -rw-r--r--    1 0        0          251631 Nov 12  2020 important.jpg
+|_-rw-r--r--    1 0        0             208 Nov 12  2020 notice.txt
+| ftp-syst: 
+|   STAT: 
+| FTP server status:
+|      Connected to 10.64.88.17
+|      Logged in as ftp
+|      TYPE: ASCII
+|      No session bandwidth limit
+|      Session timeout in seconds is 300
+|      Control connection is plain text
+|      Data connections will be plain text
+|      At session startup, client count was 3
+|      vsFTPd 3.0.3 - secure, fast, stable
+|_End of status
+22/tcp open  ssh     OpenSSH 7.2p2 Ubuntu 4ubuntu2.10 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 b9:a6:0b:84:1d:22:01:a4:01:30:48:43:61:2b:ab:94 (RSA)
+|   256 ec:13:25:8c:18:20:36:e6:ce:91:0e:16:26:eb:a2:be (ECDSA)
+|_  256 a2:ff:2a:72:81:aa:a2:9f:55:a4:dc:92:23:e6:b4:3f (ED25519)
+80/tcp open  http    Apache httpd 2.4.18 ((Ubuntu))
+|_http-server-header: Apache/2.4.18 (Ubuntu)
+|_http-title: Maintenance
+Device type: general purpose
+Running: Linux 3.X
+OS CPE: cpe:/o:linux:linux_kernel:3
+OS details: Linux 3.10 - 3.13
+Network Distance: 1 hop
+Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT     ADDRESS
+1   0.56 ms 10.64.145.68
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 9.69 seconds
+```
+
+> [!note]
+> Ran gobuster and found a /files to access which seems suspect AF so ill explore this after I am happy with the level of enumeration i've done
+
+```
+root@ip-10-64-88-17:~# gobuster dir -u http://10.64.145.68:80/ -w /usr/share/wordlists/dirb/common.txt
+===============================================================
+Gobuster v3.6
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://10.64.145.68:80/
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                /usr/share/wordlists/dirb/common.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.6
+[+] Timeout:                 10s
+===============================================================
+Starting gobuster in directory enumeration mode
+===============================================================
+/.htpasswd            (Status: 403) [Size: 277]
+/.hta                 (Status: 403) [Size: 277]
+/.htaccess            (Status: 403) [Size: 277]
+/files                (Status: 301) [Size: 312] [--> http://10.64.145.68/files/]
+/index.html           (Status: 200) [Size: 808]
+/server-status        (Status: 403) [Size: 277]
+Progress: 4614 / 4615 (99.98%)
+===============================================================
+Finished
+===============================================================
+```
+
