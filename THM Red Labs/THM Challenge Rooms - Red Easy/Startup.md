@@ -217,3 +217,16 @@ DECIMAL       HEXADECIMAL     DESCRIPTION
 
 ![](Obsidian%20assets/INCEPTION.png)
 
+```
+root@ip-10-64-88-17:~/Downloads# ls -la
+total 368
+drwxr-xr-x  3 root root   4096 Feb 11 19:19 .
+drwxr-xr-x 51 root root   4096 Feb 11 18:31 ..
+-rw-r--r--  1 root root 251631 Feb 11 18:38 important.png
+drwxr-xr-x  2 root root   4096 Feb 11 19:19 _important.png.extracted
+-rw-r--r--  1 root root   1801 Nov 19  2024 owasp_zap_root_ca.cer
+-rw-r--r--  1 root root 102777 Feb 11 19:07 zsteg_output.txt
+root@ip-10-64-88-17:~/Downloads# ls _important.png.extracted/
+39  39.zlib
+```
+
