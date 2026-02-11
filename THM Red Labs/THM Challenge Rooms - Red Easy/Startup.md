@@ -167,4 +167,12 @@ b4,rgb,lsb,xy       .. text: "Uwwwwwwwwwwww"
 ```
 
 > [!info]
-> OK, not sure what files i 
+> OK, not sure what files this relates to but was advised online to use -a for an aggressive scan.
+
+> [!note]
+> Ran the aggresive scan but a whole of content came out so had to redirect into a readable file
+
+```
+zsteg -a important.png > zsteg_output.txt
+```
+
