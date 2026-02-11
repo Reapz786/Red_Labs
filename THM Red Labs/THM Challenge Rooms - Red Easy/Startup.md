@@ -17,4 +17,5 @@ date: 2026-02-11
 > Target IP: 10.64.145.68
 
 > [!info]
-> Ok will run the usual scans of nmap/gobuster but will look to try Nikto which is a recent t
+> Ok will run the usual scans of nmap/gobuster but will look to try Nikto which is a recent tool I learnt about so lets go!
+
