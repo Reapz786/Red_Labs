@@ -155,3 +155,6 @@ root@ip-10-64-88-17:~# nikto -h 10.64.145.68
 
 ![](Obsidian%20assets/AmongUs.png)
 
+> [!note]
+> Funny images aside, I'm betting the image has something to show me via steganography...
+> Lets run some CMDs to reveal the hidden fies/text with 
