@@ -176,3 +176,18 @@ b4,rgb,lsb,xy       .. text: "Uwwwwwwwwwwww"
 zsteg -a important.png > zsteg_output.txt
 ```
 
+> [!note]
+> Random text here and there so I'll just add what I think is key info for now.
+
+```
+b5p,abgr,msb,xy     .. file: old packed data
+
+b6,r,lsb,xy         .. text: "YvYavZEw"
+b6p,r,lsb,xy        .. text: "````````yab`"
+b6p,rgb,lsb,xy      .. text: "````````````````ze`e`Z`p"
+b6p,abgr,msb,xy     .. text: ["?" repeated 16 times]
+b7p,r,msb,xy        .. text: ["\r" repeated 8 times]
+b7p,rgb,msb,xy      .. text: "\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r="
+b7p,abgr,msb,xy     .. file: RDI Acoustic Doppler Current Profiler (ADCP)
+
+```
