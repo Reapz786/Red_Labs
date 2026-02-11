@@ -153,3 +153,5 @@ root@ip-10-64-88-17:~# nikto -h 10.64.145.68
 > [!info]
 > With the initial enumeration done, I can proceed enumeration with /files as a potential attack vector so lets see where that leads us.
 
+![](Obsidian%20assets/AmongUs.png)
+
