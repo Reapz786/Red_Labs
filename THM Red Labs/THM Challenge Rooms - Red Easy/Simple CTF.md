@@ -1,3 +1,11 @@
+---
+title: "Simple CTF"
+difficulty: Easy
+platform: THM
+tags: [Web Exploitation, Linux, SQL Injection]
+tools: [Nmap, Gobuster, Python, Metasploit]
+date: 2026-02-01
+---
 Deploy the machine and attempt the questions!
 
 The main goal here is to learn as much as possible. 
