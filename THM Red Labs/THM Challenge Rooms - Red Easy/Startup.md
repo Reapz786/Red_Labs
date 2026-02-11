@@ -201,5 +201,5 @@ b4,b,lsb,XY,prime   .. text: "lC33P54z"
 ```
 
 > [!info]
-> Looking online and its apparently just false positives but key info like file types is ket like zip or whatever similar to enum further.
+> Looking online and its apparently just false positives but key info like file types is like zip or whatever similar to enum further.
 
