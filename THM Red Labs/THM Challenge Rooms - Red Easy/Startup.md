@@ -19,3 +19,5 @@ date: 2026-02-11
 > [!info]
 > Ok will run the usual scans of nmap/gobuster but will look to try Nikto which is a recent tool I learnt about so lets go!
 
+> [!note]
+> Lets show the nmap scan first - i did a scan across all ports and then did a aggresive scan after seeing only 3 open ports - ftp, ssh & http.
