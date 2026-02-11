@@ -203,3 +203,14 @@ b4,b,lsb,XY,prime   .. text: "lC33P54z"
 > [!info]
 > Looking online and its apparently just false positives but key info like file types is like zip or whatever similar to enum further.
 
+```
+root@ip-10-64-88-17:~/Downloads# binwalk -e important.png
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+0             0x0             PNG image, 735 x 458, 8-bit/color RGBA, non-interlaced
+57            0x39            Zlib compressed data, compressed
+```
+
+> [!note]
+> Using knowledge from Agent Sudo CTF, I was able to determine binwalk the correct tool to use and find hidden files like a PNG and a Zlib - so it was a PNG 
