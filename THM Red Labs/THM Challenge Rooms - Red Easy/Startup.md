@@ -157,4 +157,8 @@ root@ip-10-64-88-17:~# nikto -h 10.64.145.68
 
 > [!note]
 > Funny images aside, I'm betting the image has something to show me via steganography...
-> Lets run some CMDs to reveal the hidden fies/text with 
+> Lets run some CMDs to reveal the hidden fies/text with zsteg as its a .png file
+
+```
+
+```
