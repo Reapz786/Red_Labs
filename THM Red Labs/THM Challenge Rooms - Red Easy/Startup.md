@@ -213,4 +213,7 @@ DECIMAL       HEXADECIMAL     DESCRIPTION
 ```
 
 > [!note]
-> Using knowledge from Agent Sudo CTF, I was able to determine binwalk the correct tool to use and find hidden files like a PNG and a Zlib - so it was a PNG 
+> Using knowledge from Agent Sudo CTF, I was able to determine binwalk the correct tool to use and find hidden files like a PNG and a Zlib - so it was a PNG within a PNG! INCEPTION!
+
+![](Obsidian%20assets/INCEPTION.png)
+
