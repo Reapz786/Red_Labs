@@ -247,5 +247,12 @@ _important.png.extracted/39: empty
 
 > [!info]
 > Anyways I decided to cheat by looking at a hint which said:
+> 
 > FTP and HTTP. What could possibly go wrong?
+> 
+>The way they phrased that hint was to suggest they are linked but obviously I know they are insecure ports.
+
+
+
+
 
