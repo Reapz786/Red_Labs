@@ -160,5 +160,11 @@ root@ip-10-64-88-17:~# nikto -h 10.64.145.68
 > Lets run some CMDs to reveal the hidden fies/text with zsteg as its a .png file
 
 ```
-
+root@ip-10-64-88-17:~/Downloads# zsteg important.png 
+imagedata           .. file: SVR2 pure executable (USS/370)
+chunk:0:IHDR        .. file: dBase III DBT, version number 0, next free block index 3741450240
+b4,rgb,lsb,xy       .. text: "Uwwwwwwwwwwww"
 ```
+
+> [!info]
+> OK, not sure what files i 
