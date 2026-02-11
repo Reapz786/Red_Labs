@@ -119,4 +119,10 @@ Finished
 ```
 
 > [!note]
-> Inspecting the webpage didnt reveal 
+> Inspecting the webpage page source didnt reveal much even the contact us didnt reveal much.
+> 
+
+![](Obsidian%20assets/Pagesource.png)
+
+> [!note]
+> so using Nikto revealed 4 O
