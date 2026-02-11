@@ -8,11 +8,11 @@ permalink: /htb-labs/
     <div class="container">
         <header class="browse-header" style="text-align: center; margin-bottom: var(--spacing-xl);">
             <h1 style="font-size: 2.5rem; margin-bottom: var(--spacing-sm);">HackTheBox Labs</h1>
-            {% assign htb_writeups = site.pages | where_exp: "page", "page.path contains 'HTB Labs'" | where_exp: "page", "page.path contains '.md'" %}
+            {% assign htb_writeups = site.pages | where_exp: "page", "page.path contains 'HTB Labs'" | where_exp: "page", "page.path contains '.md'" | where_exp: "page", "page.name != 'index.md'" %}
             <p style="color: var(--text-secondary); font-size: 1.125rem;">{{ htb_writeups.size }} penetration testing challenges documented</p>
         </header>
 
-        <!-- Filters -->
+        <!-- Filters (same as THM) -->
         <div class="filters" style="display: flex; flex-wrap: wrap; gap: var(--spacing-md); margin-bottom: var(--spacing-xl); padding: var(--spacing-lg); background: var(--bg-secondary); border-radius: 8px; border: 1px solid var(--border-color);">
             <div class="filter-group" style="flex: 1; min-width: 150px;">
                 <label for="difficulty-filter" style="font-size: 0.875rem; font-weight: 600; color: var(--text-secondary); display: block; margin-bottom: 0.5rem;">Difficulty:</label>

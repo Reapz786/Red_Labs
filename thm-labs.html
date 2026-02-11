@@ -8,7 +8,7 @@ permalink: /thm-labs/
     <div class="container">
         <header class="browse-header" style="text-align: center; margin-bottom: var(--spacing-xl);">
             <h1 style="font-size: 2.5rem; margin-bottom: var(--spacing-sm);">TryHackMe Red Labs</h1>
-            {% assign thm_writeups = site.pages | where_exp: "page", "page.path contains 'THM Red Labs'" | where_exp: "page", "page.path contains '.md'" %}
+            {% assign thm_writeups = site.pages | where_exp: "page", "page.path contains 'THM Red Labs'" | where_exp: "page", "page.path contains '.md'" | where_exp: "page", "page.name != 'index.md'" %}
             <p style="color: var(--text-secondary); font-size: 1.125rem;">{{ thm_writeups.size }} penetration testing challenges documented</p>
         </header>
 

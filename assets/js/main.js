@@ -1,9 +1,12 @@
-// Enhanced Portfolio JavaScript with Slow Animations
+// Enhanced Portfolio JavaScript - Fixed Counter Reset Issue
 
 document.addEventListener('DOMContentLoaded', function() {
     
-    // ===== Very Slow Counter Animation (6 seconds) =====
-    function animateCounter(element, target, duration = 6000) {
+    // Track if counters have already animated (PREVENT RESET)
+    const animatedCounters = new Set();
+    
+    // ===== Very Slow Counter Animation (5 seconds) =====
+    function animateCounter(element, target, duration = 5000) {
         const start = 0;
         const increment = target / (duration / 16);
         let current = start;
@@ -19,46 +22,42 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 16);
     }
     
-    // ===== Expandable Stats =====
+    // ===== Expandable Stats (NO COUNTER RESET) =====
     const statExpandables = document.querySelectorAll('.stat-expandable');
     
     statExpandables.forEach((stat, index) => {
         const header = stat.querySelector('.stat-header');
+        const number = stat.querySelector('.stat-number');
         
         // Staggered reveal on page load
         setTimeout(() => {
             stat.classList.add('visible');
         }, index * 200);
         
-        // Click to expand
+        // Animate counter ONCE on page load (NOT on expand)
+        if (number && number.dataset.target) {
+            const target = parseInt(number.dataset.target);
+            const counterId = number.closest('.stat-expandable').getAttribute('data-stat-id') || `stat-${index}`;
+            
+            if (!animatedCounters.has(counterId)) {
+                setTimeout(() => {
+                    animateCounter(number, target, 5000);
+                    animatedCounters.add(counterId);
+                }, 1000 + (index * 500));
+            }
+        }
+        
+        // Click to expand (DON'T re-animate counter)
         if (header) {
             header.addEventListener('click', function() {
                 stat.classList.toggle('expanded');
-                
-                // Trigger counter animation when expanded
-                if (stat.classList.contains('expanded')) {
-                    const number = stat.querySelector('.stat-number');
-                    if (number && number.dataset.target) {
-                        const target = parseInt(number.dataset.target);
-                        number.textContent = '0';
-                        setTimeout(() => animateCounter(number, target, 6000), 300);
-                    }
-                }
+                // Counter stays at its value, no re-animation
             });
         }
     });
     
-    // ===== Auto-count stats on page load =====
-    const statNumbers = document.querySelectorAll('.stat-number[data-target]');
-    statNumbers.forEach((number, index) => {
-        const target = parseInt(number.dataset.target);
-        setTimeout(() => {
-            animateCounter(number, target, 6000);
-        }, 1000 + (index * 500));
-    });
-    
     // ===== Typing Effect (4 seconds) =====
-    function typeText(element, text, speed = 100) {
+    function typeText(element, text, speed = 60) {
         let i = 0;
         element.textContent = '';
         
@@ -79,15 +78,20 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(() => typeText(typeElement, text, 60), 800);
     }
     
-    // ===== Smooth Scroll =====
+    // ===== Smooth Scroll with Offset =====
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
+            const targetId = this.getAttribute('href').substring(1);
+            const target = document.getElementById(targetId);
+            
             if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
+                const navHeight = document.querySelector('.nav').offsetHeight;
+                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 20;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
                 });
             }
         });
@@ -121,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (currentPath === href || 
             (href.includes('thm') && currentPath.includes('thm')) ||
             (href.includes('htb') && currentPath.includes('htb')) ||
-            (currentPath === '/' + window.location.pathname.split('/')[1] + '/' && href === '/')) {
+            (currentPath === window.location.pathname.split('/')[1] + '/' && href.includes('index'))) {
             link.classList.add('active');
         }
     });
@@ -132,22 +136,29 @@ document.addEventListener('DOMContentLoaded', function() {
         button.classList.add('glow-effect');
     });
     
-});
-
-// ===== Helper: Format Date Properly =====
-function formatRelativeTime(dateString) {
-    const date = new Date(dateString);
-    const now = new Date();
-    const diffTime = Math.abs(now - date);
-    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+    // ===== Process Callouts (Add data attributes for ALL types) =====
+    document.querySelectorAll('.writeup-content blockquote').forEach(blockquote => {
+        const firstP = blockquote.querySelector('p:first-child');
+        if (firstP) {
+            const text = firstP.textContent;
+            // Match [!type] with any capitalization
+            const match = text.match(/\[!(\w+)\]/i);
+            if (match) {
+                const type = match[1].toLowerCase();
+                blockquote.setAttribute('data-callout', type);
+                // Remove the [!type] marker from visible text
+                firstP.innerHTML = firstP.innerHTML.replace(/\[!\w+\]\s*/i, '');
+                // Add a styled label
+                const label = document.createElement('strong');
+                label.style.display = 'block';
+                label.style.marginBottom = '0.5rem';
+                label.style.textTransform = 'uppercase';
+                label.style.fontSize = '0.85rem';
+                label.style.opacity = '0.9';
+                label.textContent = type;
+                firstP.insertBefore(label, firstP.firstChild);
+            }
+        }
+    });
     
-    if (diffDays === 0) return 'Today';
-    if (diffDays === 1) return '1 day ago';
-    if (diffDays < 30) return `${diffDays} days ago`;
-    if (diffDays < 365) {
-        const months = Math.floor(diffDays / 30);
-        return `${months} month${months > 1 ? 's' : ''} ago`;
-    }
-    const years = Math.floor(diffDays / 365);
-    return `${years} year${years > 1 ? 's' : ''} ago`;
-}
+});
