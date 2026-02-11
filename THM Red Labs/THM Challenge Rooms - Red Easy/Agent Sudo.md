@@ -1,3 +1,11 @@
+---
+title: "Agent Sudo"
+difficulty: Easy
+platform: THM
+tags: [Linux, Privilege Escalation, Sudo Exploitation, Steganography, Brute Force]
+tools: [Nmap, Hydra, Binwalk, Steghide, John, SSH, Sudo]
+date: 2026-02-01
+---
 > [!info]
 > You found a secret server located under the deep sea. Your task is to hack inside the server and reveal the truth.
 > Welcome to another THM exclusive CTF room. Your task is simple, capture the flags just like the other CTF room. Have Fun!
