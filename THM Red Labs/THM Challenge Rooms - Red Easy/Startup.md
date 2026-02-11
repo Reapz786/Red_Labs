@@ -230,3 +230,6 @@ root@ip-10-64-88-17:~/Downloads# ls _important.png.extracted/
 39  39.zlib
 ```
 
+> [!note]
+> got a zlib file it seems but can still be a false positive so best to extract and see whats going on with it.
+
