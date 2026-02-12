@@ -343,5 +343,20 @@ drwxrwxrwx    2 65534    65534        4096 Nov 12  2020 ftp
 > Back to it! Decided to look at the image after realising it was a jpg file! which according to steghide cmd is not a supported format so found out its a data type file.
 
 ```
-
+root@ip-10-67-86-193:~# steghide extract -sf important.jpg 
+Enter passphrase: 
+steghide: the file format of the file "important.jpg" is not supported.
+root@ip-10-67-86-193:~# file important.jpg 
+important.jpg: data
+root@ip-10-67-86-193:~# exiftool important.jpg
+ExifTool Version Number         : 11.88
+File Name                       : important.jpg
+Directory                       : .
+File Size                       : 246 kB
+File Modification Date/Time     : 2026:02:12 18:01:46+00:00
+File Access Date/Time           : 2026:02:12 18:02:57+00:00
+File Inode Change Date/Time     : 2026:02:12 18:01:46+00:00
+File Permissions                : rw-r--r--
+Error                           : File format error
 ```
+
