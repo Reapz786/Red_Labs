@@ -606,3 +606,6 @@ THM{03ce3d619b80ccbfb3b7fc81e46c0e79}
 > [!important]
 > What are the contents of root.txt?
 
+> [!info]
+> We are in as lennie but what else can we explore to get PE?
+
