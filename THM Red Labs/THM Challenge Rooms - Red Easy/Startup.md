@@ -450,3 +450,5 @@ ftp> ls
 226 Directory send OK.
 ```
 
+> [!info]
+> I put in target ip instead of AM IP - haven't executed cmd yet cause of 
