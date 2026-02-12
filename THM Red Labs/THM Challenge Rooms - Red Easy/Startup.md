@@ -340,4 +340,8 @@ drwxrwxrwx    2 65534    65534        4096 Nov 12  2020 ftp
 > OK, officially confused...I already have these files. Maybe I didn't enumerate the files before properly?
 
 > [!info]
-> Back
+> Back to it! Decided to look at the image after realising it was a jpg file! which according to steghide cmd it contains a passphrase.
+
+```
+
+```
