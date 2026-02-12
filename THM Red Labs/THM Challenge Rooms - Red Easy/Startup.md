@@ -575,4 +575,10 @@ root@ip-10-67-86-193:~# wireshark sus.pcap
 > First code block is what is setup using NetCat to extract file and on Attack machine code block, i setup nc listener and had it redirect to local file and now going to use wireshark to investigate.
 
 > [!note]
-> Did basic check for http traffic etc. and couldn't find anything so decided to look for keyword st
+> Did basic check for http traffic etc. and couldn't find anything so decided to look for keyword string like 'password' using: frame contains "password" in the search filter and got the following:
+
+![](Obsidian%20assets/password%20string%20wireshark.png)
+> [!note]
+> Followed the TCP stream which led to an interesting password reveal but not sure for what yet however did see previously a user called lennie so he might have the user.txt.
+
+![](Obsidian%20assets/Lennie%20PW.png)
