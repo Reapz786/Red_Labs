@@ -585,3 +585,24 @@ root@ip-10-67-86-193:~# wireshark sus.pcap
 > [!note]
 > From previous enumeration of the wireshark pcap, it was called suspicious because there was alreayd someone else who setup a reverse shell and seems like they didnt get far but we have a string that we can try with lennie.
 
+```
+www-data@startup:/incidents$ su lennie
+su lennie
+Password: c4ntg3t3n0ughsp1c3
+
+lennie@startup:/incidents$ cd ~
+cd ~
+lennie@startup:~$ pwd
+pwd
+/home/lennie
+lennie@startup:~$ ls
+ls
+Documents  scripts  user.txt
+lennie@startup:~$ cat user.txt	
+cat user.txt
+THM{03ce3d619b80ccbfb3b7fc81e46c0e79}
+```
+
+> [!important]
+> What are the contents of root.txt?
+
