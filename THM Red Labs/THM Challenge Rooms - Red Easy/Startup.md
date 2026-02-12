@@ -379,3 +379,42 @@ local: test.txt remote: test.txt
 553 Could not create file.
 ```
 
+> [!note]
+> Managed to see ftp as a viable option to go into to upload reverse shell and tested this aswell with PHP code:
+
+```
+ftp> ls -la
+200 PORT command successful. Consider using PASV.
+150 Here comes the directory listing.
+drwxr-xr-x    3 65534    65534        4096 Nov 12  2020 .
+drwxr-xr-x    3 65534    65534        4096 Nov 12  2020 ..
+-rw-r--r--    1 0        0               5 Nov 12  2020 .test.log
+drwxrwxrwx    2 65534    65534        4096 Nov 12  2020 ftp
+-rw-r--r--    1 0        0          251631 Nov 12  2020 important.jpg
+-rw-r--r--    1 0        0             208 Nov 12  2020 notice.txt
+226 Directory send OK.
+ftp> cd ftp
+250 Directory successfully changed.
+ftp> ls
+200 PORT command successful. Consider using PASV.
+150 Here comes the directory listing.
+226 Directory send OK.
+ftp> put test.php
+local: test.php remote: test.php
+200 PORT command successful. Consider using PASV.
+150 Ok to send data.
+226 Transfer complete.
+21 bytes sent in 0.03 secs (0.6576 kB/s)
+ftp> ls
+200 PORT command successful. Consider using PASV.
+150 Here comes the directory listing.
+-rwxrwxr-x    1 112      118            20 Feb 12 18:37 test.php
+226 Directory send OK.
+```
+
+> [!info]
+> Need to upload a reverse php shell script so plenty to find online but looked on pentest monkey:
+
+```
+
+```
