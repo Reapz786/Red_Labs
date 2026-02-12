@@ -11,14 +11,14 @@ title: Home
                 <!-- Hero Text -->
                 <h1 class="hero-name">EHSAN ALI</h1>
                 <div class="hero-tagline">
-                    <span class="hero-tagline-line type-effect">I break systems and write about it.</span>
-                    <span class="hero-tagline-line">Here's the proof.</span>
+                    <span class="hero-tagline-line type-line-1" data-text="I break systems and write about it."></span>
+                    <span class="hero-tagline-line type-line-2" data-text="Here's the proof."></span>
                 </div>
                 
                 <!-- Expandable Stats -->
                 <div class="stats-section">
                     {% assign thm_pages = site.pages | where_exp: "page", "page.path contains 'THM Red Labs'" | where_exp: "page", "page.path contains '.md'" | where_exp: "page", "page.name != 'index.md'" %}
-                    {% assign htb_pages = site.pages | where_exp: "page", "page.path contains 'HTB Labs'" | where_exp: "page", "page.path contains '.md'" | where_exp: "page", "page.name != 'index.md'" %}
+                    {% assign htb_pages = site.pages | where_exp: "page", "page.path contains 'HTB Red Labs'" | where_exp: "page", "page.path contains '.md'" | where_exp: "page", "page.name != 'index.md'" %}
                     {% assign all_writeups = thm_pages | concat: htb_pages %}
                     {% assign total_writeups = all_writeups.size %}
                     

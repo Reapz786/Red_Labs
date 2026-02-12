@@ -260,6 +260,11 @@ body::before {
 .hero-tagline-line {
     display: block;
     margin-bottom: 0.75rem;
+    opacity: 0; /* Hidden until typing starts */
+}
+
+.hero-tagline-line.typing {
+    opacity: 1; /* Visible when typing */
 }
 
 /* ===== Expandable Stats ===== */

@@ -56,10 +56,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // ===== Enhanced Typing Effect with Scroll Trigger =====
-    function typeText(element, text, speed = 60) {
+    // ===== Enhanced Typing Effect with Sequential and Scroll Trigger =====
+    function typeText(element, text, speed = 60, callback) {
         let i = 0;
         element.textContent = '';
+        element.classList.add('typing');
         element.style.opacity = '1';
         
         function type() {
@@ -67,6 +68,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 element.textContent += text.charAt(i);
                 i++;
                 setTimeout(type, speed);
+            } else if (callback) {
+                callback(); // Call callback when done
             }
         }
         
@@ -76,14 +79,26 @@ document.addEventListener('DOMContentLoaded', function() {
     // Check if mobile (for scroll trigger)
     const isMobile = window.innerWidth <= 1024;
     
-    // Hero text (always types on load)
-    const typeElement = document.querySelector('.type-effect');
-    if (typeElement) {
-        const text = typeElement.textContent;
-        setTimeout(() => typeText(typeElement, text, 60), 800);
+    // ===== Hero text typing (BOTH LINES) =====
+    const typeLine1 = document.querySelector('.type-line-1');
+    const typeLine2 = document.querySelector('.type-line-2');
+    
+    if (typeLine1 && typeLine2) {
+        const text1 = typeLine1.dataset.text;
+        const text2 = typeLine2.dataset.text;
+        
+        // Type first line, then second line after it completes
+        setTimeout(() => {
+            typeText(typeLine1, text1, 60, () => {
+                // After first line completes, type second line
+                setTimeout(() => {
+                    typeText(typeLine2, text2, 60);
+                }, 300); // Small pause between lines
+            });
+        }, 800);
     }
     
-    // Section titles with typing
+    // ===== Section titles with typing =====
     const typeOnScrollElements = document.querySelectorAll('.type-on-scroll');
     
     if (isMobile) {
@@ -92,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
             entries.forEach(entry => {
                 if (entry.isIntersecting && !entry.target.dataset.typed) {
                     const text = entry.target.textContent;
-                    const speed = parseInt(entry.target.dataset.typeSpeed) || 60;
+                    const speed = parseInt(entry.target.dataset.typeSpeed) || 40;
                     entry.target.dataset.typed = 'true';
                     typeText(entry.target, text, speed);
                 }
@@ -110,13 +125,14 @@ document.addEventListener('DOMContentLoaded', function() {
         // DESKTOP: Type all on page load (staggered)
         typeOnScrollElements.forEach((el, index) => {
             const text = el.textContent;
-            const speed = parseInt(el.dataset.typeSpeed) || 60;
+            const speed = parseInt(el.dataset.typeSpeed) || 40;
             el.style.opacity = '0'; // Hide initially
             
-            // Stagger the typing animations
+            // Stagger the typing animations (start after hero finishes)
+            // Hero takes ~800ms (delay) + ~1800ms (typing both lines) = ~2600ms total
             setTimeout(() => {
                 typeText(el, text, speed);
-            }, 1500 + (index * 800)); // Start after hero, 800ms between each
+            }, 3000 + (index * 1000)); // Start 3s after page load, 1s between each
         });
     }
     
