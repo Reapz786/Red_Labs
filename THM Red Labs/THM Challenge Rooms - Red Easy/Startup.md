@@ -574,3 +574,5 @@ root@ip-10-67-86-193:~# wireshark sus.pcap
 > [!note]
 > First code block is what is setup using NetCat to extract file and on Attack machine code block, i setup nc listener and had it redirect to local file and now going to use wireshark to investigate.
 
+> [!note]
+> Did basic check for http traffic etc. and couldn't find anything so decided to look for keyword st
