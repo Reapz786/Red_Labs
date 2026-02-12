@@ -2,7 +2,7 @@
 title: "Ehsan Ali - Security Research Portfolio"
 description: "Offensive security portfolio documenting penetration testing work"
 url: "https://reapz786.github.io"
-baseurl: "/THM_Red_Labs"
+baseurl: "/Red_Labs"
 
 # Author Information
 author:
@@ -25,14 +25,14 @@ kramdown:
 # CRITICAL: Include all write-up directories and assets
 include:
   - "THM Red Labs"
-  - "HTB Labs"
+  - "HTB Red Labs"
   - "_*"
   - "assets"
 
 # CRITICAL: Keep all assets folders during build
 keep_files:
   - "THM Red Labs"
-  - "HTB Labs"
+  - "HTB Red Labs"
   - assets
 
 # Defaults for write-ups
@@ -43,7 +43,7 @@ defaults:
       layout: "writeup"
       platform: "THM"
   - scope:
-      path: "HTB Labs"
+      path: "HTB Red Labs"
     values:
       layout: "writeup"
       platform: "HTB"

@@ -9,7 +9,7 @@ permalink: /browse/
         <header class="browse-header" style="text-align: center; margin-bottom: var(--spacing-xl);">
             <h1 style="font-size: 2.5rem; margin-bottom: var(--spacing-sm);">All Write-ups</h1>
             {% assign thm_writeups = site.pages | where_exp: "page", "page.path contains 'THM Red Labs'" | where_exp: "page", "page.path contains '.md'" | where_exp: "page", "page.name != 'index.md'" %}
-            {% assign htb_writeups = site.pages | where_exp: "page", "page.path contains 'HTB Labs'" | where_exp: "page", "page.path contains '.md'" | where_exp: "page", "page.name != 'index.md'" %}
+            {% assign htb_writeups = site.pages | where_exp: "page", "page.path contains 'HTB Red Labs'" | where_exp: "page", "page.path contains '.md'" | where_exp: "page", "page.name != 'index.md'" %}
             {% assign all_writeups = thm_writeups | concat: htb_writeups %}
             <p style="color: var(--text-secondary); font-size: 1.125rem;">{{ all_writeups.size }} total ({{ thm_writeups.size }} THM + {{ htb_writeups.size }} HTB)</p>
         </header>

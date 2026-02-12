@@ -317,5 +317,24 @@ Nmap done: 1 IP address (1 host up) scanned in 19.42 seconds
 > [!info]
 > If I can login as anonymous on ftp server then what can I find? Lets see..
 
+```
+root@ip-10-64-88-17:~/Downloads# ftp 10.64.145.68
+Connected to 10.64.145.68.
+220 (vsFTPd 3.0.3)
+Name (10.64.145.68:root): anonymous 
+331 Please specify the password.
+Password:
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+ftp> ls
+200 PORT command successful. Consider using PASV.
+150 Here comes the directory listing.
+drwxrwxrwx    2 65534    65534        4096 Nov 12  2020 ftp
+-rw-r--r--    1 0        0          251631 Nov 12  2020 important.jpg
+-rw-r--r--    1 0        0             208 Nov 12  2020 notice.txt
+226 Directory send OK.
+```
 
-
+> [!note]
+> OK, officially confused...I already have these files. Maybe I didn't enumerate the files before properly?
