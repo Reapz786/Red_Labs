@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 i++;
                 setTimeout(type, speed);
             } else if (callback) {
-                callback(); // Call callback when done
+                callback();
             }
         }
         
@@ -84,8 +84,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const typeLine2 = document.querySelector('.type-line-2');
     
     if (typeLine1 && typeLine2) {
-        const text1 = typeLine1.dataset.text;
-        const text2 = typeLine2.dataset.text;
+        const text1 = typeLine1.dataset.text || typeLine1.textContent.trim();
+        const text2 = typeLine2.dataset.text || typeLine2.textContent.trim();
         
         // Type first line, then second line after it completes
         setTimeout(() => {
@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // After first line completes, type second line
                 setTimeout(() => {
                     typeText(typeLine2, text2, 60);
-                }, 300); // Small pause between lines
+                }, 300);
             });
         }, 800);
     }
@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         
         typeOnScrollElements.forEach(el => {
-            el.style.opacity = '0'; // Hide until typed
+            el.style.opacity = '0';
             scrollObserver.observe(el);
         });
     } else {
@@ -126,13 +126,12 @@ document.addEventListener('DOMContentLoaded', function() {
         typeOnScrollElements.forEach((el, index) => {
             const text = el.textContent;
             const speed = parseInt(el.dataset.typeSpeed) || 40;
-            el.style.opacity = '0'; // Hide initially
+            el.style.opacity = '0';
             
-            // Stagger the typing animations (start after hero finishes)
-            // Hero takes ~800ms (delay) + ~1800ms (typing both lines) = ~2600ms total
+            // Stagger the typing animations
             setTimeout(() => {
                 typeText(el, text, speed);
-            }, 3000 + (index * 1000)); // Start 3s after page load, 1s between each
+            }, 3000 + (index * 1000));
         });
     }
     
