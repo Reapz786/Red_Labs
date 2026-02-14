@@ -236,4 +236,10 @@ Finished
 ```
 
 > [!info]
->
+>Lets go back to basics and see how the website reacts to random user/pw login attempts.
+
+> [!note]
+> tried username=user and Pw=password123 and got
+
+![](Obsidian%20assets/wrong%20userpw.png)
+
