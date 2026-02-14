@@ -204,3 +204,11 @@ gobuster vhost -u http://lookup.thm -w /usr/share/wordlists/seclists/Discovery/D
 ```
 gobuster vhost -u http://lookup.thm -w /usr/share/wordlists/seclists/Discovery/DNS/subdomains-top1million-110000.txt
 ```
+```
+gobuster vhost -u http://lookup.thm -w /usr/share/wordlists/seclists/Discovery/DNS/subdomains-top1million-5000.txt
+```
+
+> [!note]
+> Unfortunately all showed status code 400.
+
+
