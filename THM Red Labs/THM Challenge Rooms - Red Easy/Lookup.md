@@ -569,3 +569,6 @@ cat user.txt
 > [!important]
 > User flag = **38375fb4dd8baa2b2039ac03d92b820e**
 
+> [!info]
+> Now to see what think can do to PE to root!
+
