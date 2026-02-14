@@ -17,7 +17,7 @@ date: 2026-02-14
 > What is the user flag?
 
 > [!important]
-> Target IP: 10.66.172.224
+> Target IP: 10.66.172.224 - added lookup.t
 
 > [!info]
 > First things first, enumeration! Gobuster, Nikto, Nmap, web exploits.
