@@ -12,5 +12,8 @@
 > Find directories on the web server using the GoBuster tool.  
 > What is the hidden directory?
 
+> [!info]
+> Running nmap & Gobuster with specific options for both should get me answers for all of them.
+
 
 
