@@ -423,3 +423,12 @@ Password: nopassword
 su: Authentication failure
 www-data@ip-10-66-172-224:/home/think$ 
 ```
+
+> [!info]
+> Decided to use Linpeas to get used to the tool more post-exploit and found a SUID bit binary set for me to use
+
+```
+#setup python server on AM:
+python3 -m http.server 8000
+
+```
