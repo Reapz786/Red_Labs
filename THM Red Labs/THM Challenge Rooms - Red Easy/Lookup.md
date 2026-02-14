@@ -547,6 +547,9 @@ Password: josemario.AKA(think)
 think@ip-10-66-172-224:/tmp$ 
 ```
 
+> [!important]
+> think:josemario.AKA(think)
+
 > [!info]
 > Time to get user.txt!
 
@@ -564,4 +567,5 @@ cat user.txt
 ```
 
 > [!important]
-> User flag = 
+> User flag = **38375fb4dd8baa2b2039ac03d92b820e**
+
