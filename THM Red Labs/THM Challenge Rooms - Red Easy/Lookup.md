@@ -572,3 +572,9 @@ cat user.txt
 > [!info]
 > Now to see what think can do to PE to root!
 
+> [!note]
+> Going for low-hanging fruit of checking sudo permission got me a program called look to search for lines in files that start with a given string which I can run as sudo to get root file using the following:
+
+```
+
+```
