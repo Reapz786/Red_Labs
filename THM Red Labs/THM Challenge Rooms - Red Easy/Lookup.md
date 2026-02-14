@@ -304,7 +304,9 @@ Shellcodes: No Results
 ![](Obsidian%20assets/elFinder%20version.png)
 
 > [!note]
-> CMD injection was the way it seems like.
+> CMD injection was the way it seems like with CVE-2019-9194
+
+
 
 
 
