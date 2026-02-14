@@ -47,17 +47,17 @@ Finished
 ===============================================================
 ```
 ```
-──(kali㉿kali)-[~]                                                                                                                                        
-└─$ sudo nmap -A -O -sVC 10.67.185.180                                                                                                                     
-[sudo] password for kali:                                                                                                                                  
-Starting Nmap 7.95 ( https://nmap.org ) at 2026-02-14 17:52 EST                                                                                            
-Nmap scan report for 10.67.185.180                                                                                                                         
-Host is up (0.086s latency).                                                                                                                               
-Not shown: 998 closed tcp ports (reset)                                                                                                                    
+──(kali㉿kali)-[~]                                                         
+└─$ sudo nmap -A -O -sVC 10.67.185.180                                                  
+[sudo] password for kali:                                                               
+Starting Nmap 7.95 ( https://nmap.org ) at 2026-02-14 17:52 EST                            
+Nmap scan report for 10.67.185.180              
+Host is up (0.086s latency).                                                          
+Not shown: 998 closed tcp ports (reset)                                                 
 PORT   STATE SERVICE VERSION                                                                                                                               
 22/tcp open  ssh     OpenSSH 8.2p1 Ubuntu 4ubuntu0.13 (Ubuntu Linux; protocol 2.0)                                                                         
 | ssh-hostkey:                                                                                                                                             
-|   3072 ed:9d:5b:71:c6:ea:cb:0f:53:4f:d9:be:31:28:d6:fa (RSA)                                                                                             
+|   3072 ed:9d:5b:71:c6:ea:cb:0f:53:4f:d9:be:31:28:d6:fa (RSA)                                                                                        
 |   256 28:a1:db:b6:c8:8f:18:cc:44:cb:8a:f3:a1:be:ad:a6 (ECDSA)                                                                                            
 |_  256 c6:7f:7d:fb:71:7b:5a:49:ec:b3:74:10:27:9c:f9:f2 (ED25519)                                                                                          
 80/tcp open  http    Apache httpd 2.4.41 ((Ubuntu))                                                                                                        
