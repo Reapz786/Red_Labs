@@ -401,3 +401,8 @@ meterpreter >
 ```
 
 ![](Obsidian%20assets/IM%20IN.png)
+
+> [!note]
+> Spawned shell from meterpreter to use su cmd but upgraded shell then tried to change into think using su but the password was wrong?
+
+``
