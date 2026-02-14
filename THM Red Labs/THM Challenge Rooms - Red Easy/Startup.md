@@ -3,6 +3,13 @@ title: Startup
 difficulty: Easy
 platform: THM
 tags:
+  - nmap
+  - gobuster
+  - nikto
+  - netcat
+  - wireshark
+  - zsteg
+  - binwalk
 tools:
 date: 2026-02-11
 ---
