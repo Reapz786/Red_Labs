@@ -176,18 +176,20 @@ Finished
 └─$ nslookup lookup.thm                  
 Server:         192.168.50.120
 Address:        192.168.50.120#53
-
 ** server can't find lookup.thm: NXDOMAIN
 ┌──(kali㉿kali)-[~]
 └─$ nslookup http://lookup.thm/
 Server:         192.168.50.120
 Address:        192.168.50.120#53
-
 ** server can't find http://lookup.thm/: NXDOMAIN
-
-                                                                           
 ┌──(kali㉿kali)-[~]
 └─$ nslookup 10.66.172.224     
 ** server can't find 224.172.66.10.in-addr.arpa: NXDOMAIN
+```
+
+[!note]
+> Nothing useful but instead of looking online, I saw my notes that gobuster has a way to scan domains & subdomains.
+
+```
 
 ```
