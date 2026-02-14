@@ -449,4 +449,18 @@ pwm
 ```
 
 > [!info]
-> Was curious about this pwm file as it must be to do with think or somethiing to allow me to PE and couldn't execture with nano/cat so looking online i found strings which ust prints string text within the file.
+> Was curious about this pwm file as it must be to do with think or somethiing to allow me to PE and couldn't execute with nano/cat so looking online i found strings which ust prints string text within the file.
+
+```
+[!] Running 'id' command to extract the username and user ID (UID)
+[-] Error executing id command
+uid=%*u(%[^)])
+[-] Error reading username from id command
+[!] ID: %s
+/home/%s/.passwords
+[-] File /home/%s/.passwords not found
+```
+
+> [!note]
+> Need to know wtf this all is but i know its key as it was printed when i tried to execute pwm...
+
