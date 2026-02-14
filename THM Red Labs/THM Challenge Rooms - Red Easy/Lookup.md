@@ -1,12 +1,11 @@
 ---
-title: Lookup
+title: "Lookup"
 difficulty: Easy
 platform: THM
-tags:
-tools:
-date: 2026-02-14
+tags: [UID-exploitation, PATH-hijacking, password-brute-force, command-injection, reverse-shell, sudo-abuse, vhost-enumeration, username-enumeration]
+tools: [nmap, gobuster, nikto, dig, nslookup, hydra, metasploit, msf, meterpreter, linpeas, strings, curl]
+date: 2026-12-14
 ---
-
 ![](Obsidian%20assets/Lookup.png)
 
 > [!important]
