@@ -367,3 +367,5 @@ msf exploit(unix/webapp/elfinder_php_connector_exiftran_cmd_injection) >
 
 ```
 
+> [!note]
+> Set wrong RHOSTS and should have set LHOST as im t
