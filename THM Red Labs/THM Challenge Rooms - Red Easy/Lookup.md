@@ -464,3 +464,6 @@ uid=%*u(%[^)])
 > [!note]
 > Need to know wtf this all is but i know its key as it was printed when i tried to execute pwm...
 
+> [!note]
+> Turns out this was a 2 part exploit with SUID bit binary set and PATH hijacking:
+
