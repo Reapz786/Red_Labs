@@ -92,3 +92,7 @@ HOP RTT      ADDRESS
 OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 Nmap done: 1 IP address (1 host up) scanned in 29.68 seconds
 ```
+
+> [!important]
+> Answers to each question were 2, 2.4.41, SSH, /panel/
+
