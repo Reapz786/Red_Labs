@@ -127,3 +127,67 @@ Finished
 > [!info]
 > I'm going to use dig cmd and nslookup for sub-domains as that was mentioned in the first paragraph section about Lookup.
 
+```
+┌──(kali㉿kali)-[~]
+└─$ dig http://lookup.thm/    
+
+; <<>> DiG 9.20.11-4+b1-Debian <<>> http://lookup.thm/
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NXDOMAIN, id: 4575
+;; flags: qr rd ra ad; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; QUESTION SECTION:
+;http://lookup.thm/.            IN      A
+
+;; AUTHORITY SECTION:
+.                       3415    IN      SOA     a.root-servers.net. nstld.verisign-grs.com. 2026021400 1800 900 604800 86400
+
+;; Query time: 3 msec
+;; SERVER: 192.168.50.120#53(192.168.50.120) (UDP)
+;; WHEN: Sat Feb 14 09:10:01 EST 2026
+;; MSG SIZE  rcvd: 122
+
+                                                                           
+┌──(kali㉿kali)-[~]
+└─$ dig http://lookup.thm/ ANY
+
+; <<>> DiG 9.20.11-4+b1-Debian <<>> http://lookup.thm/ ANY
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOTIMP, id: 54953
+;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1452
+;; QUESTION SECTION:
+;http://lookup.thm/.            IN      ANY
+
+;; Query time: 0 msec
+;; SERVER: 192.168.50.120#53(192.168.50.120) (TCP)
+;; WHEN: Sat Feb 14 09:10:10 EST 2026
+;; MSG SIZE  rcvd: 47
+```
+
+```
+┌──(kali㉿kali)-[~]
+└─$ nslookup lookup.thm                  
+Server:         192.168.50.120
+Address:        192.168.50.120#53
+
+** server can't find lookup.thm: NXDOMAIN
+┌──(kali㉿kali)-[~]
+└─$ nslookup http://lookup.thm/
+Server:         192.168.50.120
+Address:        192.168.50.120#53
+
+** server can't find http://lookup.thm/: NXDOMAIN
+
+                                                                           
+┌──(kali㉿kali)-[~]
+└─$ nslookup 10.66.172.224     
+** server can't find 224.172.66.10.in-addr.arpa: NXDOMAIN
+
+```
