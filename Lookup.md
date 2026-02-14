@@ -99,4 +99,4 @@ Finished
 ![](Obsidian%20assets/Login%20Page%20-%20Source%20code.png)
 
 > [!note]
-> Ok
+> Ok so before posting Nikto results, let's review the above - first with nmap - 2 ports only open SSH & HTTP - gobuster is not revealing any hidden directories - the login pa
