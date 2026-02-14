@@ -196,5 +196,11 @@ gobuster dns -do lookup.thm -w /usr/share/seclists/Discovery/DNS/subdomains-top1
 
 > [!note]
 > Upon realising, you cannot check the subdomains like this if DNS port 53 is closed which it is.
-> I pivoted to looking into 
+> I pivoted to looking into Vhosts
 
+```
+gobuster vhost -u http://lookup.thm -w /usr/share/wordlists/seclists/Discovery/DNS/subdomains-top1million-20000.txt 
+```
+```
+gobuster vhost -u http://lookup.thm -w /usr/share/wordlists/seclists/Discovery/DNS/subdomains-top1million-110000.txt
+```
