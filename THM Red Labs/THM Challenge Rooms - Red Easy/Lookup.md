@@ -400,3 +400,4 @@ msf exploit(unix/webapp/elfinder_php_connector_exiftran_cmd_injection) > exploit
 meterpreter >         
 ```
 
+![](Obsidian%20assets/IM%20IN.png)
