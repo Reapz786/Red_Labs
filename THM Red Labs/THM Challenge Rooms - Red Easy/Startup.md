@@ -4,7 +4,24 @@ difficulty: Easy
 platform: THM
 tags:
   - web_enumeration
+  - ftp
+  - Steganography
+  - reverse-shell
+  - file-upload
+  - pcap-analysis
+  - lateral-movement
+  - privilege-escalation
+  - cron-jobs
 tools:
+  - Nmap
+  - Gobuster
+  - nikto
+  - zsteg
+  - Binwalk
+  - Netcat
+  - wget
+  - wireshark
+  - python3
 date: 2026-02-11
 ---
 ![](Obsidian%20assets/Startup.png)
