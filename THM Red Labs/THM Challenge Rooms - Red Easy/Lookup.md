@@ -276,6 +276,8 @@ hydra -L /usr/share/seclists/Usernames/Names/names.txt -p password123 lookup.thm
 > [!note]
 > OK this is very interesting - seems like an set up an FTP server/mount a volume/upload/download/write and there are many interesting files but opening them up just leads to random words...
 
-![](Obsidian%20assets/Pasted%20image%2020260214163959.png)
+![](Obsidian%20assets/think%20%20nopassword.png)
+
+
 
 
