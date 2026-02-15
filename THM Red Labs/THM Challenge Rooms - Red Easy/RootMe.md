@@ -157,4 +157,5 @@ Nmap done: 1 IP address (1 host up) scanned in 29.68 seconds
 
 ![](Obsidian%20assets/RootMeUploads.png)
 > [!note]
-> Ignore the files as they are all what i uploaded as i realised you cant get a .js/.css reverse shell so im trying to do 
+> Ignore the files as they are all what i uploaded as i realised you cant get a .js/.css reverse shell so im trying to do file upload bypass to see if that works..
+
