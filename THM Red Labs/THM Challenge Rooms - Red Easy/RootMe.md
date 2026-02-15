@@ -159,3 +159,16 @@ Nmap done: 1 IP address (1 host up) scanned in 29.68 seconds
 > [!note]
 > Ignore the files as they are all what i uploaded as i realised you cant get a .js/.css reverse shell so im trying to do file upload bypass to see if that works..
 
+> [!info]
+> Decided to look online for file upload bypass for apache 2.4.41 and found the following:
+```
+2. `.htaccess` File Upload Bypass
+
+A common scenario for 2.4.41, particularly when used with Content Management Systems (CMS), is bypassing upload restrictions by uploading a customized `.htaccess` file. 
+
+- **The Attack:** If an attacker can upload a `.htaccess` file, they can redefine server rules for a specific directory.
+- **Method:**
+    1. Upload a `.htaccess` file with content: `AddType application/x-httpd-php .jpg`
+    2. Upload a malicious file named `shell.jpg` containing PHP code.
+    3. The Apache server will treat `shell.jpg` as a PHP script.
+```
