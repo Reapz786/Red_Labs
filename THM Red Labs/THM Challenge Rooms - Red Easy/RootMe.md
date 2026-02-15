@@ -1,4 +1,19 @@
-
+---
+title: ROOM_NAME_HERE
+difficulty: Easy
+platform: THM
+tags:
+  - Tag1
+  - Tag2
+  - Tag3
+  - Tag4
+tools:
+  - Tool1
+  - Tool2
+  - Tool3
+  - Tool4
+date: 2026-02-15
+---
 ![](Obsidian%20assets/RootMe.png)
 
 > [!important]
