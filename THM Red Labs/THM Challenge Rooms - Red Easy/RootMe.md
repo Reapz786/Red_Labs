@@ -181,11 +181,9 @@ A common scenario for 2.4.41, particularly when used with Content Management Sys
 ```
 ──(kali㉿kali)-[~/Downloads/php-reverse-shell-1.0]
 └─$ ls
-CHANGELOG  COPYING.GPL  COPYING.PHP-REVERSE-SHELL  php-reverse-shell.php
-                                                                              
+CHANGELOG  COPYING.GPL  COPYING.PHP-REVERSE-SHELL  php-reverse-shell.php   
 ┌──(kali㉿kali)-[~/Downloads/php-reverse-shell-1.0]
-└─$ mv php-reverse-shell.php revshell.php5    
-                                                                              
+└─$ mv php-reverse-shell.php revshell.php5        
 ┌──(kali㉿kali)-[~/Downloads/php-reverse-shell-1.0]
 └─$ 
 [0] 0:zsh*Z                                              
