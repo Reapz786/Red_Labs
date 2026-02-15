@@ -1,11 +1,12 @@
 ---
-title: RootMe
+title: "RootMe"
 difficulty: Easy
 platform: THM
-tags:
-tools:
+tags: [web-enumeration, file-upload-bypass, reverse-shell, suid-exploitation, privilege-escalation]
+tools: [nmap, gobuster, netcat, python]
 date: 2026-02-15
 ---
+
 ![](Obsidian%20assets/RootMeLogo.png)
 
 > [!important]
