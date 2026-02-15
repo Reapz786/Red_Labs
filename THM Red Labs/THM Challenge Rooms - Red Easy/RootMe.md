@@ -126,4 +126,17 @@ Nmap done: 1 IP address (1 host up) scanned in 29.68 seconds
 
 ![](Obsidian%20assets/RootMepanel.png)
 > [!note]
-> 
+> Bingo! IF we can upload a file, lets test this by uploading test.php:
+
+```
+|   |
+|---|
+|<html>|
+|<head>|
+|<title>PHP-Test</title>|
+|</head>|
+|<body>|
+|<?php echo '<h1>Hello World!</h1><h3>Welcome to WPMU DEV</h3>'; ?>|
+|</body>|
+|</html>|
+```
