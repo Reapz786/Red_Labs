@@ -255,29 +255,9 @@ cd root/
 root@ip-10-64-146-97:/root# ls
 ls
 root.txt  snap
-root@ip-10-64-146-97:/root# cd sn	
-cd snap/
-root@ip-10-64-146-97:/root/snap# ls
-ls
-lxd
-root@ip-10-64-146-97:/root/snap# cd lxd
-cd lxd
-root@ip-10-64-146-97:/root/snap/lxd# ls
-ls
-32662  common  current
-root@ip-10-64-146-97:/root/snap/lxd# cd ..
-cd ..
-root@ip-10-64-146-97:/root/snap# cd ..
-cd ..
-root@ip-10-64-146-97:/root# ls
-ls
-root.txt  snap
-root@ip-10-64-146-97:/root# cat root
-cat root
-cat: root: No such file or directory
 root@ip-10-64-146-97:/root# cat ro	
 cat root.txt 
 THM{pr1v1l3g3_3sc4l4t10n}
-root@ip-10-64-146-97:/root# 
-
 ```
+
+![](Obsidian%20assets/RootMecompleted.png)
