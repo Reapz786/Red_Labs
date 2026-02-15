@@ -178,3 +178,15 @@ A common scenario for 2.4.41, particularly when used with Content Management Sys
 > [!note]
 > File upload worked but im not allowed to access this unfortunately. TBH I havent tried all the extensions so lets just go back and try some of the and i'll post a successful or fail message after
 
+```
+──(kali㉿kali)-[~/Downloads/php-reverse-shell-1.0]
+└─$ ls
+CHANGELOG  COPYING.GPL  COPYING.PHP-REVERSE-SHELL  php-reverse-shell.php
+                                                                              
+┌──(kali㉿kali)-[~/Downloads/php-reverse-shell-1.0]
+└─$ mv php-reverse-shell.php revshell.php5    
+                                                                              
+┌──(kali㉿kali)-[~/Downloads/php-reverse-shell-1.0]
+└─$ 
+[0] 0:zsh*Z                                              
+```
