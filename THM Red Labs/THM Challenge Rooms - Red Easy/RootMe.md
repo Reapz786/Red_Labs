@@ -136,7 +136,11 @@ Nmap done: 1 IP address (1 host up) scanned in 29.68 seconds
 |<title>PHP-Test</title>|
 |</head>|
 |<body>|
-|<?php echo '<h1>Hello World!</h1><h3>Welcome to WPMU DEV</h3>'; ?>|
+|<?php echo '<h1>Hello World!</h1><h3>This works!</h3>'; ?>|
 |</body>|
 |</html>|
 ```
+
+![](Obsidian%20assets/RootMePHP%20not%20allowed.png)
+> [!note]
+> PHP not allowed? what about a text file?
