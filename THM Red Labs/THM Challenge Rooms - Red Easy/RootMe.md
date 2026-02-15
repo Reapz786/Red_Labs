@@ -207,8 +207,15 @@ $ python
 www-data@ip-10-64-146-97:/$ find / -type f -name "user.txt" 2>/dev/null
 find / -type f -name "user.txt" 2>/dev/null
 /var/www/user.txt
-www-data@ip-10-64-146-97:/$ 
 www-data@ip-10-64-146-97:/$ cat /var/www/user.txt
 cat /var/www/user.txt
 THM{y0u_g0t_a_sh3ll}
 ```
+
+> [!important]
+> Now that we have a shell, let's escalate our privileges to root.
+> 
+> Search for files with SUID permission, which file is weird?
+
+
+
