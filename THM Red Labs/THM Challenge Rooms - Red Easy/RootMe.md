@@ -201,4 +201,5 @@ $ python
 ```
 
 > [!note]
-> After annoying technical difficulties with setting up reverse shell, i went o
+> After annoying technical difficulties with setting up reverse shell, i went on THM attack box instead - not sure if my vpn messed but anywas lets get user flag.
+
