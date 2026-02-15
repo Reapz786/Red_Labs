@@ -111,8 +111,7 @@ Nmap done: 1 IP address (1 host up) scanned in 29.68 seconds
 
 ![](Obsidian%20assets/RootMeHmePge.png)
 
-![](Obsidian%20assets/Pasted%20image%2020260215095402.png)
-
+![](Obsidian%20assets/RootMeSourcepage.png)
 
 ```
 ┌──(kali㉿kali)-[~]
