@@ -112,26 +112,11 @@ Nmap done: 1 IP address (1 host up) scanned in 29.68 seconds
 ![](Obsidian%20assets/RootMeHmePge.png)
 
 ![](Obsidian%20assets/RootMeSourcepage.png)
+> [!note]
+> Looking at the above pages didn't show anything obvious that is an exploit so I will use knowledge from Gobuster to investigate further.
 
-```
-┌──(kali㉿kali)-[~]
-└─$ fdewfefewf
-fdewfefewf: command not found
-                                                                                                                                                           
-┌──(kali㉿kali)-[~]
-└─$ fewff     
-fewff: command not found
-                                                                                                                                                           
-┌──(kali㉿kali)-[~]
-└─$ fewfe
-fewfe: command not found
-                                                                                                                                                           
-┌──(kali㉿kali)-[~]
-└─$ fdewfefewf
-fdewfefewf: command not found
-                                                                            
-┌──(kali㉿kali)-[~]
-└─$ 
+![](Obsidian%20assets/RootMeCSS.png)
+> [!note]
+> The two files contained nothing of interest.
 
-```
 
