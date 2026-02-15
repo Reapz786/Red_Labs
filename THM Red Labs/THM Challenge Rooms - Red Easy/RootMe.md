@@ -155,3 +155,6 @@ Nmap done: 1 IP address (1 host up) scanned in 29.68 seconds
 > [!note]
 > Ok, big brain moment! - the two web dirs before /js & /css have the files there so if i can upload a file via JS/CSS, we should be able to get a reverse shell going.
 
+![](Obsidian%20assets/RootMeUploads.png)
+> [!note]
+> Ignore the files as they are all what i uploaded as i realised you cant get a .js/.css reverse shell so im trying to do 
