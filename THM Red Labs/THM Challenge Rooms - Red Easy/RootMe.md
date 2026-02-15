@@ -144,3 +144,10 @@ Nmap done: 1 IP address (1 host up) scanned in 29.68 seconds
 ![](Obsidian%20assets/RootMePHP%20not%20allowed.png)
 > [!note]
 > PHP not allowed? what about a text file?
+
+![](Obsidian%20assets/RootMesuccess.png)
+
+> [!note]
+> Great, It's uploaded the text file but where does it get sent to?
+
+![](Obsidian%20assets/Pasted%20image%2020260215100654.png)
