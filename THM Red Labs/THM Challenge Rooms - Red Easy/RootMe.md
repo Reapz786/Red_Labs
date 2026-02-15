@@ -6,7 +6,7 @@ tags:
 tools:
 date: 2026-02-15
 ---
-![](Obsidian%20assets/RootMe.png)
+![](Obsidian%20assets/RootMeLogo.png)
 
 > [!important]
 > A ctf for beginners, can you root me?
@@ -109,7 +109,10 @@ Nmap done: 1 IP address (1 host up) scanned in 29.68 seconds
 > [!info]
 > Lets enumerate the webpage.
 
-![](Obsidian%20assets/RootMe%20webpage.png)
+![](Obsidian%20assets/RootMeHmePge.png)
+
+![](Obsidian%20assets/Pasted%20image%2020260215095402.png)
+
 
 ```
 ┌──(kali㉿kali)-[~]
