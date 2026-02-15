@@ -176,4 +176,5 @@ A common scenario for 2.4.41, particularly when used with Content Management Sys
 ![](Obsidian%20assets/RootMeforbidden.png)
 
 > [!note]
-> File upload worked but im not allowed to access this unfortunately.
+> File upload worked but im not allowed to access this unfortunately. TBH I havent tried all the extensions so lets just go back and try some of the and i'll post a successful or fail message after
+
