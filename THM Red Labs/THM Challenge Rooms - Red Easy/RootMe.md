@@ -148,6 +148,10 @@ Nmap done: 1 IP address (1 host up) scanned in 29.68 seconds
 ![](Obsidian%20assets/RootMesuccess.png)
 
 > [!note]
-> Great, It's uploaded the text file but where does it get sent to?
+> Great, It's uploaded the text file but where does it get sent to? What else can I upload?
 
-![](Obsidian%20assets/Pasted%20image%2020260215100654.png)
+![](Obsidian%20assets/RootMeproof%20of%20upload.png)
+
+> [!note]
+> Ok, big brain moment! - the two web dirs before /js & /css have the files there so if i can upload a file via JS/CSS, we should be able to get a reverse shell going.
+
