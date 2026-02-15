@@ -172,3 +172,8 @@ A common scenario for 2.4.41, particularly when used with Content Management Sys
     2. Upload a malicious file named `shell.jpg` containing PHP code.
     3. The Apache server will treat `shell.jpg` as a PHP script.
 ```
+
+![](Obsidian%20assets/RootMeforbidden.png)
+
+> [!note]
+> File upload worked but im not allowed to access this unfortunately.
