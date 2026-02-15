@@ -119,4 +119,11 @@ Nmap done: 1 IP address (1 host up) scanned in 29.68 seconds
 > [!note]
 > The two files contained nothing of interest.
 
+![](Obsidian%20assets/RootMeJS.png)
 
+> [!note]
+> Nothing of interest at /js
+
+![](Obsidian%20assets/RootMepanel.png)
+> [!note]
+> 
