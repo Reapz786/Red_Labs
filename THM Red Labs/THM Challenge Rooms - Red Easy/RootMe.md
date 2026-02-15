@@ -111,3 +111,24 @@ Nmap done: 1 IP address (1 host up) scanned in 29.68 seconds
 
 ![](Obsidian%20assets/RootMe%20webpage.png)
 
+```
+┌──(kali㉿kali)-[~]
+└─$ fdewfefewf
+fdewfefewf: command not found
+                                                                                                                                                           
+┌──(kali㉿kali)-[~]
+└─$ fewff     
+fewff: command not found
+                                                                                                                                                           
+┌──(kali㉿kali)-[~]
+└─$ fewfe
+fewfe: command not found
+                                                                                                                                                           
+┌──(kali㉿kali)-[~]
+└─$ fdewfefewf
+fdewfefewf: command not found
+                                                                                                                                                            
+┌──(kali㉿kali)-[~]
+└─$ 
+
+```
