@@ -203,3 +203,12 @@ $ python
 > [!note]
 > After annoying technical difficulties with setting up reverse shell, i went on THM attack box instead - not sure if my vpn messed but anyways lets get user flag.
 
+```
+www-data@ip-10-64-146-97:/$ find / -type f -name "user.txt" 2>/dev/null
+find / -type f -name "user.txt" 2>/dev/null
+/var/www/user.txt
+www-data@ip-10-64-146-97:/$ 
+www-data@ip-10-64-146-97:/$ cat /var/www/user.txt
+cat /var/www/user.txt
+THM{y0u_g0t_a_sh3ll}
+```
