@@ -217,5 +217,22 @@ THM{y0u_g0t_a_sh3ll}
 > 
 > Search for files with SUID permission, which file is weird?
 
+```
+www-data@ip-10-64-146-97:/$ find / -perm -4000 -type f 2>/dev/null
+find / -perm -4000 -type f 2>/dev/null
+/usr/lib/dbus-1.0/dbus-daemon-launch-helper
+/usr/lib/snapd/snap-confine
+/usr/lib/x86_64-linux-gnu/lxc/lxc-user-nic
+/usr/lib/eject/dmcrypt-get-device
+/usr/lib/openssh/ssh-keysign
+/usr/lib/policykit-1/polkit-agent-helper-1
+/usr/bin/newuidmap
+/usr/bin/newgidmap
+/usr/bin/chsh
+/usr/bin/python2.7
+...
+```
+> [!note]
+> SUID bit binary set for Python so it can be run as root with python scripts for PE righttt???
 
 
