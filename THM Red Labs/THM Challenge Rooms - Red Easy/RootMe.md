@@ -127,7 +127,7 @@ fewfe: command not found
 ┌──(kali㉿kali)-[~]
 └─$ fdewfefewf
 fdewfefewf: command not found
-                                                                                                                                                            
+                                                                            
 ┌──(kali㉿kali)-[~]
 └─$ 
 
