@@ -610,12 +610,32 @@ body::before {
     color: var(--accent-primary);
     transition: all var(--transition-fast);
     white-space: nowrap;
+    text-decoration: none;
 }
 
 .room-link:hover {
     background: rgba(59, 130, 246, 0.3);
     transform: scale(1.05);
     box-shadow: 0 0 15px var(--accent-glow);
+}
+
+.room-link-small {
+    padding: 0.2rem 0.5rem;
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 3px;
+    font-size: 0.75rem;
+    color: var(--accent-primary);
+    transition: all var(--transition-fast);
+    white-space: nowrap;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.room-link-small:hover {
+    background: var(--accent-primary);
+    color: var(--bg-primary);
+    transform: scale(1.05);
 }
 
 /* ===== Contact Links (ALL BLUE) ===== */

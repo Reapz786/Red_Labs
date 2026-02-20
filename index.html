@@ -45,23 +45,30 @@ title: Home
                     {% assign all_writeups = thm_pages | concat: htb_pages %}
                     {% assign total_writeups = all_writeups.size %}
                     
-                    {% assign all_tags = "" | split: "" %}
+                    <!-- Collect and normalize all tags (case-insensitive) -->
+                    {% assign all_tags_lower = "" | split: "" %}
                     {% for page in all_writeups %}
                         {% if page.tags %}
-                            {% assign all_tags = all_tags | concat: page.tags %}
+                            {% for tag in page.tags %}
+                                {% assign tag_lower = tag | downcase %}
+                                {% assign all_tags_lower = all_tags_lower | push: tag_lower %}
+                            {% endfor %}
                         {% endif %}
                     {% endfor %}
-                    {% assign unique_tags = all_tags | uniq %}
+                    {% assign unique_tags = all_tags_lower | uniq %}
                     {% assign unique_tags_count = unique_tags.size %}
                     
-                    <!-- Calculate tool count from frontmatter tools field -->
-                    {% assign all_tools = "" | split: "" %}
+                    <!-- Collect and normalize all tools (case-insensitive) -->
+                    {% assign all_tools_lower = "" | split: "" %}
                     {% for page in all_writeups %}
                         {% if page.tools %}
-                            {% assign all_tools = all_tools | concat: page.tools %}
+                            {% for tool in page.tools %}
+                                {% assign tool_lower = tool | downcase %}
+                                {% assign all_tools_lower = all_tools_lower | push: tool_lower %}
+                            {% endfor %}
                         {% endif %}
                     {% endfor %}
-                    {% assign unique_tools = all_tools | uniq %}
+                    {% assign unique_tools = all_tools_lower | uniq %}
                     {% assign unique_tools_count = unique_tools.size %}
                     
                     <!-- Write-ups Stat -->
@@ -100,7 +107,7 @@ title: Home
                         </div>
                     </div>
                     
-                    <!-- Techniques Stat -->
+                    <!-- Techniques Stat (FIXED) -->
                     <div class="stat-expandable" data-stat-id="techniques">
                         <div class="stat-header">
                             <div class="stat-title">
@@ -116,11 +123,15 @@ title: Home
                                 {% assign tag_counts = '' | split: '' %}
                                 {% for tag in unique_tags %}
                                     {% assign count = 0 %}
-                                    {% assign tag_writeups = "" | split: "" %}
                                     {% for page in all_writeups %}
-                                        {% if page.tags contains tag %}
-                                            {% assign count = count | plus: 1 %}
-                                            {% assign tag_writeups = tag_writeups | push: page %}
+                                        {% if page.tags %}
+                                            {% for page_tag in page.tags %}
+                                                {% assign page_tag_lower = page_tag | downcase %}
+                                                {% if page_tag_lower == tag %}
+                                                    {% assign count = count | plus: 1 %}
+                                                    {% break %}
+                                                {% endif %}
+                                            {% endfor %}
                                         {% endif %}
                                     {% endfor %}
                                     {% if count > 0 %}
@@ -130,19 +141,29 @@ title: Home
                                 {% endfor %}
                                 {% assign sorted_tags = tag_counts | sort | reverse %}
                                 
-                                {% for tag_data in sorted_tags limit:5 %}
+                                {% for tag_data in sorted_tags %}
                                     {% assign parts = tag_data | split: '|' %}
                                     {% assign tag_count = parts[0] %}
                                     {% assign tag_name = parts[1] %}
                                     <div class="stat-item">
                                         <div class="stat-item-left">
                                             <span>{{ tag_name }}</span>
-                                            <span style="color: var(--text-muted); font-size: 0.85rem;">x {{ tag_count }}</span>
+                                            <span style="color: var(--text-muted); font-size: 0.85rem;">({{ tag_count }})</span>
                                         </div>
                                         <div class="stat-item-right">
-                                            {% for page in all_writeups limit:3 %}
-                                                {% if page.tags contains tag_name %}
-                                                <a href="{{ page.url | relative_url }}" class="room-link">{{ page.title | default: page.name | remove: '.md' | truncate: 15 }}</a>
+                                            {% for page in all_writeups %}
+                                                {% if page.tags %}
+                                                    {% assign has_tag = false %}
+                                                    {% for page_tag in page.tags %}
+                                                        {% assign page_tag_lower = page_tag | downcase %}
+                                                        {% if page_tag_lower == tag_name %}
+                                                            {% assign has_tag = true %}
+                                                            {% break %}
+                                                        {% endif %}
+                                                    {% endfor %}
+                                                    {% if has_tag %}
+                                                    <a href="{{ page.url | relative_url }}" class="room-link-small">{{ page.title | default: page.name | remove: '.md' }}</a>
+                                                    {% endif %}
                                                 {% endif %}
                                             {% endfor %}
                                         </div>
@@ -152,7 +173,7 @@ title: Home
                         </div>
                     </div>
                     
-                    <!-- Tools Stat (from frontmatter tools field) -->
+                    <!-- Tools Stat (FIXED) -->
                     <div class="stat-expandable" data-stat-id="tools">
                         <div class="stat-header">
                             <div class="stat-title">
@@ -165,28 +186,54 @@ title: Home
                         </div>
                         <div class="stat-content">
                             <div class="stat-content-inner">
-                                {% for tool in unique_tools limit:10 %}
-                                    {% assign tool_count = 0 %}
-                                    {% assign tool_writeups = "" | split: "" %}
+                                {% assign tool_counts = '' | split: '' %}
+                                {% for tool in unique_tools %}
+                                    {% assign count = 0 %}
                                     {% for page in all_writeups %}
-                                        {% if page.tools contains tool %}
-                                            {% assign tool_count = tool_count | plus: 1 %}
-                                            {% assign tool_writeups = tool_writeups | push: page %}
+                                        {% if page.tools %}
+                                            {% for page_tool in page.tools %}
+                                                {% assign page_tool_lower = page_tool | downcase %}
+                                                {% if page_tool_lower == tool %}
+                                                    {% assign count = count | plus: 1 %}
+                                                    {% break %}
+                                                {% endif %}
+                                            {% endfor %}
                                         {% endif %}
                                     {% endfor %}
-                                    {% if tool_count > 0 %}
+                                    {% if count > 0 %}
+                                        {% capture tool_data %}{{ count }}|{{ tool }}{% endcapture %}
+                                        {% assign tool_counts = tool_counts | push: tool_data %}
+                                    {% endif %}
+                                {% endfor %}
+                                {% assign sorted_tools = tool_counts | sort | reverse %}
+                                
+                                {% for tool_data in sorted_tools %}
+                                    {% assign parts = tool_data | split: '|' %}
+                                    {% assign tool_count = parts[0] %}
+                                    {% assign tool_name = parts[1] %}
                                     <div class="stat-item">
                                         <div class="stat-item-left">
-                                            <span>{{ tool }}</span>
-                                            <span style="color: var(--text-muted); font-size: 0.85rem;">x {{ tool_count }}</span>
+                                            <span>{{ tool_name }}</span>
+                                            <span style="color: var(--text-muted); font-size: 0.85rem;">({{ tool_count }})</span>
                                         </div>
                                         <div class="stat-item-right">
-                                            {% for writeup in tool_writeups limit:3 %}
-                                            <a href="{{ writeup.url | relative_url }}" class="room-link">{{ writeup.title | default: writeup.name | remove: '.md' | truncate: 15 }}</a>
+                                            {% for page in all_writeups %}
+                                                {% if page.tools %}
+                                                    {% assign has_tool = false %}
+                                                    {% for page_tool in page.tools %}
+                                                        {% assign page_tool_lower = page_tool | downcase %}
+                                                        {% if page_tool_lower == tool_name %}
+                                                            {% assign has_tool = true %}
+                                                            {% break %}
+                                                        {% endif %}
+                                                    {% endfor %}
+                                                    {% if has_tool %}
+                                                    <a href="{{ page.url | relative_url }}" class="room-link-small">{{ page.title | default: page.name | remove: '.md' }}</a>
+                                                    {% endif %}
+                                                {% endif %}
                                             {% endfor %}
                                         </div>
                                     </div>
-                                    {% endif %}
                                 {% endfor %}
                             </div>
                         </div>
