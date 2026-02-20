@@ -6,3 +6,7 @@ tags:
 tools:
 date: 2026-02-20
 ---
+![[Blue-2.png]]
+
+> [!important]
+> 
