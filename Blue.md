@@ -44,5 +44,86 @@ Nmap done: 1 IP address (1 host up) scanned in 2.71 seconds
 > [!important]
 > What is this machine vulnerable to? (Answer in the form of: ms??-???, ex: ms08-067)
 
+> [!Info]
+> To find this out I ran a deeper nmap scan:
+
+```
+┌──(kali㉿kali)-[~]                                                                      
+└─$ sudo nmap -A -O -sVC -p- 10.67.147.22                                               
+Starting Nmap 7.95 ( https://nmap.org ) at 2026-02-20 15:31 EST                         
+Stats: 0:02:24 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan         
+SYN Stealth Scan Timing: About 36.22% done; ETC: 15:37 (0:04:12 remaining)              
+Nmap scan report for 10.67.147.22                                                       
+Host is up (0.084s latency).                                                            
+Not shown: 65526 closed tcp ports (reset)                                               
+PORT      STATE SERVICE       VERSION                                                   
+135/tcp   open  msrpc         Microsoft Windows RPC                                     
+139/tcp   open  netbios-ssn   Microsoft Windows netbios-ssn                             
+445/tcp   open  microsoft-ds  Windows 7 Professional 7601 Service Pack 1 microsoft-ds (workgroup: WORKGROUP)
+3389/tcp  open  ms-wbt-server Microsoft Terminal Service                                
+| ssl-cert: Subject: commonName=Jon-PC                                                  
+| Not valid before: 2026-02-19T20:15:02                                                 
+|_Not valid after:  2026-08-21T20:15:02                                                 
+| rdp-ntlm-info:                                                                        
+|   Target_Name: JON-PC                                                                 
+|   NetBIOS_Domain_Name: JON-PC                                                         
+|   NetBIOS_Computer_Name: JON-PC 
+|   DNS_Domain_Name: Jon-PC                                                             
+|   DNS_Computer_Name: Jon-PC                                                           
+|   Product_Version: 6.1.7601                                                           
+|_  System_Time: 2026-02-20T20:39:19+00:00                                              
+|_ssl-date: 2026-02-20T20:39:24+00:00; +4s from scanner time.                           
+49152/tcp open  msrpc         Microsoft Windows RPC                                     
+49153/tcp open  msrpc         Microsoft Windows RPC                                     
+49154/tcp open  msrpc         Microsoft Windows RPC                                     
+49158/tcp open  msrpc         Microsoft Windows RPC                                     
+49159/tcp open  msrpc         Microsoft Windows RPC                                     
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).                                                             
+TCP/IP fingerprint:                                                                     
+OS:SCAN(V=7.95%E=4%D=2/20%OT=135%CT=1%CU=36341%PV=Y%DS=3%DC=T%G=Y%TM=6998C6             
+OS:78%P=x86_64-pc-linux-gnu)SEQ(SP=103%GCD=1%ISR=10C%TI=I%CI=I%II=I%SS=S%TS             
+OS:=7)SEQ(SP=103%GCD=1%ISR=10D%TI=I%CI=I%II=I%SS=S%TS=7)SEQ(SP=105%GCD=1%IS             
+OS:R=103%TI=I%CI=I%II=I%SS=S%TS=7)SEQ(SP=107%GCD=1%ISR=109%TI=I%CI=I%II=I%S             
+OS:S=S%TS=7)SEQ(SP=FE%GCD=1%ISR=10D%TI=I%CI=I%II=I%SS=S%TS=7)OPS(O1=M4E8NW8             
+OS:ST11%O2=M4E8NW8ST11%O3=M4E8NW8NNT11%O4=M4E8NW8ST11%O5=M4E8NW8ST11%O6=M4E             
+OS:8ST11)WIN(W1=2000%W2=2000%W3=2000%W4=2000%W5=2000%W6=2000)ECN(R=Y%DF=Y%T             
+OS:=80%W=2000%O=M4E8NW8NNS%CC=N%Q=)T1(R=Y%DF=Y%T=80%S=O%A=S+%F=AS%RD=0%Q=)T             
+OS:2(R=Y%DF=Y%T=80%W=0%S=Z%A=S%F=AR%O=%RD=0%Q=)T3(R=Y%DF=Y%T=80%W=0%S=Z%A=O
+OS:%F=AR%O=%RD=0%Q=)T4(R=Y%DF=Y%T=80%W=0%S=A%A=O%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y
+OS:%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=80%W=0%S=A%A=O%F=R%O=%R
+OS:D=0%Q=)T7(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=80%IP
+OS:L=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=80%CD=Z)
+Network Distance: 3 hops
+Service Info: Host: JON-PC; OS: Windows; CPE: cpe:/o:microsoft:windows
+Host script results:
+|_nbstat: NetBIOS name: JON-PC, NetBIOS user: <unknown>, NetBIOS MAC: 12:a9:e5:ff:6e:9d (unknown)
+| smb-os-discovery: 
+|   OS: Windows 7 Professional 7601 Service Pack 1 (Windows 7 Professional 6.1)
+|   OS CPE: cpe:/o:microsoft:windows_7::sp1:professional
+|   Computer name: Jon-PC
+|   NetBIOS computer name: JON-PC\x00
+|   Workgroup: WORKGROUP\x00
+|_  System time: 2026-02-20T14:39:19-06:00
+|_clock-skew: mean: 1h12m04s, deviation: 2h41m00s, median: 4s
+| smb2-security-mode: 
+|   2:1:0: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2026-02-20T20:39:19
+|_  start_date: 2026-02-20T20:15:00
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+TRACEROUTE (using port 110/tcp)
+HOP RTT      ADDRESS
+1   82.45 ms 192.168.128.1
+2   ...
+3   83.76 ms 10.67.147.22
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 478.20 seconds
+```
+
 > [!note]
-> To find this out I ran a deeper nmap scan
+> Running a Quick google search for Windows 7 Professional 7601 Service Pack 1 (Windows 7 Professional 6.1) got me the answer from 
