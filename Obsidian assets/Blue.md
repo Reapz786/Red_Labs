@@ -126,4 +126,32 @@ Nmap done: 1 IP address (1 host up) scanned in 478.20 seconds
 ```
 
 > [!note]
-> Running a Quick google search for Windows 7 Professional 7601 Service Pack 1 (Windows 7 Professional 6.1) got me the answer from 
+> Running a Quick google search for Windows 7 Professional 7601 Service Pack 1 (Windows 7 Professional 6.1) got me the answer from Microsoft as:
+> 
+> Microsoft Security Bulletin MS17-010 - Critical Security Update for Microsoft Windows SMB Server (4013389)
+
+> [!important]
+> Find the exploitation code we will run against the machine. What is the full path of the code? (Ex: exploit/........)Find the exploitation code we will run against the machine. What is the full path of the code? (Ex: exploit/........)
+
+> [!note]
+> Using MetaSploit I got:
+
+```
+msf > search ms17-010
+Matching Modules
+================
+
+   #   Name                                           Disclosure Date  Rank     Check  Description
+   -   ----                                           ---------------  ----     -----  -----------
+   0   exploit/windows/smb/ms17_010_eternalblue       2017-03-14       average  Yes    MS17-010 EternalBlue SMB Remote Windows Kernel Pool Corruption
+   1     \_ target: Automatic Target                  .                .        .      .
+   2     \_ target: Windows 7                         .                .        .      .
+   3     \_ target: Windows Embedded Standard 7       .                .        .      .
+   4     \_ target: Windows Server 2008 R2            .                .        .      .
+   5     \_ target: Windows 8                         .                .        .      .
+   6     \_ target: Windows 8.1                       .                .        .      .
+   7     \_ target: Windows Server 2012               .                .        .      .
+   8     \_ target: Windows 10 Pro                    .                .        .      .
+   9     \_ target: Windows 10 Enterprise Evaluation  .                .        .      .
+```
+
