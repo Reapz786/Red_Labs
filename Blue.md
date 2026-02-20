@@ -19,4 +19,6 @@ date: 2026-02-20
 > [!note]
 > Using the following nmap syntax/cmd/script, I found that there is 
 
+```
 
+```
