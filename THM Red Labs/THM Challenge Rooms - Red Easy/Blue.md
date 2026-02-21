@@ -660,5 +660,6 @@ dir
 C:\Users\Jon\Documents>type flag3.txt
 type flag3.txt
 flag{admin_documents_can_be_valuable}
-
 ```
+
+![[Blue completed.png]]
