@@ -594,3 +594,71 @@ flag{sam_database_elevated_access}
 > [!important]
 > flag3? _This flag can be found in an excellent location to loot. After all, Administrators usually have pretty interesting things saved._
 
+```
+C:\Windows\System32\config>cd /
+cd /
+
+C:\>cd Users
+cd Users
+
+C:\Users>dir
+dir
+ Volume in drive C has no label.
+ Volume Serial Number is E611-0B66
+
+ Directory of C:\Users
+
+12/12/2018  09:13 PM    <DIR>          .
+12/12/2018  09:13 PM    <DIR>          ..
+12/12/2018  09:13 PM    <DIR>          Jon
+04/12/2011  02:28 AM    <DIR>          Public
+               0 File(s)              0 bytes
+               4 Dir(s)  20,271,620,096 bytes free
+
+C:\Users>cd Jon
+cd Jon
+
+C:\Users\Jon>dir
+dir
+ Volume in drive C has no label.
+ Volume Serial Number is E611-0B66
+
+ Directory of C:\Users\Jon
+
+12/12/2018  09:13 PM    <DIR>          .
+12/12/2018  09:13 PM    <DIR>          ..
+12/12/2018  09:13 PM    <DIR>          Contacts
+12/12/2018  09:49 PM    <DIR>          Desktop
+12/12/2018  09:49 PM    <DIR>          Documents
+12/12/2018  09:13 PM    <DIR>          Downloads
+12/12/2018  09:13 PM    <DIR>          Favorites
+12/12/2018  09:13 PM    <DIR>          Links
+12/12/2018  09:13 PM    <DIR>          Music
+12/12/2018  09:13 PM    <DIR>          Pictures
+12/12/2018  09:13 PM    <DIR>          Saved Games
+12/12/2018  09:13 PM    <DIR>          Searches
+12/12/2018  09:13 PM    <DIR>          Videos
+               0 File(s)              0 bytes
+              13 Dir(s)  20,271,620,096 bytes free
+
+C:\Users\Jon>cd Documents
+cd Documents
+
+C:\Users\Jon\Documents>dir
+dir
+ Volume in drive C has no label.
+ Volume Serial Number is E611-0B66
+
+ Directory of C:\Users\Jon\Documents
+
+12/12/2018  09:49 PM    <DIR>          .
+12/12/2018  09:49 PM    <DIR>          ..
+03/17/2019  01:26 PM                37 flag3.txt
+               1 File(s)             37 bytes
+               2 Dir(s)  20,271,620,096 bytes free
+
+C:\Users\Jon\Documents>type flag3.txt
+type flag3.txt
+flag{admin_documents_can_be_valuable}
+
+```
