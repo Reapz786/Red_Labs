@@ -309,3 +309,16 @@ lin@ip-10-66-165-145:~/Desktop$
 
 ![](Bounty%20Hacker%20we're%20in.png)
 
+> [!important]
+> Find user.txt
+
+```
+lin@ip-10-66-165-145:~/Desktop$ ls
+user.txt
+lin@ip-10-66-165-145:~/Desktop$ cat user.txt
+THM{CR1M3_SyNd1C4T3}
+```
+
+> [!important]
+> Find root.txt
+
