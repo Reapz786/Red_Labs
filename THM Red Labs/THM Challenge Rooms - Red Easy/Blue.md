@@ -533,5 +533,31 @@ ffb43f0de35be4d9917ac0cc8ad57f8d:alqfna22
 > Flag1? _This flag can be found at the system root.
 
 ```
+C:\>dir
+dir
+ Volume in drive C has no label.
+ Volume Serial Number is E611-0B66
+
+ Directory of C:\
+
+02/21/2026  05:45 AM    <DIR>          badr
+03/17/2019  01:27 PM                24 flag1.txt
+07/13/2009  09:20 PM    <DIR>          PerfLogs
+04/12/2011  02:28 AM    <DIR>          Program Files
+03/17/2019  04:28 PM    <DIR>          Program Files (x86)
+12/12/2018  09:13 PM    <DIR>          Users
+02/21/2026  06:15 AM    <DIR>          Windows
+               1 File(s)             24 bytes
+               6 Dir(s)  20,271,620,096 bytes free
+
+C:\>type flag1.txt       
+type flag1.txt
+flag{access_the_machine}
+```
+
+> [!important]
+> Flag2? _This flag can be found at the location where passwords are stored within Windows._
+
+```
 
 ```
