@@ -559,5 +559,38 @@ flag{access_the_machine}
 > Flag2? _This flag can be found at the location where passwords are stored within Windows._
 
 ```
+C:\>cd C:\Windows\System32\config                                  
+cd C:\Windows\System32\config
 
+C:\Windows\System32\config>dir
+dir
+ Volume in drive C has no label.
+ Volume Serial Number is E611-0B66
+
+ Directory of C:\Windows\System32\config
+
+02/21/2026  05:45 AM    <DIR>          .
+02/21/2026  05:45 AM    <DIR>          ..
+12/12/2018  05:00 PM            28,672 BCD-Template
+02/21/2026  06:29 AM        18,087,936 COMPONENTS
+02/21/2026  07:32 AM           262,144 DEFAULT
+03/17/2019  01:32 PM                34 flag2.txt
+07/13/2009  08:34 PM    <DIR>          Journal
+02/21/2026  06:33 AM    <DIR>          RegBack
+03/17/2019  02:05 PM           262,144 SAM
+02/21/2026  06:28 AM           262,144 SECURITY
+02/21/2026  07:29 AM        40,632,320 SOFTWARE
+02/21/2026  07:31 AM        12,582,912 SYSTEM
+11/20/2010  08:41 PM    <DIR>          systemprofile
+12/12/2018  05:03 PM    <DIR>          TxR
+               8 File(s)     72,118,306 bytes
+               6 Dir(s)  20,271,620,096 bytes free
+
+C:\Windows\System32\config>type flag2.txt
+type flag2.txt
+flag{sam_database_elevated_access}
 ```
+
+> [!important]
+> flag3? _This flag can be found in an excellent location to loot. After all, Administrators usually have pretty interesting things saved._
+
