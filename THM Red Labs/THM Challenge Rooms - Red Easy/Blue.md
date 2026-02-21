@@ -6,7 +6,8 @@ tags:
 tools:
 date: 2026-02-20
 ---
-![[Blue-2.png]]
+
+![[Bluenew.png]]
 
 > [!important]
 > Deploy & hack into a Windows machine, leveraging common misconfigurations issues.
