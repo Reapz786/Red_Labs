@@ -7,7 +7,7 @@ tools:
 date: 2026-02-20
 ---
 
-![[Bluenew.png]]
+![Bluenew.png](Bluenew.png)
 
 > [!important]
 > Deploy & hack into a Windows machine, leveraging common misconfigurations issues.
@@ -332,7 +332,7 @@ Microsoft Windows [Version 6.1.7601]
 C:\Windows\system32>
 ```
 
-![[Blue We're in.png]]
+![Blue We're in.png](Blue%20We're%20in.png)
 
 > [!important]
 > If you haven't already, background the previously gained shell (CTRL + Z). Research online how to convert a shell to meterpreter shell in metasploit. What is the name of the post module we will use? (Exact path, similar to the exploit we previously selected)
@@ -662,4 +662,4 @@ type flag3.txt
 flag{admin_documents_can_be_valuable}
 ```
 
-![[Blue completed.png]]
+![](BlueCompleted.png)![](BlueCompleted.png)
