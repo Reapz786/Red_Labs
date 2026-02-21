@@ -45,30 +45,30 @@ title: Home
                     {% assign all_writeups = thm_pages | concat: htb_pages %}
                     {% assign total_writeups = all_writeups.size %}
                     
-                    <!-- Collect and normalize all tags (case-insensitive) -->
-                    {% assign all_tags_lower = "" | split: "" %}
+                    <!-- Collect and normalize all tags (PROPER sanitization) -->
+                    {% assign all_tags_normalized = "" | split: "" %}
                     {% for page in all_writeups %}
                         {% if page.tags %}
                             {% for tag in page.tags %}
-                                {% assign tag_lower = tag | downcase %}
-                                {% assign all_tags_lower = all_tags_lower | push: tag_lower %}
+                                {% assign tag_normalized = tag | strip | downcase | replace: "_", "-" | replace: " ", "-" %}
+                                {% assign all_tags_normalized = all_tags_normalized | push: tag_normalized %}
                             {% endfor %}
                         {% endif %}
                     {% endfor %}
-                    {% assign unique_tags = all_tags_lower | uniq %}
+                    {% assign unique_tags = all_tags_normalized | uniq %}
                     {% assign unique_tags_count = unique_tags.size %}
                     
-                    <!-- Collect and normalize all tools (case-insensitive) -->
-                    {% assign all_tools_lower = "" | split: "" %}
+                    <!-- Collect and normalize all tools (PROPER sanitization) -->
+                    {% assign all_tools_normalized = "" | split: "" %}
                     {% for page in all_writeups %}
                         {% if page.tools %}
                             {% for tool in page.tools %}
-                                {% assign tool_lower = tool | downcase %}
-                                {% assign all_tools_lower = all_tools_lower | push: tool_lower %}
+                                {% assign tool_normalized = tool | strip | downcase | replace: "_", "-" | replace: " ", "-" %}
+                                {% assign all_tools_normalized = all_tools_normalized | push: tool_normalized %}
                             {% endfor %}
                         {% endif %}
                     {% endfor %}
-                    {% assign unique_tools = all_tools_lower | uniq %}
+                    {% assign unique_tools = all_tools_normalized | uniq %}
                     {% assign unique_tools_count = unique_tools.size %}
                     
                     <!-- Write-ups Stat -->
@@ -126,8 +126,8 @@ title: Home
                                     {% for page in all_writeups %}
                                         {% if page.tags %}
                                             {% for page_tag in page.tags %}
-                                                {% assign page_tag_lower = page_tag | downcase %}
-                                                {% if page_tag_lower == tag %}
+                                                {% assign page_tag_normalized = page_tag | strip | downcase | replace: "_", "-" | replace: " ", "-" %}
+                                                {% if page_tag_normalized == tag %}
                                                     {% assign count = count | plus: 1 %}
                                                     {% break %}
                                                 {% endif %}
@@ -155,8 +155,8 @@ title: Home
                                                 {% if page.tags %}
                                                     {% assign has_tag = false %}
                                                     {% for page_tag in page.tags %}
-                                                        {% assign page_tag_lower = page_tag | downcase %}
-                                                        {% if page_tag_lower == tag_name %}
+                                                        {% assign page_tag_normalized = page_tag | strip | downcase | replace: "_", "-" | replace: " ", "-" %}
+                                                        {% if page_tag_normalized == tag_name %}
                                                             {% assign has_tag = true %}
                                                             {% break %}
                                                         {% endif %}
@@ -192,8 +192,8 @@ title: Home
                                     {% for page in all_writeups %}
                                         {% if page.tools %}
                                             {% for page_tool in page.tools %}
-                                                {% assign page_tool_lower = page_tool | downcase %}
-                                                {% if page_tool_lower == tool %}
+                                                {% assign page_tool_normalized = page_tool | strip | downcase | replace: "_", "-" | replace: " ", "-" %}
+                                                {% if page_tool_normalized == tool %}
                                                     {% assign count = count | plus: 1 %}
                                                     {% break %}
                                                 {% endif %}
@@ -221,8 +221,8 @@ title: Home
                                                 {% if page.tools %}
                                                     {% assign has_tool = false %}
                                                     {% for page_tool in page.tools %}
-                                                        {% assign page_tool_lower = page_tool | downcase %}
-                                                        {% if page_tool_lower == tool_name %}
+                                                        {% assign page_tool_normalized = page_tool | strip | downcase | replace: "_", "-" | replace: " ", "-" %}
+                                                        {% if page_tool_normalized == tool_name %}
                                                             {% assign has_tool = true %}
                                                             {% break %}
                                                         {% endif %}
