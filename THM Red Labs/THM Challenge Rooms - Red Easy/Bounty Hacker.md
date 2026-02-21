@@ -176,3 +176,53 @@ ftp> exit
 221 Goodbye.
 ```
 
+> [!note]
+> Two files found locks.txt & task.txt:
+
+```
+┌──(kali㉿kali)-[~]
+└─$ cat locks.txt 
+rEddrAGON
+ReDdr4g0nSynd!cat3
+Dr@gOn$yn9icat3
+R3DDr46ONSYndIC@Te
+ReddRA60N
+R3dDrag0nSynd1c4te
+dRa6oN5YNDiCATE
+ReDDR4g0n5ynDIc4te
+R3Dr4gOn2044
+RedDr4gonSynd1cat3
+R3dDRaG0Nsynd1c@T3
+Synd1c4teDr@g0n
+reddRAg0N
+REddRaG0N5yNdIc47e
+Dra6oN$yndIC@t3
+4L1mi6H71StHeB357
+rEDdragOn$ynd1c473
+DrAgoN5ynD1cATE
+ReDdrag0n$ynd1cate
+Dr@gOn$yND1C4Te
+RedDr@gonSyn9ic47e
+REd$yNdIc47e
+dr@goN5YNd1c@73
+rEDdrAGOnSyNDiCat3
+r3ddr@g0N
+ReDSynd1ca7e
+                                                         
+┌──(kali㉿kali)-[~]
+└─$ cat task.txt 
+1.) Protect Vicious.
+2.) Plan for Red Eye pickup on the moon.
+
+-lin
+```
+
+> [!important]
+> What service can you bruteforce with the text file found? SSH
+
+> [!info]
+> The locks.txt must be the password file itself and one of them is right for user lin for SSH:
+
+```
+
+```
