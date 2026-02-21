@@ -528,3 +528,10 @@ Stopped: Sat Feb 21 07:34:20 2026
 31d6cfe0d16ae931b73c59d7e0c089c0:
 ffb43f0de35be4d9917ac0cc8ad57f8d:alqfna22
 ```
+
+> [!important]
+> Flag1? _This flag can be found at the system root.
+
+```
+
+```
