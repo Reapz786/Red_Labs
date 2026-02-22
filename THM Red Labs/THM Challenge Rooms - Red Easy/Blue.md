@@ -9,7 +9,6 @@ date: 2026-02-20
 
 ![](Obsidian%20assets/Bluenew.png)
 
-
 > [!important]
 > Deploy & hack into a Windows machine, leveraging common misconfigurations issues.
 > 10.67.147.22
@@ -662,5 +661,7 @@ C:\Users\Jon\Documents>type flag3.txt
 type flag3.txt
 flag{admin_documents_can_be_valuable}
 ```
-![](BlueCompleted.png)
+
+![](Obsidian%20assets/Bluecompleted!.png)
+
 
