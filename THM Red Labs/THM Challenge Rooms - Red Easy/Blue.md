@@ -7,7 +7,8 @@ tools:
 date: 2026-02-20
 ---
 
-![Bluenew.png](Bluenew.png)
+![](Obsidian%20assets/Bluenew.png)
+
 
 > [!important]
 > Deploy & hack into a Windows machine, leveraging common misconfigurations issues.

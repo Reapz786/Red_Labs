@@ -6,7 +6,8 @@ tags:
 tools:
 date: 2026-02-21
 ---
-![](Bounty%20Hacker.png)
+![](Obsidian%20assets/Bounty%20Hacker.png)
+
 > [!important]
 > You talked a big game about being the most elite hacker in the solar system. Prove it and claim your right to the status of Elite Bounty Hacker!
 > 
@@ -35,7 +36,8 @@ Nmap done: 1 IP address (1 host up) scanned in 4.83 seconds
 > [!note]
 > Interesting site
 
-![](Bounty%20Hacker%20site.png)
+![](Obsidian%20assets/Bounty%20Hacker%20site.png)
+
 
 > [!important]
 > Who wrote the task list?
