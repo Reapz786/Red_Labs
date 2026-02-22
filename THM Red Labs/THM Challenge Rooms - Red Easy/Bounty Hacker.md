@@ -309,7 +309,8 @@ Last login: Mon Aug 11 12:32:35 2025 from 10.23.8.228
 lin@ip-10-66-165-145:~/Desktop$ 
 ```
 
-![](Bounty%20Hacker%20we're%20in.png)
+![](Obsidian%20assets/Bounty%20Hacker%20we're%20in.png)
+
 
 > [!important]
 > Find user.txt
@@ -388,4 +389,5 @@ root.txt  snap
 THM{80UN7Y_h4cK3r}
 ```
 
-![](Bounty%20Hacker%20completed.png)
+![](Obsidian%20assets/Bounty%20Hacker%20completed.png)
+

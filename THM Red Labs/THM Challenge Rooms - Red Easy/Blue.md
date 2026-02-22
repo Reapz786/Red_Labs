@@ -333,7 +333,7 @@ Microsoft Windows [Version 6.1.7601]
 C:\Windows\system32>
 ```
 
-![Blue We're in.png](Blue%20We're%20in.png)
+![](Bluewe'rein.png)
 
 > [!important]
 > If you haven't already, background the previously gained shell (CTRL + Z). Research online how to convert a shell to meterpreter shell in metasploit. What is the name of the post module we will use? (Exact path, similar to the exploit we previously selected)
