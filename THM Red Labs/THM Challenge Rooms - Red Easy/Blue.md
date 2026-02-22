@@ -3,7 +3,12 @@ title: Blue
 difficulty: Easy
 platform: THM
 tags:
+  - privilege-escalation
+  - ntlm-cracking
 tools:
+  - nmap
+  - metasploit
+  - hashcat
 date: 2026-02-20
 ---
 
