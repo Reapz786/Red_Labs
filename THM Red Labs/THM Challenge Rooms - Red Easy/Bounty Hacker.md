@@ -4,7 +4,17 @@ difficulty: Easy
 platform: THM
 tags:
   - ftp-enumeration
+  - password-cracking
+  - ssh-brute-forcing
+  - sudo-exploits
+  - privilege-escalation
 tools:
+  - gtfobins
+  - nmap
+  - ftp
+  - hydra
+  - tar
+  - SSH
 date: 2026-02-21
 ---
 ![](Obsidian%20assets/Bounty%20Hacker.png)
