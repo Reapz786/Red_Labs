@@ -184,4 +184,10 @@ Finished
 ===============================================================
 ```
 > [!note]
-> OK, got a couple of 301 redirects which are /admin, /javascript & /phpmyadmin which we can explore and 403 forbidden for /server-status
+> OK, got a couple of 301 redirects which are /admin, /javascript & /phpmyadmin which we can explore and 403 forbidden for /server-status. Let's see what they look like:
+
+![](Obsidian%20assets/Expose-1.png)
+![](Obsidian%20assets/Pasted%20image%2020260224154356.png)
+![](Obsidian%20assets/Expose%20real%20admin%20site.png)
+> [!note]
+> Contents
