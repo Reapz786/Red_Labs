@@ -151,6 +151,37 @@ Nmap done: 1 IP address (1 host up) scanned in 65.98 seconds
 > Quick google search revealed I was attempting a HTTPS connection request when it should be HTTP request
 
 ![](Obsidian%20assets/Exposed%20site.png)
+![](Obsidian%20assets/Expose%20page%20source.png)
+> [!note]
+> Nothing obvious here but I have a Gobuster scan running in the background.
 
-
-fdff
+```
+┌──(kali㉿kali)-[/]
+└─$ gobuster dir -u http://10.114.173.211:1337/  -w usr/share/dirbuster/wordlists/directory-list-lowercase-2.3-medium.txt
+===============================================================
+Gobuster v3.8
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://10.114.173.211:1337/
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                usr/share/dirbuster/wordlists/directory-list-lowercase-2.3-medium.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.8
+[+] Timeout:                 10s
+===============================================================
+Starting gobuster in directory enumeration mode
+===============================================================
+/admin                (Status: 301) [Size: 323] [--> http://10.114.173.211:1337/admin/] 
+/javascript           (Status: 301) [Size: 328] [--> http://10.114.173.211:1337/javascript/]                      
+/phpmyadmin           (Status: 301) [Size: 328] [--> http://10.114.173.211:1337/phpmyadmin/]                      
+/server-status        (Status: 403) [Size: 281]
+/%d0%9f%d1%80%d0%be%d0%b3%d1%80%d0%b0%d0%bc%d0%bc%d0%bd%d0%be%d0%b5_%d0%be%d0%b1%d0%b5%d1%81%d0%bf%d0%b5%d1%87%d0%b5%d0%bd%d0%b8%d0%b5 (Status: 414) [Size: 361]
+/%5bnipponsei%5d%20souten%20no%20ken%20ed%20single%20-%20kokoro%20no%20rhythm%20tobichiru%20butterfly%20%5bdoa%5d (Status: 414) [Size: 361]   
+Progress: 207641 / 207641 (100.00%)
+===============================================================
+Finished
+===============================================================
+```
+> [!note]
+> OK, got a couple of 301 redirects which are /admin, /javascript & /phpmyadmin which we can explore and 403 forbidden for /server-status
