@@ -147,8 +147,10 @@ Nmap done: 1 IP address (1 host up) scanned in 65.98 seconds
 
 ![](Obsidian%20assets/Expose%20error.png)
 > [!note]
-> Am I not viewing the site correctly? Let's continue with Gobuster for now.
+> Am I not viewing the site correctly?
+> Quick google search revealed I was attempting a HTTPS connection request when it should be HTTP request
 
-```
+![](Obsidian%20assets/Exposed%20site.png)
 
-```
+
+fdff
