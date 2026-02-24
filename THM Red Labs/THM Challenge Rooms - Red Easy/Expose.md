@@ -190,4 +190,8 @@ Finished
 ![](Obsidian%20assets/Pasted%20image%2020260224154356.png)
 ![](Obsidian%20assets/Expose%20real%20admin%20site.png)
 > [!note]
-> Contents
+Ok so only 1 redirect is interesting which is the /phpmyadmin. I'll continue to enumerate with Gosbuster and port 53 domain.
+
+```
+
+```
