@@ -1,5 +1,5 @@
 ---
-title: Pickle Rick
+title: Expose
 difficulty: Easy
 platform: THM
 tags:
@@ -143,4 +143,12 @@ Nmap done: 1 IP address (1 host up) scanned in 65.98 seconds
 > OS detected is Linux.
 
 > [!info]
->Let's continue with enumeration so 
+>Let's continue with enumeration so lets check out the website for any low hanging fruit and start a Gobuster scan in the background.
+
+![](Obsidian%20assets/Expose%20error.png)
+> [!note]
+> Am I not viewing the site correctly? Let's continue with Gobuster for now.
+
+```
+
+```
