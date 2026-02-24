@@ -134,3 +134,13 @@ Nmap done: 1 IP address (1 host up) scanned in 65.98 seconds
 > 
 > SSH open port doesn't reveal much useful info but will probably be used to find user.txt
 > 
+> domain port doesn't reveal much but Gobuster scan can explore the sub-domain for any useful info.
+> 
+> 1337/tcp open  http Apache httpd 2.4.41 ((Ubuntu)) - This is great as this means there's a webpage to view but not on port 80 but rather 1337 (leet code).
+> 
+> 1883/tcp open  mosquitto version 1.6.9 - not sure what this relates to but research around this needs to be done. Guessing for now its a DB? there were file paths revealed involving $SYS path
+> 
+> OS detected is Linux.
+
+> [!info]
+>Let's continue with enumeration so 
