@@ -197,6 +197,4 @@ trtfdsfdsfds
 fdsfdsfdsf
 ```
 
-
-
-
+![](Obsidian%20assets/Expose-4.png)
