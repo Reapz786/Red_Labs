@@ -193,5 +193,6 @@ Finished
 Ok so only 1 redirect is interesting which is the /phpmyadmin. I'll continue to enumerate with Gosbuster and port 53 domain.
 
 ```
+
 ```
 
