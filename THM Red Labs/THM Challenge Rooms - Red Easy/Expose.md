@@ -193,5 +193,10 @@ Finished
 Ok so only 1 redirect is interesting which is the /phpmyadmin. I'll continue to enumerate with Gosbuster and port 53 domain.
 
 ```
-
+trtfdsfdsfds
+fdsfdsfdsf
 ```
+
+![](THM%20Red%20Labs/THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Expose-2.png)
+
+
