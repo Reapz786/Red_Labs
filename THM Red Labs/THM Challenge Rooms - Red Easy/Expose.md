@@ -190,16 +190,20 @@ Finished
 ![](Obsidian%20assets/Pasted%20image%2020260224154356.png)
 ![](Obsidian%20assets/Expose%20real%20admin%20site.png)
 > [!note]
-Ok so only 1 redirect is interesting which is the /phpmyadmin. I'll continue to enumerate with Gobuster and port 53 domain.
+Ok so only 1 redirect is interesting which is the /phpmyadmin. I'll continue to enumerate.
 
 ```
-
+> ftp 10.112.181.129
+Connected to 10.112.181.129.
+220 Welcome to the Expose Web Challenge.
+Name (10.112.181.129:reapz786): anonymous
+331 Please specify the password.
+Password:
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
 ftp> 200 Switching to ASCII mode.
-?Invalid command
-ftp> ftp> ls
-?Invalid command
 ftp> 200 PORT command successful. Consider using PASV.
-?Invalid command
 ftp> passive
 Passive mode on.
 ftp> ls
@@ -212,8 +216,9 @@ ftp> ls -la
 drwxr-xr-x    2 0        121          4096 Jun 11  2023 .
 drwxr-xr-x    2 0        121          4096 Jun 11  2023 ..
 226 Directory send OK.
-ftp> exit
-?Invalid command
 ftp> quit
 ```
+
+> [!note]
+> Confirmed nothing interesting to see as anonymous login..
 
