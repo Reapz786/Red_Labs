@@ -194,5 +194,26 @@ Ok so only 1 redirect is interesting which is the /phpmyadmin. I'll continue to 
 
 ```
 
+ftp> 200 Switching to ASCII mode.
+?Invalid command
+ftp> ftp> ls
+?Invalid command
+ftp> 200 PORT command successful. Consider using PASV.
+?Invalid command
+ftp> passive
+Passive mode on.
+ftp> ls
+227 Entering Passive Mode (10,112,181,129,242,130).
+150 Here comes the directory listing.
+226 Directory send OK.
+ftp> ls -la
+227 Entering Passive Mode (10,112,181,129,222,207).
+150 Here comes the directory listing.
+drwxr-xr-x    2 0        121          4096 Jun 11  2023 .
+drwxr-xr-x    2 0        121          4096 Jun 11  2023 ..
+226 Directory send OK.
+ftp> exit
+?Invalid command
+ftp> quit
 ```
 
