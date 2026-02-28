@@ -227,4 +227,5 @@ ftp> quit
 ```
 
 > [!note]
-> Looking online this is an unsecure protocol  called MQTT based on publish/subscribe model hence why I can see the comms from the nmap scan.
+> Looking online this is an unsecure protocol  called MQTT based on publish/subscribe model hence why I can see the comms from the nmap scan but looking online it seems like DDoS is the main vulnerability which is not what I'm here for.
+
