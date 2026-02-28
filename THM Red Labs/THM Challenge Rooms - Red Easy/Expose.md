@@ -12,7 +12,7 @@ date: 2026-02-24
 > 
 > _Exposing unnecessary services in a machine can be dangerous. Can you capture the flags and pwn the machine_?
 > 
-> Target IP: 10.114.173.211
+> Target IP: 10.112.181.129
 > 
 > What is the user flag?
 
