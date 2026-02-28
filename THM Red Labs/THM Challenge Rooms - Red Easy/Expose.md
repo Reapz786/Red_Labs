@@ -243,3 +243,7 @@ ftp> quit
 > [!note]
 > OK, getting somewhere with the version number which is 4.9.5 so lets hunt for a CVE???
 
+![](Obsidian%20assets/Exposerootlogin.png)
+> [!note]
+> Tried default creds and got denied!
+
