@@ -239,4 +239,7 @@ ftp> quit
 > OK, confirmed its a MySQL server the information is coming from so now what? How can we exploit this further?
 
 ![](Obsidian%20assets/Exposelogin%20question.png)
-![](Obsidian%20assets/Pasted%20image%2020260228152053.png)
+![](Obsidian%20assets/Exposephpmyadmindocs.png)
+> [!note]
+> OK, getting somewhere with the version number which is 4.9.5 so lets hunt for a CVE???
+
