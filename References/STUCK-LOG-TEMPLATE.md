@@ -9,10 +9,10 @@
 ## Current Status
 
 **Where I am:**
-- [ ] Have not gained initial access
+- [x] Have not gained initial access
 - [ ] Have initial access as user: [username]
 - [ ] Attempting privilege escalation
-- [ ] Completely lost
+- [x] Completely lost
 
 **Current user (if shell obtained):**  
 **Current directory (if shell obtained):**
