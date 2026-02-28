@@ -236,4 +236,7 @@ ftp> quit
 ![](Obsidian%20assets/Exposerandomuserlogin.png)
 
 > [!note]
-> OK, confirmed its a MyS
+> OK, confirmed its a MySQL server the information is coming from so now what? How can we exploit this further?
+
+![](Obsidian%20assets/Exposelogin%20question.png)
+![](Obsidian%20assets/Pasted%20image%2020260228152053.png)
