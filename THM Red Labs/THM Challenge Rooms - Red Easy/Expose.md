@@ -233,3 +233,7 @@ ftp> quit
 
 ![](Obsidian%20assets/Exposephpmyadmin%20admin%20login.png)
 
+![](Obsidian%20assets/Exposerandomuserlogin.png)
+
+> [!note]
+> OK, confirmed its a MyS
