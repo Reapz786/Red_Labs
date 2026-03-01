@@ -478,3 +478,9 @@ http://10.112.163.38:1337/file1010111/index.php?file=test
 
 > [!note]
 > Bit hard to tell but theres a user called ZeamKish
+
+![](Obsidian%20assets/Exposerevverseshell.png)
+
+> [!note]
+> Went back to /upload-cv00101011/index.php and entered zeamkish for a file upload to do a PHP reverse shell
+
