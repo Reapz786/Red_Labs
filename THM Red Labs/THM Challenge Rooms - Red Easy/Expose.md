@@ -491,3 +491,6 @@ http://10.112.163.38:1337/file1010111/index.php?file=test
 
 ![](Obsidian%20assets/Exposefilepath.png)
 
+> [!info]
+> Need to now work on a file upload bypass so lets get a php shell setup first and then get a NC listener once file upload successful
+
