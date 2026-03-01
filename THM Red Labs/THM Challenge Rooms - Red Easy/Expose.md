@@ -247,3 +247,31 @@ ftp> quit
 > [!note]
 > Tried default creds and got denied!
 
+```
+ ~                                                                               at 15:57:46
+> gobuster dir -u http://10.112.163.38:1337/  -w /usr/share/wordlists/SecLists/Discovery/Web-C
+===============================================================
+Gobuster v3.8.2
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://10.112.163.38:1337/
+[+] Method:                  GET
+[+] Threads:                 40
+[+] Wordlist:                /usr/share/wordlists/SecLists/Discovery/Web-Content/raft-medium-directories.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.8.2
+[+] Timeout:                 10s
+===============================================================
+Starting gobuster in directory enumeration mode
+===============================================================
+javascript           (Status: 301) [Size: 326] [--> http://10.112.163.38:1337/javascript/]
+phpmyadmin           (Status: 301) [Size: 326] [--> http://10.112.163.38:1337/phpmyadmin/]
+admin                (Status: 301) [Size: 321] [--> http://10.112.163.38:1337/admin/]
+server-status        (Status: 403) [Size: 280]
+admin_101            (Status: 301) [Size: 325] [--> http://10.112.163.38:1337/admin_101/]
+Progress: 29999 / 29999 (100.00%)
+===============================================================
+Finished
+===============================================================
+```
+
