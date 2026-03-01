@@ -484,5 +484,8 @@ http://10.112.163.38:1337/file1010111/index.php?file=test
 > [!note]
 > Went back to /upload-cv00101011/index.php and entered zeamkish for a file upload to do a PHP reverse shell but its only letting me upload image files like jpg/png
 
+![](Obsidian%20assets/uploadedExpose.png)
 
+> [!note]
+> Ok so file got uploaded to <span style=" display: none;">in /upload_thm_1001 folder</span
 
