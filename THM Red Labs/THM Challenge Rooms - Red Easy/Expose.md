@@ -279,3 +279,10 @@ Finished
 > Had to go back to Gobuster as I was using the wrong word list and found another dir which is admin_101
 
 ![](Obsidian%20assets/Exposeadmin_101.png)
+
+> [!info]
+>Had to learn how to use sqlmap which led down an interesting path.
+
+```
+
+```
