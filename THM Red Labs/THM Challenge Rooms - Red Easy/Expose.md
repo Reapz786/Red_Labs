@@ -482,5 +482,7 @@ http://10.112.163.38:1337/file1010111/index.php?file=test
 ![](Obsidian%20assets/Exposerevverseshell.png)
 
 > [!note]
-> Went back to /upload-cv00101011/index.php and entered zeamkish for a file upload to do a PHP reverse shell
+> Went back to /upload-cv00101011/index.php and entered zeamkish for a file upload to do a PHP reverse shell but its only letting me upload image files like jpg/png
+
+
 
