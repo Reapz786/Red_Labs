@@ -466,3 +466,11 @@ Table: config
 <span style="display: none;">Hint: Try file or view as GET parameters?</span>
 ```
 
+> [!note]
+> I changed URL into a GET parameter by a ? and then file/view to test the response
+> which led to a LFI and so I used directory traversal to find the username that starts with Z
+
+```
+http://10.112.163.38:1337/file1010111/index.php?file=test
+```
+
