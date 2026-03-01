@@ -487,5 +487,7 @@ http://10.112.163.38:1337/file1010111/index.php?file=test
 ![](Obsidian%20assets/uploadedExpose.png)
 
 > [!note]
-> Ok so file got uploaded to <span style=" display: none;">in /upload_thm_1001 folder</span
+> Ok so file got uploaded to "span style=" display: none;">in /upload_thm_1001 folder</span"
+
+![](Obsidian%20assets/Exposefilepath.png)
 
