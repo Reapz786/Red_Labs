@@ -449,4 +449,7 @@ Table: config
 ```
 
 > [!note]
-> which led to the following URL with the password easytohac
+> which led to the following URL with the password easytohack
+
+![](Obsidian%20assets/Exposeeasytohack.png)
+
