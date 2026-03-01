@@ -453,3 +453,9 @@ Table: config
 
 ![](Obsidian%20assets/Exposeeasytohack.png)
 
+![](Obsidian%20assets/Exposefuzzing.png)
+
+> [!info]
+> Need to find out what parameter fuzzing and DOM elements are but in the meantime lets try the other url /upload-cv00101011/index.php
+
+![](Obsidian%20assets/ExposeZ.png)
