@@ -459,3 +459,10 @@ Table: config
 > Need to find out what parameter fuzzing and DOM elements are but in the meantime lets try the other url /upload-cv00101011/index.php
 
 ![](Obsidian%20assets/ExposeZ.png)
+
+> [!note]
+> OK so going back to the above image, I inspected the DOM elements to find this:
+```
+<span style="display: none;">Hint: Try file or view as GET parameters?</span>
+```
+
