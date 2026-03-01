@@ -474,3 +474,7 @@ Table: config
 http://10.112.163.38:1337/file1010111/index.php?file=test
 ```
 
+![](Obsidian%20assets/ExposeZe4amkish.png)
+
+> [!note]
+> Bit hard to tell but theres a user called ZeamKish
