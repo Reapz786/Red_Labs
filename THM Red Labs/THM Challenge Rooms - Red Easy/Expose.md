@@ -3,7 +3,17 @@ title: Expose
 difficulty: Easy
 platform: THM
 tags:
+  - web-enumeration
+  - directory-traversal
+  - sql-injection
+  - file-upload-bypass
+  - LFI
+  - reverse-shell
+  - suid-exploitation
 tools:
+  - Nmap
+  - Gobuster
+  - sqlmap
 date: 2026-02-24
 ---
 ![](Obsidian%20assets/intro.png)
