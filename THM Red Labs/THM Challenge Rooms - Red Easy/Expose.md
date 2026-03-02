@@ -585,4 +585,5 @@ zeamkish@ip-10-114-136-24:~$
 ```
 
 > [!note]
-> For some reason my VPN 
+> For some reason my VPN setup wouldn't work for the nc listener for the reverse shell so I used THM attackbox and it worked which is annoying but we have the user flag.
+
