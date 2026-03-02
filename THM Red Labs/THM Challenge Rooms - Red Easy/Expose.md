@@ -590,3 +590,8 @@ zeamkish@ip-10-114-136-24:~$
 > [!important]
 > What is the root flag?
 
+> [!note]
+> Using sudo -l took me nowhere then tried SUID bit binary and saw that nano has SUIT bit binary set:
+```
+
+```
