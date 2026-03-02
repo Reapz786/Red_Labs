@@ -14,6 +14,10 @@ tools:
   - Nmap
   - Gobuster
   - sqlmap
+  - SSH
+  - burpsuite
+  - Netcat
+  - gtfobins
 date: 2026-02-24
 ---
 ![](Obsidian%20assets/intro.png)

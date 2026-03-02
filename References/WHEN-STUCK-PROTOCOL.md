@@ -10,7 +10,6 @@ When you hit a blocker, you MUST follow this sequence. No skipping steps.
 
 ### **Timer Setup (Do This NOW)**
 
-tags: - enumeration - anonymous-ftp - directory-enumeration - sql-injection - hash-cracking - lfi - directory-traversal - file-upload-bypass - reverse-shell - suid-privesc tools: - nmap - gobuster - ftp - sqlmap - burpsuite - netcat - ssh - gtfobins
 Before starting ANY challenge room:
 1. Open your phone timer app
 2. Create a repeating 30-minute timer labeled "STUCK CHECK"
