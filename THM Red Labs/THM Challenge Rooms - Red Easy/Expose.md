@@ -605,4 +605,4 @@ zeamkish@ip-10-112-161-224:~$ ls -la /usr/bin/nano
 ![](Obsidian%20assets/Exposegtfobins.png)
 
 > [!note]
-> 
+> Used
