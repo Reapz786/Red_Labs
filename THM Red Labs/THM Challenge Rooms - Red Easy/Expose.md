@@ -593,5 +593,16 @@ zeamkish@ip-10-114-136-24:~$
 > [!note]
 > Using sudo -l took me nowhere then tried SUID bit binary and saw that nano has SUIT bit binary set:
 ```
-
+zeamkish@ip-10-112-161-224:~$ find / -perm -4000 -type f 2>/dev/null
+/usr/bin/nano
+zeamkish@ip-10-112-161-224:~$ ls -la /usr/bin/nano
+-rwsr-xr-x 1 root root 320136 Apr 10  2020 /usr/bin/nano
 ```
+
+> [!note]
+> Went on gtfobins.org to find the following:
+
+![](Obsidian%20assets/Exposegtfobins.png)
+
+> [!note]
+> 
