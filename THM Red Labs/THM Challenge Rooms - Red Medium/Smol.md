@@ -415,5 +415,21 @@ $ whoami
 www-data
 ```
 
+```
+www-data@ip-10-112-173-1:/var/www/wordpress/wp-admin$ cd /
+www-data@ip-10-112-173-1:/$ ls
+bin   dev  home  lib32  libx32      media  opt   root  sbin  swap.img  tmp  var
+boot  etc  lib   lib64  lost+found  mnt    proc  run   srv   sys       usr
+www-data@ip-10-112-173-1:/$ cd opt
+www-data@ip-10-112-173-1:/opt$ ls
+wp_backup.sql
+www-data@ip-10-112-173-1:/opt$ ls -la
+total 296
+drwxr-xr-x  2 root root   4096 Mar 29  2024 .
+drwxr-xr-x 18 root root   4096 Mar  3 15:55 ..
+-rw-r--r--  1 root root 291970 Mar 29  2024 wp_backup.sql
+www-data@ip-10-112-173-1:/opt$
+```
 
-
+> [!note]
+> Tried to gain access to users but only able to get into one user which was ssm_user - remembering earlier that we had credentials for a DB so looking online i found that a wordpress sql DB can be stored in opts
