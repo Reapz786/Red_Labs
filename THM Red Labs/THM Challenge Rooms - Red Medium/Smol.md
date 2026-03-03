@@ -381,3 +381,8 @@ define( 'DB_COLLATE', '' );
 > [!note]
 > Ok, I'm in but lets enumerate what we can find here now.
 
+![](../THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Smolprivvate%20file.png)
+
+> [!note]
+> After checking if file upload was possible, ound a private file which mentions the hello dolly plugin that can lead to backdoor access.
+
