@@ -328,4 +328,5 @@ Interesting Finding(s):
 ```
 
 > [!note]
-> Okay found the attack surface to explore
+> Okay found the attack surface to explore which is jsmol2wp version 1.07 and found a number of usernames. The vulns is cross-site scripting (XSS) & server-side request forge
+
