@@ -128,8 +128,11 @@ Finished
 > Learnt to use wpscan with apitoken which is specific to word press for automating scan to find vuln information:
 
 ```
- ~                                                                                                         INT | at 16:41:54
-> wpscan --url http://www.smol.thm -e u,vp,vt --plugins-detection aggressive
+[+] Elapsed time: 00:00:20
+ ~                                                                                                    took 23s | at 17:31:50
+> wpscan --url http://www.smol.thm --api-token 9P3ub5jnWnDFhkle2xNzmtAHdIUnITwj685IwqDiGpc -e
+ ~                                                                                                         INT | at 17:32:10
+> wpscan --url http://www.smol.thm -e u,vp,vt --plugins-detection aggressive --api-token 9P3ub5jnWnDFhkle2xNzmtAHdIUnITwj685Iw
 WARNING: Nokogiri was built against libxml version 2.14.2, but has dynamically loaded 2.15.1
 WARNING: Nokogiri was built against libxslt version 1.1.43, but has dynamically loaded 1.1.45
 /usr/lib/ruby/3.4.0/readline.rb:4: warning: reline was loaded from the standard library, but will no longer be part of the def
@@ -149,7 +152,7 @@ _______________________________________________________________
 _______________________________________________________________
 
 [+] URL: http://www.smol.thm/ [10.112.173.1]
-[+] Started: Tue Mar  3 16:42:52 2026
+[+] Started: Tue Mar  3 17:32:27 2026
 
 Interesting Finding(s):
 
@@ -187,6 +190,24 @@ Interesting Finding(s):
  | Found By: Rss Generator (Passive Detection)
  |  - http://www.smol.thm/index.php/feed/, <generator>https://wordpress.org/?v=6.7.1</generator>
  |  - http://www.smol.thm/index.php/comments/feed/, <generator>https://wordpress.org/?v=6.7.1</generator>
+ |
+ | [!] 2 vulnerabilities identified:
+ |
+ | [!] Title: WP < 6.8.3 - Author+ DOM Stored XSS
+ |     Fixed in: 6.7.4
+ |     References:
+ |      - https://wpscan.com/vulnerability/c4616b57-770f-4c40-93f8-29571c80330a
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-58674
+ |      - https://patchstack.com/database/wordpress/wordpress/wordpress/vulnerability/wordpress-wordpress-wordpress-6-8-2-cros
+ |      -  https://wordpress.org/news/2025/09/wordpress-6-8-3-release/
+ |
+ | [!] Title: WP < 6.8.3 - Contributor+ Sensitive Data Disclosure
+ |     Fixed in: 6.7.4
+ |     References:
+ |      - https://wpscan.com/vulnerability/1e2dad30-dd95-4142-903b-4d5c580eaad2
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-58246
+ |      - https://patchstack.com/database/wordpress/wordpress/wordpress/vulnerability/wordpress-wordpress-wordpress-6-8-2-sens
+ |      - https://wordpress.org/news/2025/09/wordpress-6-8-3-release/
 
 [+] WordPress theme in use: twentytwentythree
  | Location: http://www.smol.thm/wp-content/themes/twentytwentythree/
@@ -208,13 +229,43 @@ Interesting Finding(s):
  |  - http://www.smol.thm/wp-content/themes/twentytwentythree/style.css, Match: 'Version: 1.2'
 
 [+] Enumerating Vulnerable Plugins (via Aggressive Methods)
- Checking Known Locations - Time: 00:00:32 <============================================> (7343 / 7343) 100.00% Time: 00:00:32
+ Checking Known Locations - Time: 00:00:31 <============================================> (7343 / 7343) 100.00% Time: 00:00:31
 [+] Checking Plugin Versions (via Passive and Aggressive Methods)
 
-[i] No plugins Found.
+[i] Plugin(s) Identified:
+
+[+] jsmol2wp
+ | Location: http://www.smol.thm/wp-content/plugins/jsmol2wp/
+ | Latest Version: 1.07 (up to date)
+ | Last Updated: 2018-03-09T10:28:00.000Z
+ | Readme: http://www.smol.thm/wp-content/plugins/jsmol2wp/readme.txt
+ | [!] Directory listing is enabled
+ |
+ | Found By: Known Locations (Aggressive Detection)
+ |  - http://www.smol.thm/wp-content/plugins/jsmol2wp/, status: 200
+ |
+ | [!] 2 vulnerabilities identified:
+ |
+ | [!] Title: JSmol2WP <= 1.07 - Unauthenticated Cross-Site Scripting (XSS)
+ |     References:
+ |      - https://wpscan.com/vulnerability/0bbf1542-6e00-4a68-97f6-48a7790d1c3e
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-20462
+ |      - https://www.cbiu.cc/2018/12/WordPress%E6%8F%92%E4%BB%B6jsmol2wp%E6%BC%8F%E6%B4%9E/#%E5%8F%8D%E5%B0%84%E6%80%A7XSS
+ |
+ | [!] Title: JSmol2WP <= 1.07 - Unauthenticated Server Side Request Forgery (SSRF)
+ |     References:
+ |      - https://wpscan.com/vulnerability/ad01dad9-12ff-404f-8718-9ebbd67bf611
+ |      - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-20463
+ |      - https://www.cbiu.cc/2018/12/WordPress%E6%8F%92%E4%BB%B6jsmol2wp%E6%BC%8F%E6%B4%9E/#%E5%8F%8D%E5%B0%84%E6%80%A7XSS
+ |
+ | Version: 1.07 (100% confidence)
+ | Found By: Readme - Stable Tag (Aggressive Detection)
+ |  - http://www.smol.thm/wp-content/plugins/jsmol2wp/readme.txt
+ | Confirmed By: Readme - ChangeLog Section (Aggressive Detection)
+ |  - http://www.smol.thm/wp-content/plugins/jsmol2wp/readme.txt
 
 [+] Enumerating Vulnerable Themes (via Passive and Aggressive Methods)
- Checking Known Locations - Time: 00:00:03 <==============================================> (652 / 652) 100.00% Time: 00:00:03
+ Checking Known Locations - Time: 00:00:02 <==============================================> (652 / 652) 100.00% Time: 00:00:02
 [+] Checking Theme Versions (via Passive and Aggressive Methods)
 
 [i] No themes Found.
@@ -249,11 +300,11 @@ Interesting Finding(s):
  |  - http://www.smol.thm/index.php/wp-json/wp/v2/users/?per_page=100&page=1
  | Confirmed By: Author Id Brute Forcing - Author Pattern (Aggressive Detection)
 
-[+] gege
+[+] diego
  | Found By: Author Id Brute Forcing - Author Pattern (Aggressive Detection)
  | Confirmed By: Login Error Messages (Aggressive Detection)
 
-[+] diego
+[+] gege
  | Found By: Author Id Brute Forcing - Author Pattern (Aggressive Detection)
  | Confirmed By: Login Error Messages (Aggressive Detection)
 
@@ -261,15 +312,20 @@ Interesting Finding(s):
  | Found By: Author Id Brute Forcing - Author Pattern (Aggressive Detection)
  | Confirmed By: Login Error Messages (Aggressive Detection)
 
-[!] No WPScan API Token given, as a result vulnerability data has not been output.
-[!] You can get a free API token with 25 daily requests by registering at https://wpscan.com/register
+[+] WPScan DB API OK
+ | Plan: free
+ | Requests Done (during the scan): 1
+ | Requests Remaining: 21
 
-[+] Finished: Tue Mar  3 16:43:33 2026
-[+] Requests Done: 8065
-[+] Cached Requests: 8
-[+] Data Sent: 2.144 MB
-[+] Data Received: 1.625 MB
-[+] Memory used: 287.191 MB
-[+] Elapsed time: 00:00:41
- ~                                                                                                    took 43s | at 16:43:33
+[+] Finished: Tue Mar  3 17:33:06 2026
+[+] Requests Done: 8023
+[+] Cached Requests: 60
+[+] Data Sent: 2.134 MB
+[+] Data Received: 1.126 MB
+[+] Memory used: 295.363 MB
+[+] Elapsed time: 00:00:38
+ ~
 ```
+
+> [!note]
+> Okay found the attack surface to explore
