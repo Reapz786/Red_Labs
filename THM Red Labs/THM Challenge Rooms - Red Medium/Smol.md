@@ -395,3 +395,8 @@ define( 'DB_COLLATE', '' );
 
 ![](../THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Smolbase64%20decoded.png)
 
+> [!note]
+>Because im logged in as admin and the PHP code above, I can execute RCE in the URL via GET parameter as shown below screenshot:
+
+![](../THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Smolwhoami.png)
+
