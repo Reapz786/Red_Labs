@@ -63,4 +63,5 @@ Nmap done: 1 IP address (1 host up) scanned in 43.38 seconds
 ```
 
 > [!note]
-> Contents
+> Only two ports opened and had to add smol.thm to the /etc/hosts file.
+
