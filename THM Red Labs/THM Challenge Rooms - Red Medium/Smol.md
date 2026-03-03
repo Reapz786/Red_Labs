@@ -88,4 +88,5 @@ Shellcodes: No Results
 ```
 
 > [!note]
-> While awaiting gobuster web directory enumeration - I decided to look up wordpress 6.7.1 vulnerabilities and saw on searchsploit and exploit DB https://www.exploit-db.com/exploits/39894 paths for PE further into the 
+> While awaiting gobuster web directory enumeration - I decided to look up wordpress 6.7.1 vulnerabilities and saw on searchsploit and exploit DB https://www.exploit-db.com/exploits/39894 paths for PE further into the pen test so I'll keep it aside for now.
+
