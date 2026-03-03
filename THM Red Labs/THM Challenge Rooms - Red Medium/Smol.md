@@ -117,4 +117,7 @@ Finished
 ```
 
 > [!note]
-> ran gobuster with access to 3 web 
+> ran gobuster with access to 3 web dirs - wp-content didn't reveal anything, just a white page. 
+> wp-includes revealed a lot of dirs which from the start information would lead me to believe one of the plugins in vulnerable for me to get the initial foothold but I will continue to enumerate for now.
+
+![](../THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Smolwp-includes.png)
