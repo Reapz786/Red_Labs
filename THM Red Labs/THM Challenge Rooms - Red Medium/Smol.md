@@ -391,6 +391,7 @@ define( 'DB_COLLATE', '' );
 > [!note]
 > ok found the right directory traversal path to hello.php which leads to RCE
 
-
+![](../THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Smolbase64.png)
 
 ![](../THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Smolbase64%20decoded.png)
+
