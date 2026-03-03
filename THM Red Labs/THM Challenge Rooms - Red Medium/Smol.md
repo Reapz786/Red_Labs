@@ -18,4 +18,8 @@ date: 2026-03-03
 > Target IP Address: 10.114.165.225
 
 > [!info]
-> Cont
+> OK, first medium THM room, let's start with enumeration as always.
+
+```
+
+```
