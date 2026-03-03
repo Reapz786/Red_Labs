@@ -372,7 +372,12 @@ define( 'DB_COLLATE', '' );
 ```
 
 > [!note]
-> From wpscan - it led me to this link https://wpscan.com/vulnerability/ad01dad9-12ff-404f-8718-9ebbd67bf611/ which led me to a LFI exploit to get a DB password it seems: http://www.smol.thm/wp-content/plugins/jsmol2wp/php/jsmol.php?isform=true&call=getRawDataFromDatabase&query=php://filter/resource=../../../../wp-config.php as shown above but maybe i entered the password or its the wrong link i went to which was www.smol.thm/wp-admin - need to know the DB link?
-> 
-> Tried SSH but that failed.
+> From wpscan - it led me to this link https://wpscan.com/vulnerability/ad01dad9-12ff-404f-8718-9ebbd67bf611/ which led me to a LFI exploit to get a DB password it seems: http://www.smol.thm/wp-content/plugins/jsmol2wp/php/jsmol.php?isform=true&call=getRawDataFromDatabase&query=php://filter/resource=../../../../wp-config.php as shown above.
+
+![](../THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Smolim%20in.png)
+
+![](../THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Smolim%20inn.png)
+
+> [!note]
+> Ok, I'm in but lets enumerate what we can find here now.
 
