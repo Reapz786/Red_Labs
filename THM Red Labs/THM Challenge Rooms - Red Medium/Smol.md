@@ -389,4 +389,4 @@ define( 'DB_COLLATE', '' );
 ![](../THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Smolhello%20dolly.png)
 
 > [!note]
-> ok found the right directory traversal path to hello.php which leads ro
+> ok found the right directory traversal path to hello.php which leads to RCE
