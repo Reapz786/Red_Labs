@@ -121,3 +121,5 @@ Finished
 > wp-includes revealed a lot of dirs which from the start information would lead me to believe one of the plugins in vulnerable for me to get the initial foothold but I will continue to enumerate for now.
 
 ![](../THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Smolwp-includes.png)
+> [!note]
+> Ok interesting I think - the wp-admin page changed the URL into http://www.smol.thm/wp-login.php?redirect_to=http%3A%2F%2Fwww.smol.thm%2Fwp-admin%2F&reauth=1
