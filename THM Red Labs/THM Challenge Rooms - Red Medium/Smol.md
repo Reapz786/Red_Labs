@@ -90,3 +90,31 @@ Shellcodes: No Results
 > [!note]
 > While awaiting gobuster web directory enumeration - I decided to look up wordpress 6.7.1 vulnerabilities and saw on searchsploit and exploit DB https://www.exploit-db.com/exploits/39894 paths for PE further into the pen test so I'll keep it aside for now.
 
+```
+> gobuster dir -u http://www.smol.thm/  -w /usr/share/wordlists/dirbuster-big.txt  -t 40
+===============================================================
+Gobuster v3.8.2
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://www.smol.thm/
+[+] Method:                  GET
+[+] Threads:                 40
+[+] Wordlist:                /usr/share/wordlists/dirbuster-big.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.8.2
+[+] Timeout:                 10s
+===============================================================
+Starting gobuster in directory enumeration mode
+===============================================================
+wp-content           (Status: 301) [Size: 317] [--> http://www.smol.thm/wp-content/]
+wp-includes          (Status: 301) [Size: 318] [--> http://www.smol.thm/wp-includes/]
+wp-admin             (Status: 301) [Size: 315] [--> http://www.smol.thm/wp-admin/]
+server-status        (Status: 403) [Size: 277]
+Progress: 1185252 / 1185252 (100.00%)
+===============================================================
+Finished
+===============================================================
+```
+
+> [!note]
+> ran gobuster with access to 3 web 
