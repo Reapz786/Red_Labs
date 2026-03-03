@@ -125,7 +125,7 @@ Finished
 > Ok interesting I think - the wp-admin page changed the URL into http://www.smol.thm/wp-login.php?redirect_to=http%3A%2F%2Fwww.smol.thm%2Fwp-admin%2F&reauth=1
 
 > [!info]
-> Learnt to use wpscan which is specific to word press for automating scan to find vuln information:
+> Learnt to use wpscan with apitoken which is specific to word press for automating scan to find vuln information:
 
 ```
  ~                                                                                                         INT | at 16:41:54
