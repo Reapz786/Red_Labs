@@ -70,6 +70,22 @@ Nmap done: 1 IP address (1 host up) scanned in 47.90 seconds
 > Only two ports opened and had to add www.smol.thm to the /etc/hosts file.
 
 ```
-
+> searchsploit 6.7.1
+-------------------------------------------------------------------------------------------- ---------------------------------
+ Exploit Title                                                                              |  Path
+-------------------------------------------------------------------------------------------- ---------------------------------
+AnyDVD 6.7.1.0 - Denial of Service                                                          | windows_x86/dos/15306.pl
+Cisco Firepower Management Center < 6.6.7.1 - Authenticated RCE                             | hardware/webapps/51881.py
+Man-db 2.6.7.1 - Local Privilege Escalation                                                 | linux/local/41158.md
+McAfee Email Gateway 6.7.1 - 'systemWebAdminConfig.do' Remote Security Bypass               | windows/remote/34013.txt
+MedDream PACS Server Premium 6.7.1.1 - 'email' SQL Injection                                | php/webapps/45344.txt
+PHPCompta/NOALYSS 6.7.1 5638 - Remote Command Execution                                     | php/webapps/34861.txt
+Softneta MedDream PACS Server Premium 6.7.1.1 - Directory Traversal                         | php/webapps/45347.txt
+SolarWinds Kiwi Syslog Server 9.6.7.1 - Unquoted Service Path                               | windows/local/52064.txt
+WordPress Theme Newspaper 6.7.1 - Privilege Escalation                                      | php/webapps/39894.php
+-------------------------------------------------------------------------------------------- ---------------------------------
+Shellcodes: No Results
 ```
 
+> [!note]
+> While awaiting gobuster web directory enumeration - I decided to look up wordpress 6.7.1 vulnerabilities and saw on searchsploit and exploit DB https://www.exploit-db.com/exploits/39894 paths for PE further into the 
