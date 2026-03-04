@@ -589,5 +589,97 @@ Stopped: Wed Mar  4 15:09:02 2026
 > Failed hashcat so need to know where I went wrong or what is the situation?
 
 ```
+> hashcat  UPSmol.txt /usr/share/wordlists/rockyou.txt
+hashcat (v7.1.2) starting in autodetect mode
 
+Successfully initialized the NVIDIA main driver CUDA runtime library.
+
+Failed to initialize NVIDIA RTC library.
+
+* Device #1: CUDA SDK Toolkit not installed or incorrectly installed.
+             CUDA SDK Toolkit required for proper device support and utilization.
+             For more information, see: https://hashcat.net/faq/wrongdriver
+             Falling back to OpenCL runtime.
+
+OpenCL API (OpenCL 3.0 CUDA 13.1.112) - Platform #1 [NVIDIA Corporation]
+========================================================================
+* Device #01: NVIDIA GeForce RTX 2080, 7783/7783 MB (1945 MB allocatable), 46MCU
+
+Hash-mode was not specified with -m. Attempting to auto-detect hash mode.
+The following mode was auto-detected as the only one matching your input hash:
+
+400 | phpass | Generic KDF
+
+NOTE: Auto-detect is best effort. The correct hash-mode is NOT guaranteed!
+Do NOT report auto-detect issues unless you are certain of the hash type.
+
+Minimum password length supported by kernel: 0
+Maximum password length supported by kernel: 256
+Minimum salt length supported by kernel: 0
+Maximum salt length supported by kernel: 256
+
+Hashes: 6 digests; 6 unique digests, 6 unique salts
+Bitmaps: 16 bits, 65536 entries, 0x0000ffff mask, 262144 bytes, 5/13 rotates
+Rules: 1
+
+Optimizers applied:
+* Zero-Byte
+
+ATTENTION! Pure (unoptimized) backend kernels selected.
+Pure kernels can crack longer passwords, but drastically reduce performance.
+If you want to switch to optimized kernels, append -O to your commandline.
+See the above message to find out about the exact limits.
+
+Watchdog: Temperature abort trigger set to 90c
+
+Host memory allocated for this attack: 1035 MB (9579 MB free)
+
+Dictionary cache built:
+* Filename..: /usr/share/wordlists/rockyou.txt
+* Passwords.: 14344391
+* Bytes.....: 139921497
+* Keyspace..: 14344384
+* Runtime...: 0 secs
+
+$P$BWFBcbXdzGrsjnbc54Dr3Erff4JPwv1:sandiegocalifornia
+Cracking performance lower than expected?
+
+* Append -O to the commandline.
+  This lowers the maximum supported password/salt length (usually down to 32).
+
+* Append -w 3 to the commandline.
+  This can cause your screen to lag.
+
+* Append -S to the commandline.
+  This has a drastic speed impact but can be better for specific attacks.
+  Typical scenarios are a small wordlist but a large ruleset.
+
+* Update your backend API runtime / driver the right way:
+  https://hashcat.net/faq/wrongdriver
+
+* Create more work items to make use of your parallelization power:
+  https://hashcat.net/faq/morework
+[s]tatus [p]ause [b]ypass [c]heckpoint [f]inish [q]uit =>
+Approaching final keyspace - workload adjusted.
+Session..........: hashcat
+Status...........: Exhausted
+Hash.Mode........: 400 (phpass)
+Hash.Target......: UPSmol.txt
+Time.Started.....: Wed Mar  4 15:12:09 2026 (36 secs)
+Time.Estimated...: Wed Mar  4 15:12:45 2026 (0 secs)
+Kernel.Feature...: Pure Kernel (password length 0-256 bytes)
+Guess.Base.......: File (/usr/share/wordlists/rockyou.txt)
+Guess.Queue......: 1/1 (100.00%)
+Speed.#01........:  2033.6 kH/s (12.18ms) @ Accel:11 Loops:1024 Thr:512 Vec:1
+Recovered........: 1/6 (16.67%) Digests (total), 1/6 (16.67%) Digests (new), 1/6 (16.67%) Salts
+Progress.........: 86066304/86066304 (100.00%)
+Rejected.........: 0/86066304 (0.00%)
+Restore.Point....: 14344384/14344384 (100.00%)
+Restore.Sub.#01..: Salt:5 Amplifier:0-1 Iteration:7168-8192
+Candidate.Engine.: Device Generator
+Candidates.#01...: 0102940934 -> $HEX[042a0337c2a156616d6f732103]
+Hardware.Mon.#01.: Temp: 66c Fan: 51% Util: 97% Core:1920MHz Mem:7000MHz Bus:16
+
+Started: Wed Mar  4 15:12:00 2026
+Stopped: Wed Mar  4 15:12:46 2026
 ```
