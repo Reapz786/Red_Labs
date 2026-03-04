@@ -433,3 +433,105 @@ www-data@ip-10-112-173-1:/opt$
 
 > [!note]
 > Tried to gain access to users but only able to get into one user which was ssm_user - remembering earlier that we had credentials for a DB so looking online i found that a wordpress sql DB can be stored in opts
+
+```
+www-data@ip-10-112-186-157:/opt$ mysql -u wpuser -p
+Enter password:
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 28
+Server version: 8.0.42-0ubuntu0.20.04.1 (Ubuntu)
+Copyright (c) 2000, 2025, Oracle and/or its affiliates.
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+mysql> SHOW databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
+| wordpress          |
++--------------------+
+5 rows in set (0.00 sec)
+
+mysql> SHOW wordpress;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for t
+mysql> SELECT * FROM wordpress
+    ->
+    -> ;
+ERROR 1046 (3D000): No database selected
+mysql> use wordpress;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> show tables;
++---------------------------+
+| Tables_in_wordpress       |
++---------------------------+
+| wp_bp_activity            |
+| wp_bp_activity_meta       |
+| wp_bp_invitations         |
+| wp_bp_messages_messages   |
+| wp_bp_messages_meta       |
+| wp_bp_messages_notices    |
+| wp_bp_messages_recipients |
+| wp_bp_notifications       |
+| wp_bp_notifications_meta  |
+| wp_bp_optouts             |
+| wp_bp_xprofile_data       |
+| wp_bp_xprofile_fields     |
+| wp_bp_xprofile_groups     |
+| wp_bp_xprofile_meta       |
+| wp_commentmeta            |
+| wp_comments               |
+| wp_links                  |
+| wp_options                |
+| wp_postmeta               |
+| wp_posts                  |
+| wp_signups                |
+| wp_term_relationships     |
+| wp_term_taxonomy          |
+| wp_termmeta               |
+| wp_terms                  |
+| wp_usermeta               |
+| wp_users                  |
+| wp_wysija_campaign        |
+| wp_wysija_campaign_list   |
+| wp_wysija_custom_field    |
+| wp_wysija_email           |
+| wp_wysija_email_user_stat |
+| wp_wysija_email_user_url  |
+| wp_wysija_form            |
+| wp_wysija_list            |
+| wp_wysija_queue           |
+| wp_wysija_url             |
+| wp_wysija_url_mail        |
+| wp_wysija_user            |
+| wp_wysija_user_field      |
+| wp_wysija_user_history    |
+| wp_wysija_user_list       |
++---------------------------+
+42 rows in set (0.00 sec)
+
+mysql> describe wp_users;
++---------------------+-----------------+------+-----+---------------------+----------------+
+| Field               | Type            | Null | Key | Default             | Extra          |
++---------------------+-----------------+------+-----+---------------------+----------------+
+| ID                  | bigint unsigned | NO   | PRI | NULL                | auto_increment |
+| user_login          | varchar(60)     | NO   | MUL |                     |                |
+| user_pass           | varchar(255)    | NO   |     |                     |                |
+| user_nicename       | varchar(50)     | NO   | MUL |                     |                |
+| user_email          | varchar(100)    | NO   | MUL |                     |                |
+| user_url            | varchar(100)    | NO   |     |                     |                |
+| user_registered     | datetime        | NO   |     | 0000-00-00 00:00:00 |                |
+| user_activation_key | varchar(255)    | NO   |     |                     |                |
+| user_status         | int             | NO   |     | 0                   |                |
+| display_name        | varchar(250)    | NO   |     |                     |                |
++---------------------+-----------------+------+-----+---------------------+----------------+
+10 rows in set (0.00 sec)
+
+```
