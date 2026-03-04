@@ -746,3 +746,46 @@ u742mQ/UfeT6NnCJWHTorNpJO1fOexq1kmFKCMncIINnk8ZF1BBRQZtfjMvJ44sj9Oi4aE
 > [!note]
 > Found private SSH key of think user
 
+```
+ ~/Downloads/THM rooms                                                                                           at 15:49:44
+> ssh -i id_rsa think@10.112.186.157
+** WARNING: connection is not using a post-quantum key exchange algorithm.
+** This session may be vulnerable to "store now, decrypt later" attacks.
+** The server may need to be upgraded. See https://openssh.com/pq.html
+Welcome to Ubuntu 20.04.6 LTS (GNU/Linux 5.15.0-139-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Wed 04 Mar 2026 03:49:50 PM UTC
+
+  System load:  0.08              Processes:             140
+  Usage of /:   69.0% of 9.75GB   Users logged in:       0
+  Memory usage: 30%               IPv4 address for ens5: 10.112.186.157
+  Swap usage:   0%
+
+ * Ubuntu 20.04 LTS Focal Fossa has reached its end of standard support on 31 Ma
+
+   For more details see:
+   https://ubuntu.com/20-04
+
+Expanded Security Maintenance for Infrastructure is not enabled.
+
+0 updates can be applied immediately.
+
+37 additional security updates can be applied with ESM Infra.
+Learn more about enabling ESM Infra service for Ubuntu 20.04 at
+https://ubuntu.com/20-04
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+Your Hardware Enablement Stack (HWE) is supported until April 2025.
+
+
+think@ip-10-112-186-157:~$
+```
+
+> [!note]
+> Couldn't find anything else via linpeas which seemed exploitable in the context of the CTF 
