@@ -668,4 +668,21 @@ Hardware.Mon.#01.: Temp: 66c Fan: 51% Util: 97% Core:1920MHz Mem:7000MHz Bus:16
 
 Started: Wed Mar  4 15:12:00 2026
 Stopped: Wed Mar  4 15:12:46 2026
+> hashcat  UPSmol.txt /usr/share/wordlists/rockyou.txt --show
+Hash-mode was not specified with -m. Attempting to auto-detect hash mode.
+The following mode was auto-detected as the only one matching your input hash:
+
+400 | phpass | Generic KDF
+
+NOTE: Auto-detect is best effort. The correct hash-mode is NOT guaranteed!
+Do NOT report auto-detect issues unless you are certain of the hash type.
+
+$P$BWFBcbXdzGrsjnbc54Dr3Erff4JPwv1:sandiegocalifornia
+```
+
+> [!note]
+> The password revealed belongs to Diego! so lets try that now.
+
+```
+
 ```
