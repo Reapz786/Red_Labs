@@ -642,20 +642,6 @@ Dictionary cache built:
 * Runtime...: 0 secs
 
 $P$BWFBcbXdzGrsjnbc54Dr3Erff4JPwv1:sandiegocalifornia
-Cracking performance lower than expected?
-
-* Append -O to the commandline.
-  This lowers the maximum supported password/salt length (usually down to 32).
-
-* Append -w 3 to the commandline.
-  This can cause your screen to lag.
-
-* Append -S to the commandline.
-  This has a drastic speed impact but can be better for specific attacks.
-  Typical scenarios are a small wordlist but a large ruleset.
-
-* Update your backend API runtime / driver the right way:
-  https://hashcat.net/faq/wrongdriver
 
 * Create more work items to make use of your parallelization power:
   https://hashcat.net/faq/morework
