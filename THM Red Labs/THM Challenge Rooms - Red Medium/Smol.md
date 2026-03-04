@@ -799,3 +799,14 @@ think@ip-10-112-186-157:~$
 > [!note]
 > Ran linpeas again so just listing interesting finds for now.
 
+```
+╔══════════╣ Checking Pkexec and Polkit
+╚ https://book.hacktricks.wiki/en/linux-hardening/privilege-escalation/interesting-groups-linux-pe/index.html#pe---method-2
+
+══╣ Polkit Binary
+Pkexec binary found at: /usr/bin/pkexec
+Pkexec binary has SUID bit set!
+-rwsr-xr-x 1 root root 31032 Feb 21  2022 /usr/bin/pkexec
+pkexec version 0.105
+```
+
