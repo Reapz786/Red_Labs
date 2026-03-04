@@ -533,5 +533,17 @@ mysql> describe wp_users;
 | display_name        | varchar(250)    | NO   |     |                     |                |
 +---------------------+-----------------+------+-----+---------------------+----------------+
 10 rows in set (0.00 sec)
-
+mysql> SELECT user_login, user_pass, user_email, user_activation_key FROM wp_users
+    -> ;
++------------+------------------------------------+--------------------+---------------------+
+| user_login | user_pass                          | user_email         | user_activation_key |
++------------+------------------------------------+--------------------+---------------------+
+| admin      | $P$BH.CF15fzRj4li7nR19CHzZhPmhKdX. | admin@smol.thm     |                     |
+| wpuser     | $P$BfZjtJpXL9gBwzNjLMTnTvBVh2Z1/E. | wp@smol.thm        |                     |
+| think      | $P$BOb8/koi4nrmSPW85f5KzM5M/k2n0d/ | josemlwdf@smol.thm |                     |
+| gege       | $P$B1UHruCd/9bGD.TtVZULlxFrTsb3PX1 | gege@smol.thm      |                     |
+| diego      | $P$BWFBcbXdzGrsjnbc54Dr3Erff4JPwv1 | diego@local        |                     |
+| xavi       | $P$BB4zz2JEnM2H3WE2RHs3q18.1pvcql1 | xavi@smol.thm      |                     |
++------------+------------------------------------+--------------------+---------------------+
+6 rows in set (0.00 sec)
 ```
