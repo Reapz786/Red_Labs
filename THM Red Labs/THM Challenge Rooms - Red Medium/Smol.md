@@ -808,5 +808,18 @@ Pkexec binary found at: /usr/bin/pkexec
 Pkexec binary has SUID bit set!
 -rwsr-xr-x 1 root root 31032 Feb 21  2022 /usr/bin/pkexec
 pkexec version 0.105
+think@ip-10-112-186-157:/home/diego$ id
+uid=1000(think) gid=1000(think) groups=1000(think),1004(dev),1005(internal)
 ```
+
+> [!note]
+> Had to get a THM hint as i was lost at this point and got:
+> 
+> Even Linpeas can not do every check for you. But it suggests you do some stuff manually.
+> 
+> The thing is, I did the manual checks so what can I manually check that Linpeas doesn't?
+
+
+
+
 
