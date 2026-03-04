@@ -586,4 +586,8 @@ Stopped: Wed Mar  4 15:09:02 2026
 ```
 
 > [!note]
-> Failed hashcat so need to 
+> Failed hashcat so need to know where I went wrong or what is the situation?
+
+```
+
+```
