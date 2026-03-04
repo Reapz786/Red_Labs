@@ -827,6 +827,23 @@ gege@ip-10-112-186-157:/home$
 > [!note]
 > The hint indicated from online search that Linpeas can't enumerate those with no password but encourages you to try anyway...
 
+```
+ ~/Downloads/THM rooms                                                                                           at 16:43:32
+> zip2john wordpress.old.zip > wordpressziphash
+> john --wordlist=/usr/share/wordlists/rockyou.txt wordpressziphash
+Using default input encoding: UTF-8
+Loaded 1 password hash (PKZIP [32/64])
+Will run 12 OpenMP threads
+Press 'q' or Ctrl-C to abort, almost any other key for status
+hero_gege@hotmail.com (wordpress.old.zip)
+1g 0:00:00:00 DONE (2026-03-04 16:46) 1.449g/s 11077Kp/s 11077Kc/s 11077KC/s hershy kiss..heelys_123
+Use the "--show" option to display all of the cracked passwords reliably
+Session completed
+ !w /
+```
+
+> [!note]
+> Used john to get me the zip password which is hero_gege@hotmail.com 
 
 
 
