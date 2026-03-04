@@ -789,3 +789,13 @@ think@ip-10-112-186-157:~$
 
 > [!note]
 > Couldn't find anything else via linpeas which seemed exploitable in the context of the CTF so I decided to create a private SSH key locally and SSH'd in to user think.
+
+```
+╔══════════╣ Files inside others home (limit 20)
+/home/gege/.profile
+/home/gege/wordpress.old.zip
+```
+
+> [!note]
+> Ran linpeas again so just listing interesting finds for now.
+
