@@ -819,6 +819,21 @@ uid=1000(think) gid=1000(think) groups=1000(think),1004(dev),1005(internal)
 > 
 > The thing is, I did the manual checks so what can I manually check that Linpeas doesn't?
 
+```
+think@ip-10-112-186-157:/home$ ls
+diego  gege  ssm-user  think  ubuntu  xavi
+think@ip-10-112-186-157:/home$ cd xavi/
+think@ip-10-112-186-157:/home/xavi$ ls
+think@ip-10-112-186-157:/home/xavi$ cd ..
+think@ip-10-112-186-157:/home$ su xavi
+Password:
+su: Authentication failure
+think@ip-10-112-186-157:/home$ cd gege
+think@ip-10-112-186-157:/home/gege$ cd ..
+think@ip-10-112-186-157:/home$ su gege
+gege@ip-10-112-186-157:/home$
+```
+
 
 
 
