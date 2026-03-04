@@ -771,7 +771,8 @@ uid=1000(think) gid=1000(think) groups=1000(think),1004(dev),1005(internal)
 > Even Linpeas can not do every check for you. But it suggests you do some stuff manually.
 > 
 > The thing is, I did the manual checks so what can I manually check that Linpeas doesn't?
-> cat /etc/pam.d/su to read PAM config file to see if users have no 
+> 
+> cat /etc/pam.d/su to read PAM config file to see if users have no PW.
 
 ```
 think@ip-10-112-186-157:/home$ ls
