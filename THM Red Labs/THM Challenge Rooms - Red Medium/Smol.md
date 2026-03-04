@@ -547,3 +547,7 @@ mysql> SELECT user_login, user_pass, user_email, user_activation_key FROM wp_use
 +------------+------------------------------------+--------------------+---------------------+
 6 rows in set (0.00 sec)
 ```
+
+> [!note]
+> Using previously taken DB creds, I was able to find hashed passwords from the Mysql DB specifically from the wordpress DB in the wp_users table.
+
