@@ -788,4 +788,4 @@ think@ip-10-112-186-157:~$
 ```
 
 > [!note]
-> Couldn't find anything else via linpeas which seemed exploitable in the context of the CTF 
+> Couldn't find anything else via linpeas which seemed exploitable in the context of the CTF so I decided to create a private SSH key locally and SSH'd in to user think.
