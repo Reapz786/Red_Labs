@@ -825,6 +825,8 @@ gege@ip-10-112-186-157:/home$
 ```
 
 > [!note]
-> 
+> The hint indicated from online search that Linpeas can't enumerate those with no password but encourages you to try anyway...
+
+
 
 
