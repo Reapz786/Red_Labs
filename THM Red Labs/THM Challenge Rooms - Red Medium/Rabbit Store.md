@@ -14,4 +14,8 @@ date: 2026-03-08
 > Target IP Address: 10.112.159.28
 
 > [!info]
-> Web app pen testing skills are very basic but I have a feel
+> Web app pen testing skills are very basic but I have a feeling I am going to learn a few things which I welcome! Anyway let's enumerate.
+
+```
+
+```
