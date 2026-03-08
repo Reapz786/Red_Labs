@@ -141,3 +141,5 @@ Finished
 > [!note]
 > Login/signup page for me to explore...
 
+![](../THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Rabbit%20Storelogin.png)
+
