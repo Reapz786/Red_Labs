@@ -149,3 +149,31 @@ Finished
 > created a random email/password combo with admin@admin.com and password is admin which was a successful creation but I wasn't recognised as an internal user.
 > 
 > I also see a further domain worth using gobuster so maybe I can bypass the login altogether?
+
+```
+> gobuster dir -u http://storage.cloudsite.thm/dashboard -w /usr/share/wordlists/SecLists/Discovery/Web-Content/common.txt -t 50 -x php,html,txt,jsp,asp,aspx,bak,old,zip,tar,gz
+===============================================================
+Gobuster v3.8.2
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://storage.cloudsite.thm/dashboard
+[+] Method:                  GET
+[+] Threads:                 50
+[+] Wordlist:                /usr/share/wordlists/SecLists/Discovery/Web-Content/common.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.8.2
+[+] Extensions:              tar,gz,php,txt,aspx,bak,html,jsp,asp,old,zip
+[+] Timeout:                 10s
+===============================================================
+Starting gobuster in directory enumeration mode
+===============================================================
+active               (Status: 401) [Size: 32]
+Progress: 57012 / 57012 (100.00%)
+===============================================================
+Finished
+===============================================================
+```
+
+> [!note]
+> OK so the right user will be /dashboard/active but obviously it won't matter if I have the right creds at that point.
+
