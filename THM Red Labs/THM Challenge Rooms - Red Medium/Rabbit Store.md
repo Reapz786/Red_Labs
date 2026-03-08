@@ -77,3 +77,40 @@ Nmap done: 1 IP address (1 host up) scanned in 177.43 seconds
 > [!note]
 > Wappalyzer used to reveal the tech stack.
 
+```
+> gobuster dir -u http://cloudsite.thm/ -w /usr/share/wordlists/SecLists/Discovery/Web-Content/common.txt -t 50 -x php,html,txt,jsp,asp,aspx,bak,old,zip,tar,gz
+===============================================================
+Gobuster v3.8.2
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://cloudsite.thm/
+[+] Method:                  GET
+[+] Threads:                 50
+[+] Wordlist:                /usr/share/wordlists/SecLists/Discovery/Web-Content/common.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.8.2
+[+] Extensions:              php,html,txt,asp,aspx,bak,gz,jsp,old,zip,tar
+[+] Timeout:                 10s
+===============================================================
+Starting gobuster in directory enumeration mode
+===============================================================
+about_us.html        (Status: 200) [Size: 9992]
+assets               (Status: 301) [Size: 315] [--> http://cloudsite.thm/assets/]
+blog.html            (Status: 200) [Size: 10939]
+contact_us.html      (Status: 200) [Size: 9914]
+index.html           (Status: 200) [Size: 18451]
+index.html           (Status: 200) [Size: 18451]
+javascript           (Status: 301) [Size: 319] [--> http://cloudsite.thm/javascript/]
+server-status        (Status: 403) [Size: 278]
+services.html        (Status: 200) [Size: 9358]
+Progress: 57012 / 57012 (100.00%)
+===============================================================
+Finished
+===============================================================
+```
+
+> [!note]
+> 2 redirects which have shown up and I ran other wordlists to ensure best results but assets is the only one that shows up.
+
+![](../THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Rabbit%20Storeassets.png)
+
