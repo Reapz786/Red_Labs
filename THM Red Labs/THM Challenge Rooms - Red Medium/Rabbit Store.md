@@ -217,4 +217,5 @@ Finished
 ```
 
 > [!note]
-> More gobuster enumera
+> More gobuster enumeration was done. Going to look into sqlmap but I know I need an email atleast to use it but let's see what else I can explore?
+
