@@ -70,4 +70,10 @@ Nmap done: 1 IP address (1 host up) scanned in 177.43 seconds
 ```
 
 > [!note]
-> nmap reveals 4 ports that are open. CTF name is rabbit store and there is a rabbit port 25672 so thats my attack vector however ?
+> nmap reveals 4 ports that are open. CTF name is rabbit store and there is a rabbit port 25672 so thats my attack vector however I will continue to enumerate.
+
+![](../THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Rabbit%20Storewappalyzer.png)
+
+> [!note]
+> Wappalyzer used to reveal the tech stack.
+
