@@ -188,3 +188,33 @@ Finished
 
 ![](../THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Rabbit%20Storeburprequestresponse.png)
 
+```
+> gobuster dir -u http://storage.cloudsite.thm/dashboard -w /usr/share/wordlists/SecLists/Discovery/Web-Content/raft-large-directories.txt -t 50 -x php,html,txt,jsp,asp,aspx,bak,old,zip,tar,gz
+===============================================================
+Gobuster v3.8.2
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://storage.cloudsite.thm/dashboard
+[+] Method:                  GET
+[+] Threads:                 50
+[+] Wordlist:                /usr/share/wordlists/SecLists/Discovery/Web-Content/raft-large-directories.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.8.2
+[+] Extensions:              php,html,asp,aspx,zip,txt,jsp,bak,old,tar,gz
+[+] Timeout:                 10s
+===============================================================
+Starting gobuster in directory enumeration mode
+===============================================================
+active               (Status: 401) [Size: 32]
+inactive             (Status: 401) [Size: 32]
+XsltFiles.asp        (Status: 502) [Size: 428]
+XsltFiles.zip        (Status: 502) [Size: 428]
+Active               (Status: 401) [Size: 32]
+Progress: 747372 / 747372 (100.00%)
+===============================================================
+Finished
+===============================================================
+```
+
+> [!note]
+> More gobuster enumera
