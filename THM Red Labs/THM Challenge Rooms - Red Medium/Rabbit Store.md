@@ -143,3 +143,9 @@ Finished
 
 ![](../THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Rabbit%20Storelogin.png)
 
+![](../THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Rabbit%20Storecant%20login.png)
+
+> [!note]
+> created a random email/password combo with admin@admin.com and password is admin which was a successful creation but I wasn't recognised as an internal user.
+> 
+> I also see a further domain worth using gobuster so maybe I can bypass the login altogether?
