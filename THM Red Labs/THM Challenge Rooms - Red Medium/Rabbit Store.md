@@ -11,6 +11,8 @@ date: 2026-03-08
 > [!important]
 > Demonstrate your web application testing skills and the basics of Linux to escalate your privileges.
 > 
+> What is user.txt?
+> 
 > Target IP Address: 10.112.159.28
 
 > [!info]
@@ -176,4 +178,6 @@ Finished
 
 > [!note]
 > OK so the right user will be /dashboard/active but obviously it won't matter if I have the right creds at that point.
+
+![](../THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Rabbit%20Storedashbpardactive.png)
 
