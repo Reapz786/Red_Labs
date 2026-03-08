@@ -22,7 +22,6 @@ date: 2026-03-08
 > Put site into browser and http://cloudsite.thm/ came back so gotta add to /etc/hosts
 
 ```
- !w /                                                                              at 18:26:14
 > sudo nmap -A -O -sVC -p- 10.112.159.28
 [sudo] password for reapz786:
 Starting Nmap 7.98 ( https://nmap.org ) at 2026-03-08 18:26 +0000
@@ -218,4 +217,6 @@ Finished
 
 > [!note]
 > More gobuster enumeration was done. Going to look into sqlmap but I know I need an email atleast to use it but let's see what else I can explore?
+
+![](../THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Rabbit%20Store%20JWT.png)
 
