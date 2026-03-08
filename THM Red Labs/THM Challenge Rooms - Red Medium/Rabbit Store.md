@@ -184,4 +184,5 @@ Finished
 ![](../THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Rabbit%20Storeuser%20exists%20already.png)
 
 > [!note]
-> Cont
+> The list is being sent somewhere right? is it a sqlmap to enumerate this? Not sure...
+
