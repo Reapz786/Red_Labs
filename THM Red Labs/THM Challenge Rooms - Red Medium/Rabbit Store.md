@@ -114,3 +114,30 @@ Finished
 
 ![](../THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Rabbit%20Storeassets.png)
 
+```
+> gobuster vhost -u http://cloudsite.thm/ --append-domain -w /usr/share/wordlists/SecLists/Discovery/DNS/subdomains-top1million-110000.txt  -t 50 | grep -v "302"
+===============================================================
+Gobuster v3.8.2
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                       http://cloudsite.thm/
+[+] Method:                    GET
+[+] Threads:                   50
+[+] Wordlist:                  /usr/share/wordlists/SecLists/Discovery/DNS/subdomains-top1million-110000.txt
+[+] User Agent:                gobuster/3.8.2
+[+] Timeout:                   10s
+[+] Append Domain:             true
+[+] Exclude Hostname Length:   false
+===============================================================
+Starting gobuster in VHOST enumeration mode
+===============================================================
+storage.cloudsite.thm Status: 200 [Size: 9039]
+po\197\161ta.cloudsite.thm Status: 400 [Size: 301]
+===============================================================
+Finished
+===============================================================
+```
+
+> [!note]
+> Login/signup page for me to explore...
+
