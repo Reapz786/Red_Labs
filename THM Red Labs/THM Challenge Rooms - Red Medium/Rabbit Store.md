@@ -220,3 +220,6 @@ Finished
 
 ![](../THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Rabbit%20Store%20JWT.png)
 
+> [!note]
+> JWT is theory I learnt recently from THM so need to review this and manually enumerate/probe what can be done to change the subscription to active.
+
