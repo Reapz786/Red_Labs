@@ -18,4 +18,5 @@ To access the VM, click the **Start Machine** button below. Please give the VM
 
 ![](../../THM%20Red%20Labs/THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/The%20Crown%20Jewel%20-%20SourceIP.png)
 
-![](../../THM%20Red%20Labs/THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Pasted%20image%2020260916082156.png)
+![](../../THM%20Red%20Labs/THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/The%20Crown%20Jewel%20-%20Dest%20IP%20+%20Port.png)
+
