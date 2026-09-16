@@ -12,7 +12,10 @@ To solve this case, you will need to correlate activity between two primary sour
 
 - EDR Console: You have access to the EDR console below, which is the primary tool for investigating the resulting attack detections and initiate response actions to contain the threat.
 
-|   |   |
-|---|---|
-|**Access**|Granted|
-|**URL**|[EDR Console(opens in new tab)](https://static-labs.tryhackme.cloud/apps/portal-drop-edr/)|
+|            |                                                                                            |
+| ---------- | ------------------------------------------------------------------------------------------ |
+| **Access** | Granted                                                                                    |
+| **URL**    | [EDR Console(opens in new tab)](https://static-labs.tryhackme.cloud/apps/portal-drop-edr/) |
+What is the IP address that initiated the brute force on the CRM web portal?
+
+![](../../THM%20Red%20Labs/THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Portal%20Drop%20-%20brutforcing.png)
