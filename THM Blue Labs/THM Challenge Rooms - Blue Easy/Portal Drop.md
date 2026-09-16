@@ -57,4 +57,8 @@ What is the first decoded command the attacker ran on the CRM?
 
 Based on the attacker’s activity on the CRM, which MITRE ATT&CK Persistence sub-technique ID is most applicable?
 
+![](../../THM%20Red%20Labs/THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Portal%20Drop%20-%20technique.png)
+
+![](../../THM%20Red%20Labs/THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Portal%20Drop%20-%20sub%20technique.png)
+
 
