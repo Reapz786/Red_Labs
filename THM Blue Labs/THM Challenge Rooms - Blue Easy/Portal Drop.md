@@ -67,7 +67,12 @@ Which process image executes attacker commands received from the web?
 
 What command allowed the attacker to open a bash reverse shell?
 
+> [!NOTE] 
+> Had to run base64 decoder twice.
+> 
 
+
+![](../../THM%20Red%20Labs/THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Portal%20Drop%20-%20base64'd.png)
 
 Which Linux user executes the entered malicious commands?
 
