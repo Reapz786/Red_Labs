@@ -26,8 +26,13 @@ What is the IP address that initiated the brute force on the CRM web portal?
 How many successful and failed logins are seen in the logs?  
 Answer Example: 42, 56
 
+
+
 Following the brute force, which user-agent was used for the file upload?
+
+![](../../THM%20Red%20Labs/THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Portal%20Drop%20-%20user%20agent.png)
 
 What was the name of the suspicious file uploaded by the attacker?
 
 ![](../../THM%20Red%20Labs/THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Portal%20Drop%20-%20invoice%20file.png)
+
