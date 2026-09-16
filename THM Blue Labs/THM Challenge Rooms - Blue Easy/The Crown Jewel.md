@@ -14,4 +14,8 @@ To access the VM, click the **Start Machine** button below. Please give the VM
 - Detailed network traffic capture `challenge.pcap` that you can find on the `network_traffic` folder on the VM's Desktop
 - Pre-ingested Splunk logs (`index=network_logs`), which can be accessed at `MACHINE_IP:8000`
 
-![](../../THM%20Red%20Labs/THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Pasted%20image%2020260916081957.png)
+![](../../THM%20Red%20Labs/THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/The%20Crown%20Jewel.png)
+
+![](../../THM%20Red%20Labs/THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/The%20Crown%20Jewel%20-%20SourceIP.png)
+
+![](../../THM%20Red%20Labs/THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Pasted%20image%2020260916082156.png)
