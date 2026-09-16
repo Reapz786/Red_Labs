@@ -23,3 +23,6 @@ What is the IP address that initiated the brute force on the CRM web portal?
 
 ![](../../THM%20Red%20Labs/THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Portal%20Drop%20-%20brutforcing.png)
 
+How many successful and failed logins are seen in the logs?  
+Answer Example: 42, 56
+
