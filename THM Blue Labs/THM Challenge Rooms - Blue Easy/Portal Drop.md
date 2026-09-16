@@ -1,0 +1,1 @@
+Investigate a suspected breach on a CRM portal using logs and EDR data.
