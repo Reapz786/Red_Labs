@@ -26,7 +26,13 @@ What is the IP address that initiated the brute force on the CRM web portal?
 How many successful and failed logins are seen in the logs?  
 Answer Example: 42, 56
 
-
+```
+> grep '/login' access-combined-crm-1767978582478-1768841821765.log | awk '{print $9}' | sort | uniq -c
+     18 200
+     35 401
+ ~/Downloads/THM rooms/Portal Drop                                                  at 19:41:18
+>
+```
 
 Following the brute force, which user-agent was used for the file upload?
 
@@ -40,3 +46,4 @@ At what time did the attacker first invoke the uploaded script?
 Answer Example: 2025-10-24 15:35:50
 
 ![](../../THM%20Red%20Labs/THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Portal%20Drop%20-%20first%20time%20file%20invoked.png)
+
