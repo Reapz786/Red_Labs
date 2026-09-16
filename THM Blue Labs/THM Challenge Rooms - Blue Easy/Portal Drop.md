@@ -47,3 +47,7 @@ Answer Example: 2025-10-24 15:35:50
 
 ![](../../THM%20Red%20Labs/THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Portal%20Drop%20-%20first%20time%20file%20invoked.png)
 
+What is the first decoded command the attacker ran on the CRM?
+
+![](../../THM%20Red%20Labs/THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Portal%20Drop%20-%20whoami.png)
+
