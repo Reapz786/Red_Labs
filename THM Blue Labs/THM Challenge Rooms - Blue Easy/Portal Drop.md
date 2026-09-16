@@ -18,4 +18,8 @@ To solve this case, you will need to correlate activity between two primary sour
 | **URL**    | [EDR Console(opens in new tab)](https://static-labs.tryhackme.cloud/apps/portal-drop-edr/) |
 What is the IP address that initiated the brute force on the CRM web portal?
 
+> [!info]
+> Realised when loking for bruteforce - it involves login in the URI/URL and its a POST request so looked at highest occuring IP that had it and boom!
+
 ![](../../THM%20Red%20Labs/THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Portal%20Drop%20-%20brutforcing.png)
+
