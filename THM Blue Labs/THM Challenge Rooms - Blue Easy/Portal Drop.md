@@ -36,3 +36,7 @@ What was the name of the suspicious file uploaded by the attacker?
 
 ![](../../THM%20Red%20Labs/THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Portal%20Drop%20-%20invoice%20file.png)
 
+At what time did the attacker first invoke the uploaded script?  
+Answer Example: 2025-10-24 15:35:50
+
+![](../../THM%20Red%20Labs/THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Portal%20Drop%20-%20first%20time%20file%20invoked.png)
