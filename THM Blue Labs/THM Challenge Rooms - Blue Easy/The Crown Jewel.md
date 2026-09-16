@@ -24,3 +24,5 @@ To access the VM, click the **Start Machine** button below. Please give the VM
 
 ![](../../THM%20Red%20Labs/THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/The%20Crown%20Jewel%20-%20non%20standard%20user%20agent.png)
 
+![](../../THM%20Red%20Labs/THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/The%20Crown%20Jewel%20-%20ARP%20spoof%20count.png)
+
