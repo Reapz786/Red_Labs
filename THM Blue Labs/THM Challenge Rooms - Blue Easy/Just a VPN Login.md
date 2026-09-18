@@ -23,15 +23,15 @@ What is the ASN number related to the IP?
 
 Which service is offered from this IP?
 
-
+![](../../THM%20Red%20Labs/THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Just%20a%20VPN%20Login%20-%20vpn.png)
 
 What is the filename of the file related to the hash?
 
-
+![](../../THM%20Red%20Labs/THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Just%20a%20VPN%20Login%20-%20hash%20of%20file.png)
 
 What is the threat signature that Microsoft assigned to the file?
 
-
+![](../../THM%20Red%20Labs/THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Just%20a%20VPN%20Login%20-%20microsoft.png)
 
 One of the contacted domains is part of a large malicious infrastructure cluster.  
 Based on its HTTPS certificate, how many domains are linked to the same campaign?
