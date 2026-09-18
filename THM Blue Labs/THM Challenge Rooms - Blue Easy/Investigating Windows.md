@@ -13,9 +13,9 @@ Whats the version and year of the windows machine?
 
 ![](../../THM%20Red%20Labs/THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Investigating%20Windows%20-%20sys%20info.png)
 
-Which user logged in last?  
+Which user logged in last?  Adiministrator
 
-
+![](../../THM%20Red%20Labs/THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Investigating%20Windows%20-%20Administrator.png)
 
 When did John log onto the system last?
 
