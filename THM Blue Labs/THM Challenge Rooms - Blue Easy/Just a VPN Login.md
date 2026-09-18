@@ -50,7 +50,7 @@ What is the title of the report mentioning this hash?
 
 Which team did the author of the malware start collaborating with in early 2024?
 
-
+![](../../THM%20Red%20Labs/THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Just%20a%20VPN%20Login%20-%20collab.png)
 
 A Mexican-based affiliate related to the malware family also uses other infostealers.  
 Which mentioned infostealer targets Android systems?
