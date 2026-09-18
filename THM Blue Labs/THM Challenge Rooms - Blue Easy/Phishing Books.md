@@ -77,3 +77,11 @@ What is the Threat Actor associated with this malicious file and/or URL?
 ![](../../THM%20Red%20Labs/THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Phishing%20Books%20=%20threat%20actors.png)
 
 What is the main target of this Threat Actor according to MITRE?
+
+searchign up on mitre and it said the following:
+
+[Silent Librarian](https://attack.mitre.org/groups/G0122) is a group that has targeted research and proprietary data at universities, government agencies, and private sector companies worldwide since at least 2013. Members of [Silent Librarian](https://attack.mitre.org/groups/G0122) are known to have been affiliated with the Iran-based Mabna Institute
+
+but answer was research and proprietary data....GO FIGURE!!!
+
+![](../../THM%20Red%20Labs/THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Phishing%20Books%20-%20done.png)
