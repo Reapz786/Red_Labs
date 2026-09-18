@@ -66,7 +66,7 @@ What is the hidden message the attacker left in the file?
 
 Which line in the attached file is responsible for decoding the URL redirect?
 
-
+![](../../THM%20Red%20Labs/THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Phishing%20Books%20-%20line%20reverser.png)
 
 What is the first URL in the redirect chain?
 
