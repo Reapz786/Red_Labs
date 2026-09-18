@@ -58,7 +58,7 @@ What is the landing page of the phishing attack?
 
 Which MITRE technique ID was used inside the attached file?  
 
-
+![](../../THM%20Red%20Labs/THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Phishing%20Books%20-%20obconfusious.png)
 
 What is the hidden message the attacker left in the file?  
 
