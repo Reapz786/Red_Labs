@@ -29,3 +29,51 @@ You also have access to TryDetectThis, a threat intelligence database to check t
 |---|---|
 |**Access**|Granted|
 |**URL**|[TryDetectThis(opens in new tab)](https://static-labs.tryhackme.cloud/apps/trydetectthis/)|
+Answer the questions below
+
+Which specific header check explains why Isabella received the email without being rejected by the email platform?  
+Answer Example: "CHECK=value"
+
+
+
+What technique did the attacker use to make the message seem legitimate?
+
+
+
+Which MITRE technique and sub-technique ID best fit this sender address trick?
+
+
+
+What is the file extension of the attached file?
+
+
+
+What is the MD5 hash of the .HTML file?  
+
+
+
+What is the landing page of the phishing attack?
+
+
+
+Which MITRE technique ID was used inside the attached file?  
+
+
+
+What is the hidden message the attacker left in the file?  
+
+
+
+Which line in the attached file is responsible for decoding the URL redirect?
+
+
+
+What is the first URL in the redirect chain?
+
+
+
+What is the Threat Actor associated with this malicious file and/or URL?
+
+
+
+What is the main target of this Threat Actor according to MITRE?
