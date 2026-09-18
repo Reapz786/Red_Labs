@@ -36,9 +36,9 @@ Answer Example: "CHECK=value"
 
 ![](../../THM%20Red%20Labs/THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Phishing%20Books%20-%20DMARC.png)
 
-What technique did the attacker use to make the message seem legitimate?
+What technique did the attacker use to make the message seem legitimate? Typosquatting
 
-
+![](../../THM%20Red%20Labs/THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Phishing%20Books%20-%20typosquatting.png)
 
 Which MITRE technique and sub-technique ID best fit this sender address trick?
 
