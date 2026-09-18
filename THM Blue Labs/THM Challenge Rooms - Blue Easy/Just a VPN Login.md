@@ -46,7 +46,7 @@ What line is present in the rule's "condition" field?
 The file is also mentioned in a threat intel report.  
 What is the title of the report mentioning this hash?
 
-![](../../THM%20Red%20Labs/THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Pasted%20image%2020260918190948.png)
+![](../../THM%20Red%20Labs/THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Just%20a%20VPN%20Login%20-%20report%20mention.png)
 
 Which team did the author of the malware start collaborating with in early 2024?
 
