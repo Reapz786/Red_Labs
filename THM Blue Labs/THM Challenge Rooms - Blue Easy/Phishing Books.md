@@ -54,7 +54,7 @@ What is the MD5 hash of the .HTML file?
 
 What is the landing page of the phishing attack?
 
-
+![](../../THM%20Red%20Labs/THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Phishing%20Books%20-%20url.png)
 
 Which MITRE technique ID was used inside the attached file?  
 
