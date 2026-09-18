@@ -74,6 +74,6 @@ http://xn--librarytlu-13cwe32432-kwr.com:8082 - cheatedd for that
 
 What is the Threat Actor associated with this malicious file and/or URL?
 
-
+![](../../THM%20Red%20Labs/THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Phishing%20Books%20=%20threat%20actors.png)
 
 What is the main target of this Threat Actor according to MITRE?
