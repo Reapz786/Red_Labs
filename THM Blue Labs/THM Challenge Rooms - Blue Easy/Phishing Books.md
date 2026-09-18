@@ -50,7 +50,7 @@ What is the file extension of the attached file?
 
 What is the MD5 hash of the .HTML file?  
 
-
+![](../../THM%20Red%20Labs/THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Phishing%20Books%20=%20md5.png)
 
 What is the landing page of the phishing attack?
 
