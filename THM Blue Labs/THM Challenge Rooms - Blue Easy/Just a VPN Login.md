@@ -1,11 +1,9 @@
 Gather threat intel to determine the risks and assist incident response.
-
 ## Unusual Login
 
 Welcome to your first shift! You are greeted by an internal alert on the SOC dashboard titled "Unusual VPN login of susan.martin@probablyfine.thm from 37.19.201.132 (Singapore)."
 
 The SOC handover notes did indeed mention that Susan from Marketing is in Singapore, attending a security vendor conference. It is probably just fine, but the SOC procedure tells us to verify each IP in our threat intel platform TryDetectThis. Answer the first **four** questions to gather more information and determine the threat level.
-
 ## Security Check Tool
 
 That login IP looks suspicious, doesn't it? Your teammates reached out to Susan, and she confirmed she did not log in to the company VPN. She also mentioned that while using a public Wi-Fi hotspot at a cafe, she was suddenly prompted to install a "security check" tool, which she did. The host telemetry reveals a suspicious binary with the hash **b8e02f2bc0ffb42e8cf28e37a26d8d825f639079bf6d948f8debab6440ee5630**. Can you help us figure out what this binary exactly does and answer the remaining questions?
