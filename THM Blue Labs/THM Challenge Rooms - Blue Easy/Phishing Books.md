@@ -1,0 +1,31 @@
+Uncover and investigate a phishing campaign targeting the education sector.
+
+## Phishing Books
+
+It's another typical day at **ProbablyFine Ltd**. Your SOC dashboard is glowing with endless alerts, most of them false positives, as usual. Your team manages several education-sector clients, including universities, schools, and research institutes across the UK. Today, you are in charge of monitoring alerts from universities in London.
+
+Normally, things stay quiet. These universities are very targeted by phishing attacks, but most attempts get stopped by the email filters before anyone even sees them. But today is different. You got an email from a university teacher:
+
+**Subject:** MFA Removal Requests  
+**From:** Dr. Isabella <isabella@kingford.ac.uk>
+
+> _Hey, ProbablyFine SOC Team,  
+> __I've been getting several emails asking me to approve my MFA.  
+> Are you performing any tests? Should I approve these requests?_  
+> _Dr. Isabella_
+
+You contact Dr. Isabella directly, and it becomes clear that she has been targeted by a phishing email designed to steal her credentials, which is why she is receiving multiple MFA requests! You advise her to reset her password immediately.
+
+Now it's time to dig deeper: No alerts were triggered in your SIEM, so you requested the original `.eml` file of the phishing email to perform a manual investigation. Was this an isolated hit, or part of a larger phishing campaign targeting universities? Start the analysis machine and examine the email. Let's see what’s really going on!
+## Machine Access
+
+For this challenge, you are given an instance containing the `.eml` file reported by Dr. Isabella. Please start the machine by clicking the "**Start Machine**" button below.
+
+**Ensure that you test and analyze the file inside the VM environment.**
+
+You also have access to TryDetectThis, a threat intelligence database to check the reputation and other details of IP addresses, domains, and file hashes. To access this platform, please navigate to the following URL in your own browser, outside the VM environment:
+
+|   |   |
+|---|---|
+|**Access**|Granted|
+|**URL**|[TryDetectThis(opens in new tab)](https://static-labs.tryhackme.cloud/apps/trydetectthis/)|
