@@ -42,11 +42,11 @@ What technique did the attacker use to make the message seem legitimate? Typosqu
 
 Which MITRE technique and sub-technique ID best fit this sender address trick?
 
-
+![](../../THM%20Red%20Labs/THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Phishing%20Books%20-%20mitre.png)
 
 What is the file extension of the attached file?
 
-
+![](../../THM%20Red%20Labs/THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Phishing%20Books%20-%20html.png)
 
 What is the MD5 hash of the .HTML file?  
 
