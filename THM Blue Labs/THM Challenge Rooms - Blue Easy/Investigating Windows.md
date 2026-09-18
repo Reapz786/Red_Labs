@@ -11,7 +11,7 @@ Please note that this machine does not respond to ping (ICMP) and may take a few
 
 Whats the version and year of the windows machine?  
 
-
+![](../../THM%20Red%20Labs/THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Investigating%20Windows%20-%20sys%20info.png)
 
 Which user logged in last?  
 
