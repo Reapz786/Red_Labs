@@ -70,7 +70,7 @@ Which line in the attached file is responsible for decoding the URL redirect?
 
 What is the first URL in the redirect chain?
 
-
+http://xn--librarytlu-13cwe32432-kwr.com:8082 - cheatedd for that
 
 What is the Threat Actor associated with this malicious file and/or URL?
 
