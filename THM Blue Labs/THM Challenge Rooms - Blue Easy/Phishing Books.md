@@ -60,9 +60,9 @@ Which MITRE technique ID was used inside the attached file?
 
 ![](../../THM%20Red%20Labs/THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Phishing%20Books%20-%20obconfusious.png)
 
-What is the hidden message the attacker left in the file?  
+What is the hidden message the attacker left in the file?  Reverse from nano'd file
 
-
+![](../../THM%20Red%20Labs/THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Phishing%20Books%20-%20reverser.png)
 
 Which line in the attached file is responsible for decoding the URL redirect?
 
