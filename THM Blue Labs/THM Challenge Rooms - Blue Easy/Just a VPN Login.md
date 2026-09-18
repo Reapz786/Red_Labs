@@ -36,7 +36,7 @@ What is the threat signature that Microsoft assigned to the file?
 One of the contacted domains is part of a large malicious infrastructure cluster.  
 Based on its HTTPS certificate, how many domains are linked to the same campaign?
 
-
+![](../../THM%20Red%20Labs/THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Just%20a%20VPN%20Login%20-%20domain.png)
 
 The file matches one of the YARA rules made by "kevoreilly".  
 What line is present in the rule's "condition" field?
