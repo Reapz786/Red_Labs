@@ -41,12 +41,12 @@ Based on its HTTPS certificate, how many domains are linked to the same campaign
 The file matches one of the YARA rules made by "kevoreilly".  
 What line is present in the rule's "condition" field?
 
-
+![](../../THM%20Red%20Labs/THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Just%20a%20VPN%20Login%20-%20YARA%20CROFT.png)
 
 The file is also mentioned in a threat intel report.  
 What is the title of the report mentioning this hash?
 
-
+![](../../THM%20Red%20Labs/THM%20Challenge%20Rooms%20-%20Red%20Easy/Obsidian%20assets/Pasted%20image%2020260918190948.png)
 
 Which team did the author of the malware start collaborating with in early 2024?
 
